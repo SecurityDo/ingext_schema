@@ -5,8 +5,17 @@ fields:
   # ==========================================
   # COMMON FIELDS (Available in All/Most Workloads)
   # ==========================================
-  - name: CreationTime
+  - name: timestamp
     type: DateTime
+    description: "Event timestamp (UTC), normalized to epoch milliseconds. converted from the field CreationTime. Primary time column for range filters (e.g. where TimeGenerated > ago(1d))."
+    applicableWorkloads: ["All"]
+
+  - name: size
+    type: Integer
+    description: "Internal record size in bytes, used for ingestion accounting"
+
+  - name: CreationTime
+    type: String
     description: "The date and time the event occurred."
     applicableWorkloads: ["All"]
 
@@ -61,6 +70,15 @@ fields:
     description: "The outcome of the operation."
     sampleValues: ["Success", "Succeeded", "Failed"]
     applicableWorkloads: ["Exchange", "AzureActiveDirectory"]
+
+  # ==========================================
+  # ENRICHMENT (Added by Ingext)
+  # ==========================================
+  - name: _behaviors
+    type: DynamicArray
+    description: "A list of behavior rule names that this event triggered. Each element is a string. Use mv-expand to flatten before grouping, e.g. `mv-expand _behaviors | summarize count() by Behaviors = _behaviors`."
+    sampleValues: ["O365_AzureAD_UserLoggedIn"]
+    applicableWorkloads: ["All"]
 
   # ==========================================
   # GEO-IP & NETWORK (Commonly Enriched)

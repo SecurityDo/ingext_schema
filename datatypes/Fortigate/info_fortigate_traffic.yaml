@@ -314,3 +314,13 @@ fields:
   - name: _fields
     type: Dynamic
     description: "Extended fields not modeled as top-level columns, stored as a JSON object. Contents vary by logid (each traffic subtype emits its own extra key=value pairs). Query sub-keys with dot/bracket notation, e.g. _fields.foo or _fields['foo']."
+
+  - name: _fields.sentdelta
+    type: String
+    description: "Incremental bytes sent since the previous log for this session (numeric value stored as a string in the _fields JSON bag; wrap in tolong() to aggregate). Prefer over sentbyte for per-interval bandwidth, falling back to sentbyte when absent, e.g. coalesce(tolong(_fields.sentdelta), sentbyte)."
+    sampleValues: ["1850"]
+
+  - name: _fields.rcvddelta
+    type: String
+    description: "Incremental bytes received since the previous log for this session (numeric value stored as a string in the _fields JSON bag; wrap in tolong() to aggregate). Prefer over rcvdbyte for per-interval bandwidth, falling back to rcvdbyte when absent, e.g. coalesce(tolong(_fields.rcvddelta), rcvdbyte)."
+    sampleValues: ["39898"]
