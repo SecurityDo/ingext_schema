@@ -1,0 +1,27 @@
+// _behaviors holds a list of behavior rules that one event triggered 
+Office365
+    | where timestamp > ago(1d)
+    | where isnotempty(_behaviors)
+    | mv-expand _behaviors
+    | summarize BehaviorCount = count() by Behaviors = _behaviors
+    | order by BehaviorCount desc
+
+
+// Outptut:
+// Behaviors	                BehaviorCount
+// O365_AzureAD_UserLoggedIn	   36
+
+
+
+// _ip holds the geoIP information (if available)
+Office365
+    | where timestamp > ago(1d)
+    | where isnotempty(_ip.country)
+    | summarize Events = count() by Country = _ip.country 
+
+// Output:
+// Country	        Events
+// United States	 608
+// Canada	         122
+// Spain	         4
+// South Africa	         7

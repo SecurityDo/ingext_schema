@@ -1,0 +1,18 @@
+{
+        "AppAccessContext": {
+            "AADSessionId": "99999999-aaaa-bbbb-cccc-000000000000",
+            "IssuedAtTime": "2026-06-02T10:50:16",
+            "UniqueTokenId": "rVuLLZBlrEGSODAdjdUhAA"
+        },
+        "CreationTime": "2026-06-02T10:55:16",
+        "Id": "aaaa1111-bbbb-cccc-dddd-eeee22223333",
+        "ObjectId": "TeamsGraphService (Unknown)",
+        "Operation": "TeamsSessionStarted",
+        "OrganizationId": "00000000-0000-0000-0000-000000000001",
+        "RecordType": 25,
+        "UserId": "megan.bowen@contoso.com",
+        "UserKey": "bbbb1111-cccc-dddd-eeee-ffff22223333",
+        "UserType": 0,
+        "Version": 1,
+        "Workload": "MicrosoftTeams"
+}

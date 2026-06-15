@@ -1,0 +1,756 @@
+{
+    "name": "SigninLogs",
+    "description": "Azure AD sign-in logs for interactive user authentications. Ref: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/signinlogs",
+    "fields": [
+        {
+            "name": "TimeGenerated",
+            "description": "The timestamp (UTC) of the sign-in event. Raw: TimeGenerated (datetime). Conversion: datetime → INT64 epoch milliseconds.",
+            "fpltype": "int64",
+            "type": "INT64",
+            "convertedtype": "TIMESTAMP_MILLIS"
+        },
+	{
+             "name": "_Size",
+             "fpltype": "int64",
+             "type": "INT32"
+        },
+        {
+            "name": "AADTenantId",
+            "description": "The Azure AD tenant ID. Raw: AADTenantId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Agent",
+            "description": "Agentic property for sign-in logs; includes agentType and parentAppId when type is AgenticInstance. Raw: Agent (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "AlternateSignInName",
+            "description": "The identification the user provided to sign in; may be UPN or other identifiers. Raw: AlternateSignInName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AppDisplayName",
+            "description": "The application name displayed in the Azure Portal. Raw: AppDisplayName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AppId",
+            "description": "The application identifier in Azure Active Directory. Raw: AppId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AppliedConditionalAccessPolicies",
+            "description": "Applied conditional access policies. Raw: AppliedConditionalAccessPolicies (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AppliedEventListeners",
+            "description": "Detailed info about listeners (Azure Logic Apps, Azure Functions) triggered by the sign-in event. Raw: AppliedEventListeners (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "AppOwnerTenantId",
+            "description": "The tenant identifier of the owner of the application in Azure AD. Raw: AppOwnerTenantId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationAppDeviceDetails",
+            "description": "App and device state used during the most recent authentication step using an authentication app. Raw: AuthenticationAppDeviceDetails (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationAppPolicyEvaluationDetails",
+            "description": "Policies applied and enforced related to the authentication app during the latest sign-in step. Raw: AuthenticationAppPolicyEvaluationDetails (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationContextClassReferences",
+            "description": "Conditional access authentication contexts applied to the sign-in. Raw: AuthenticationContextClassReferences (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationDetails",
+            "description": "Result of the authentication attempt and additional details on the authentication method. Raw: AuthenticationDetails (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationMethodsUsed",
+            "description": "Authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS. Raw: AuthenticationMethodsUsed (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationProcessingDetails",
+            "description": "Additional authentication processing details, such as agent name for PTA/PHS or server name for federated auth. Raw: AuthenticationProcessingDetails (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationProtocol",
+            "description": "Protocol type or grant type used. Possible values: none, oAuth2, ropc, wsFederation, saml20, deviceCode. Raw: AuthenticationProtocol (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationRequirement",
+            "description": "Highest level of authentication needed through all sign-in steps for sign-in to succeed. Raw: AuthenticationRequirement (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticationRequirementPolicies",
+            "description": "Sources of authentication requirement: conditional access, per-user MFA, identity protection, security defaults. Raw: AuthenticationRequirementPolicies (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AuthenticatorAppLocation",
+            "description": "The location of the authenticator app. Raw: AuthenticatorAppLocation (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AutonomousSystemNumber",
+            "description": "The Autonomous System Number (ASN) of the network used by the actor. Raw: AutonomousSystemNumber (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Category",
+            "description": "Log category. Raw: Category (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ClientAppUsed",
+            "description": "Legacy client used for sign-in (e.g. Browser, Exchange ActiveSync, IMAP, MAPI, SMTP, POP). Raw: ClientAppUsed (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ClientCredentialType",
+            "description": "Type of client credential used (e.g. client assertion, client secret). Raw: ClientCredentialType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ConditionalAccessAudiences",
+            "description": "The audiences targeted by the conditional access policy. Raw: ConditionalAccessAudiences (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ConditionalAccessPolicies",
+            "description": "List of conditional access policies triggered by the sign-in activity. Raw: ConditionalAccessPolicies (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "ConditionalAccessStatus",
+            "description": "Status of triggered conditional access policy. Possible values: success, failure, notApplied. Raw: ConditionalAccessStatus (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "CorrelationId",
+            "description": "Identifier sent from the client when sign-in is initiated; used for troubleshooting. Raw: CorrelationId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "CreatedDateTime",
+            "description": "Date and time the sign-in was initiated (UTC). Raw: CreatedDateTime (datetime). Conversion: datetime → INT64 epoch milliseconds.",
+            "fpltype": "int64",
+            "type": "INT64",
+            "convertedtype": "TIMESTAMP_MILLIS",
+            "nullable": true
+        },
+        {
+            "name": "CrossTenantAccessType",
+            "description": "Type of cross-tenant access used by the actor to access the resource. Raw: CrossTenantAccessType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "DeviceDetail",
+            "description": "Device information from where the sign-in occurred (deviceId, OS, browser). Raw: DeviceDetail (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "DurationMs",
+            "description": "Duration of the sign-in in milliseconds. Raw: DurationMs (long). Conversion: long → INT64.",
+            "fpltype": "int64",
+            "type": "INT64",
+            "nullable": true
+        },
+        {
+            "name": "FederatedCredentialId",
+            "description": "Federated Credential Id. Raw: FederatedCredentialId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "FlaggedForReview",
+            "description": "Whether a user flagged a failed sign-in for tenant admin review. Raw: FlaggedForReview (bool).",
+            "fpltype": "bool",
+            "type": "BOOLEAN",
+            "nullable": true
+        },
+        {
+            "name": "GlobalSecureAccessIpAddress",
+            "description": "Global Secure Access IP address that user signed in from. Raw: GlobalSecureAccessIpAddress (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "HomeTenantId",
+            "description": "Tenant identifier of the user initiating the sign-in. Not applicable for Managed Identity or service principal. Raw: HomeTenantId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "HomeTenantName",
+            "description": "Tenant name of the external tenant who homes the entity acting in the customer's tenant. Raw: HomeTenantName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Id",
+            "description": "Identifier representing the sign-in activity. Raw: Id (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Identity",
+            "description": "Display name of the actor identified in the sign-in. Raw: Identity (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "IncomingTokenType",
+            "description": "Type of token used to sign in (e.g. primary refresh token, SAML assertion). Raw: IncomingTokenType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "IPAddress",
+            "description": "IP address of the client from where the sign-in occurred. Raw: IPAddress (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "IPAddressFromResourceProvider",
+            "description": "IP address a user used to reach a resource provider; used for Conditional Access compliance. Raw: IPAddressFromResourceProvider (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "IsInteractive",
+            "description": "Whether the sign-in is interactive (user provides an auth factor) vs non-interactive (client uses token/code). Raw: IsInteractive (bool).",
+            "fpltype": "bool",
+            "type": "BOOLEAN",
+            "nullable": true
+        },
+        {
+            "name": "IsRisky",
+            "description": "Whether the sign-in is considered risky. Raw: IsRisky (bool).",
+            "fpltype": "bool",
+            "type": "BOOLEAN",
+            "nullable": true
+        },
+        {
+            "name": "IsTenantRestricted",
+            "description": "Whether the sign-in is under a tenant restrictions policy. Raw: IsTenantRestricted (bool).",
+            "fpltype": "bool",
+            "type": "BOOLEAN",
+            "nullable": true
+        },
+        {
+            "name": "IsThroughGlobalSecureAccess",
+            "description": "Whether the user came through Global Secure Access service. Raw: IsThroughGlobalSecureAccess (bool).",
+            "fpltype": "bool",
+            "type": "BOOLEAN",
+            "nullable": true
+        },
+        {
+            "name": "Level",
+            "description": "Log level. Raw: Level (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Location",
+            "description": "2-letter country code from where the sign-in occurred. Raw: Location (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "LocationDetails",
+            "description": "City, state, country/region and lat/long of the sign-in location. Raw: LocationDetails (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "MfaDetail",
+            "description": "MFA detail (deprecated). Raw: MfaDetail (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "NetworkLocationDetails",
+            "description": "Network location details including the type of network used and its names. Raw: NetworkLocationDetails (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "OperationName",
+            "description": "Operation name. Raw: OperationName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "OperationVersion",
+            "description": "Operation version. Raw: OperationVersion (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "OriginalRequestId",
+            "description": "Request identifier of the first request in the authentication sequence. Raw: OriginalRequestId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "OriginalTransferMethod",
+            "description": "Transfer method used to initiate a session throughout all subsequent requests. Raw: OriginalTransferMethod (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ProcessingTimeInMilliseconds",
+            "description": "Processing time in milliseconds. Raw: ProcessingTimeInMilliseconds (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Resource",
+            "description": "Resource. Raw: Resource (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceDisplayName",
+            "description": "Name of the resource that the user signed in to. Raw: ResourceDisplayName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceGroup",
+            "description": "Resource group. Raw: ResourceGroup (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceId",
+            "description": "Identifier of the resource that the user signed in to. Raw: ResourceId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceIdentity",
+            "description": "The resource that the user signed in to. Raw: ResourceIdentity (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceOwnerTenantId",
+            "description": "Tenant identifier of the owner of the resource referenced in the sign-in. Raw: ResourceOwnerTenantId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceProvider",
+            "description": "Resource provider. Raw: ResourceProvider (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceServicePrincipalId",
+            "description": "Identifier of the service principal representing the target resource. Raw: ResourceServicePrincipalId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceTenantId",
+            "description": "Tenant identifier of the resource referenced in the sign-in. Raw: ResourceTenantId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResultDescription",
+            "description": "Error message or reason for failure of the sign-in activity. Raw: ResultDescription (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResultSignature",
+            "description": "Result signature. Raw: ResultSignature (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResultType",
+            "description": "5-6 digit error code for the sign-in event; 0 indicates success. Raw: ResultType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "RiskDetail",
+            "description": "Reason behind the state of a risky user/sign-in. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, etc. Raw: RiskDetail (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "RiskEventTypes",
+            "description": "Risk event types (deprecated). Raw: RiskEventTypes (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "RiskEventTypes_V2",
+            "description": "Risk event types for the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, etc. Raw: RiskEventTypes_V2 (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "RiskLevel",
+            "description": "Risk level. Raw: RiskLevel (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "RiskLevelAggregated",
+            "description": "Aggregated risk level. Possible values: none, low, medium, high, hidden. Raw: RiskLevelAggregated (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "RiskLevelDuringSignIn",
+            "description": "Risk level during sign-in. Possible values: none, low, medium, high, hidden. Raw: RiskLevelDuringSignIn (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "RiskState",
+            "description": "Risk state. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised. Raw: RiskState (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ServicePrincipalId",
+            "description": "Application identifier used for sign-in; populated when signing in using an application. Raw: ServicePrincipalId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ServicePrincipalName",
+            "description": "Application name used for sign-in; populated when signing in using an application. Raw: ServicePrincipalName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "SessionId",
+            "description": "Session ID generated during the sign-in. Raw: SessionId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "SessionLifetimePolicies",
+            "description": "Conditional access session management policies applied during the sign-in event. Raw: SessionLifetimePolicies (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "SignInIdentifier",
+            "description": "The identification the user provided to sign in; may be UPN or other identifiers. Raw: SignInIdentifier (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "SignInIdentifierType",
+            "description": "Type of sign-in identifier. Possible values: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName. Raw: SignInIdentifierType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "SourceAppClientId",
+            "description": "The Source App's Client ID for Target Identities. Raw: SourceAppClientId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "SourceSystem",
+            "description": "Type of agent the event was collected by (e.g. OpsManager, Linux, Azure). Raw: SourceSystem (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Status",
+            "description": "Sign-in status including error code and description of the error for failures. Raw: Status (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "TokenIssuerName",
+            "description": "Name of the identity provider (e.g. sts.microsoft.com). Raw: TokenIssuerName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "TokenIssuerType",
+            "description": "Type of identity provider. Possible values: AzureAD, ADFederationServices, AzureADBackupAuth, etc. Raw: TokenIssuerType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "TokenProtectionStatusDetails",
+            "description": "Whether the sign-in token was bound to the device via token protection. Raw: TokenProtectionStatusDetails (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "Type",
+            "description": "The name of the table. Raw: Type (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "UniqueTokenIdentifier",
+            "description": "Base64 encoded request identifier to track tokens issued by Azure AD as they are redeemed. Raw: UniqueTokenIdentifier (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "UserAgent",
+            "description": "User agent information related to sign-in. Raw: UserAgent (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "UserDisplayName",
+            "description": "Display name of the user. Raw: UserDisplayName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "UserId",
+            "description": "Identifier of the user. Raw: UserId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "UserPrincipalName",
+            "description": "The UPN of the user. Raw: UserPrincipalName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "UserType",
+            "description": "Whether the user is a member or guest in the tenant. Possible values: member, guest. Raw: UserType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "name": "ContainerLogV2",
+	"fields": [
+    { "name": "TimeGenerated", "type": "INT64", "convertedtype": "TIMESTAMP_MILLIS" },
+    { "name": "_Size", "type": "INT32", "nullable": true },
+
+    { "name": "ResourceId", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+    { "name": "SubscriptionId", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+
+    { "name": "LogId", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+    { "name": "_IsBillable", "type": "BOOLEAN", "nullable": true },
+
+    { "name": "_ResourceId", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+
+    { "name": "Computer", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+
+    { "name": "ContainerId", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+    { "name": "ContainerName", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+
+    { "name": "PodName", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+    { "name": "PodNamespace", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+
+    { "name": "LogSource", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+    { "name": "LogLevel", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+
+    {
+      "name": "LogMessage",
+      "type": "BYTE_ARRAY",
+      "convertedtype": "UTF8",
+      "nullable": true,
+      "logical_hint": "kusto_dynamic_json"
+    },
+    {
+      "name": "KubernetesMetadata",
+      "type": "BYTE_ARRAY",
+      "convertedtype": "UTF8",
+      "nullable": true,
+      "logical_hint": "kusto_dynamic_json"
+    },
+
+    { "name": "TenantId", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+
+    { "name": "SourceSystem", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true },
+    { "name": "Type", "type": "BYTE_ARRAY", "convertedtype": "UTF8", "nullable": true }
+  ]
+}
+

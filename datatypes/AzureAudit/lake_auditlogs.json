@@ -1,0 +1,245 @@
+{
+    "name": "AuditLogs",
+    "description": "Audit log for Azure Active Directory. Includes system activity information about user and group management, managed applications, and directory activities. Ref: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/auditlogs",
+    "fields": [
+        {
+            "name": "TimeGenerated",
+            "description": "Date and time the record was created. Raw: TimeGenerated (datetime). Conversion: datetime → INT64 epoch milliseconds.",
+            "fpltype": "int64",
+            "type": "INT64",
+            "convertedtype": "TIMESTAMP_MILLIS"
+        },
+        {
+            "name": "_Size",
+            "description": "Internal record size in bytes, used for ingestion accounting. Not sourced from AuditLogs.",
+            "fpltype": "int64",
+            "type": "INT32"
+        },
+        {
+            "name": "AADOperationType",
+            "description": "Type of the operation. Possible values are Add, Update, Delete, and Other. Raw: AADOperationType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AADTenantId",
+            "description": "ID of the AAD tenant. Raw: AADTenantId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ActivityDateTime",
+            "description": "Date and time the activity was performed in UTC. Raw: ActivityDateTime (datetime). Conversion: datetime → INT64 epoch milliseconds.",
+            "fpltype": "int64",
+            "type": "INT64",
+            "convertedtype": "TIMESTAMP_MILLIS",
+            "nullable": true
+        },
+        {
+            "name": "ActivityDisplayName",
+            "description": "Activity name or the operation name (e.g. Create User, Add member to group). See the Azure AD activity list for the full set. Raw: ActivityDisplayName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "AdditionalDetails",
+            "description": "Additional details on the activity. Raw: AdditionalDetails (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint; KQL queries can access JSON fields directly.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "Category",
+            "description": "Log category. Currently 'Audit' is the only supported value. Raw: Category (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "CorrelationId",
+            "description": "Optional GUID that's passed by the client. Helps correlate client-side operations with server-side operations and is useful when tracking logs that span services. Raw: CorrelationId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "DurationMs",
+            "description": "Property is not used and can be ignored. Raw: DurationMs (long). Conversion: long → INT64.",
+            "fpltype": "int64",
+            "type": "INT64",
+            "nullable": true
+        },
+        {
+            "name": "Id",
+            "description": "GUID that uniquely identifies the activity. Raw: Id (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Identity",
+            "description": "Identity from the token that was presented when the request was made. The identity can be a user account, system account, or service principal. Raw: Identity (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "InitiatedBy",
+            "description": "User or app that initiated the activity. Raw: InitiatedBy (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "Level",
+            "description": "Message type. Currently always 'Informational'. Raw: Level (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Location",
+            "description": "Location of the datacenter. Raw: Location (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "LoggedByService",
+            "description": "Service that initiated the activity (e.g. Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management). Raw: LoggedByService (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "OperationName",
+            "description": "Name of the operation. Raw: OperationName (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "OperationVersion",
+            "description": "REST API version requested by the client. Raw: OperationVersion (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Resource",
+            "description": "Raw: Resource (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceGroup",
+            "description": "Raw: ResourceGroup (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceId",
+            "description": "Raw: ResourceId (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResourceProvider",
+            "description": "Raw: ResourceProvider (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "Result",
+            "description": "Result of the activity. Possible values: success, failure, timeout, unknownFutureValue. Raw: Result (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResultDescription",
+            "description": "Additional description of the result. Raw: ResultDescription (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResultReason",
+            "description": "Describes cause of failure or timeout results. Raw: ResultReason (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResultSignature",
+            "description": "Property is not used and can be ignored. Raw: ResultSignature (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "ResultType",
+            "description": "Result of the operation. Possible values are Success and Failure. Raw: ResultType (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "SourceSystem",
+            "description": "The type of agent the event was collected by (e.g. OpsManager for Windows agents, Linux for Linux agents, Azure for Azure Diagnostics). Raw: SourceSystem (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "TargetResources",
+            "description": "Information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy, or Other. Raw: TargetResources (dynamic). Conversion: dynamic → UTF8 string with kusto_dynamic_json hint.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        },
+        {
+            "name": "Type",
+            "description": "The name of the table. Raw: Type (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        }
+    ]
+}

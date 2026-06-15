@@ -1,0 +1,62 @@
+{
+        "Actor": [
+            {
+                "ID": "aaaaaaaa-1111-2222-3333-444444444444",
+                "Type": 0
+            },
+            {
+                "ID": "adele.vance@contoso.com",
+                "Type": 5
+            }
+        ],
+        "ActorContextId": "00000000-0000-0000-0000-000000000001",
+        "ActorIpAddress": "2001:db8:b29a:2c00::1",
+        "ApplicationId": "bbbbbbbb-1111-2222-3333-444444444444",
+        "AzureActiveDirectoryEventType": 1,
+        "ClientIP": "2001:db8:b29a:2c00::1",
+        "CreationTime": "2026-06-02T11:03:13",
+        "DevicePropertiesFields": {
+            "BrowserType": "Chrome",
+            "IsCompliant": "False",
+            "IsCompliantAndManaged": "False",
+            "OS": "Linux",
+            "SessionId": "cccccccc-1111-2222-3333-444444444444"
+        },
+        "ErrorNumber": "0",
+        "ExtendedPropertiesFields": {
+            "RequestType": "Login:reprocess",
+            "ResultStatusDetail": "Redirect",
+            "UserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+        },
+        "Id": "dddddddd-1111-2222-3333-444444444444",
+        "InterSystemsId": "eeeeeeee-1111-2222-3333-444444444444",
+        "IntraSystemId": "dddddddd-1111-2222-3333-444444444444",
+        "ModifiedProperties": [],
+        "ObjectId": "00000003-0000-0000-c000-000000000000",
+        "Operation": "UserLoggedIn",
+        "OrganizationId": "00000000-0000-0000-0000-000000000001",
+        "RecordType": 15,
+        "ResultStatus": "Success",
+        "SupportTicketId": "",
+        "Target": [
+            {
+                "ID": "00000003-0000-0000-c000-000000000000",
+                "Type": 0
+            }
+        ],
+        "TargetContextId": "00000000-0000-0000-0000-000000000001",
+        "UserId": "adele.vance@contoso.com",
+        "UserKey": "aaaaaaaa-1111-2222-3333-444444444444",
+        "UserType": 0,
+        "Version": 1,
+        "Workload": "AzureActiveDirectory",
+        "_ip": {
+            "city": "Seattle",
+            "country": "United States",
+            "countryCode": "US",
+            "isp": "Example ISP",
+            "latitude": 47.6062,
+            "longitude": -122.3321,
+            "org": "Example ISP"
+        }
+}

@@ -1,0 +1,70 @@
+{
+        "ActorInfoString": "Client=REST;Client=RESTSystem;UserContext[AppId=ffffffff-1111-2222-3333-444444444444];",
+        "AppAccessContext": {
+            "APIId": "ffffffff-1111-2222-3333-444444444444",
+            "ClientAppId": "ffffffff-1111-2222-3333-444444444444",
+            "IssuedAtTime": "2026-06-02T10:51:16",
+            "UniqueTokenId": "11111111-aaaa-bbbb-cccc-222222222222"
+        },
+        "AppId": "ffffffff-1111-2222-3333-444444444444",
+        "ClientAppId": "ffffffff-1111-2222-3333-444444444444",
+        "ClientIPAddress": "2001:db8:8:2::15",
+        "ClientInfoString": "Client=REST;Client=RESTSystem;;",
+        "CreationTime": "2026-06-02T10:51:24",
+        "ExternalAccess": false,
+        "Folders": [
+            {
+                "FolderItems": [
+                    {
+                        "ClientRequestId": "33333333-aaaa-bbbb-cccc-444444444444",
+                        "CreationTime": "2026-06-02T10:51:24",
+                        "Id": "LgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ",
+                        "ImmutableId": "LgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ",
+                        "InternetMessageId": "<MSG0000000000000000000000000000@example.prod.outlook.com>",
+                        "SizeInBytes": 5931055,
+                        "Subject": "Re: Sample subject"
+                    }
+                ],
+                "Id": "LgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEJAAAB",
+                "Path": "\\Sent Items"
+            }
+        ],
+        "Id": "55555555-aaaa-bbbb-cccc-666666666666",
+        "InternalLogonType": 0,
+        "LogonType": 0,
+        "LogonUserSid": "S-1-5-21-1111111111-2222222222-3333333333-1001",
+        "MailboxGuid": "77777777-aaaa-bbbb-cccc-888888888888",
+        "MailboxOwnerSid": "S-1-5-21-1111111111-2222222222-3333333333-1001",
+        "MailboxOwnerUPN": "alex.wilber@contoso.com",
+        "Operation": "MailItemsAccessed",
+        "OperationCount": 1,
+        "OperationProperties": [
+            {
+                "Name": "MailAccessType",
+                "Value": "Bind"
+            }
+        ],
+        "OperationPropertiesFields": {
+            "MailAccessType": "Bind"
+        },
+        "OrganizationId": "00000000-0000-0000-0000-000000000001",
+        "OrganizationName": "contoso.onmicrosoft.com",
+        "OriginatingServer": "EXAMPLESERVER (15.20.4200.000)\r\n",
+        "RecordType": 50,
+        "ResultStatus": "Succeeded",
+        "TokenTenantId": "00000000-0000-0000-0000-000000000001",
+        "UserId": "alex.wilber@contoso.com",
+        "UserKey": "ffffffff-1111-2222-3333-444444444444",
+        "UserType": 5,
+        "Version": 1,
+        "Workload": "Exchange",
+        "_ip": {
+            "city": "Redmond",
+            "country": "United States",
+            "countryCode": "US",
+            "isp": "Microsoft Corporation",
+            "latitude": 47.6740,
+            "longitude": -122.1215,
+            "org": "Microsoft Corporation"
+        }
+ }

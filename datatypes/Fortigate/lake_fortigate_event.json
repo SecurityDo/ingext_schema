@@ -1,0 +1,353 @@
+{
+    "name": "NetworkFortigateEvent",
+    "description": "FortiGate event and UTM logs (type=event and type=utm). Ref: https://docs.fortinet.com/document/fortigate/7.6.6/fortios-log-message-reference/357866/log-message-fields. Fields above _fields are shared across FortiGate log families (see FortigateTraffic for matching definitions); subtype-specific columns are held in _fields as a JSON bag keyed by logid.",
+    "fields": [
+        {
+            "name": "TimeGenerated",
+            "description": "Event timestamp (UTC). Raw: eventtime (epoch nanoseconds). Conversion: eventtime / 1000000 → INT64 epoch milliseconds. Fallback: parse date + time + tz if eventtime is absent.",
+            "fpltype": "int64",
+            "type": "INT64",
+            "convertedtype": "TIMESTAMP_MILLIS"
+        },
+        {
+            "name": "_Size",
+            "description": "Internal record size in bytes, used for ingestion accounting. Not sourced from FortiGate.",
+            "fpltype": "int64",
+            "type": "INT32"
+        },
+        {
+            "name": "_Type",
+            "description": "The name of the table/index. This field will be set by the index engine.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "logid",
+            "description": "Log ID. See https://docs.fortinet.com/document/fortigate/7.6.6/fortios-log-message-reference/656858/log-id-definitions. Raw: logid (string).",
+            "sampleValue": "0000000013",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "type",
+            "description": "Log type (event or utm for this table). See https://docs.fortinet.com/document/fortigate/7.6.6/fortios-log-message-reference/374445/type. Raw: type (string).",
+            "sampleValue": "event",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "subtype",
+            "description": "Subtype of the log. See https://docs.fortinet.com/document/fortigate/7.6.6/fortios-log-message-reference/195419/subtype. Raw: subtype (string).",
+            "sampleValue": "system",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "action",
+            "description": "Action taken or session status. For UTM logs this is the security action (e.g. blocked, passthrough); for event logs this describes the event action. Raw: action (string).",
+            "sampleValue": "close",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "date",
+            "description": "Day, month, and year when the log was recorded. Raw: date (string).",
+            "sampleValue": "2017-11-15",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "devid",
+            "description": "Serial number of the device for the traffic's origin. Raw: devid (string).",
+            "sampleValue": "FGVM02Q105060010",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "devname",
+            "description": "Name of the device for the traffic's origin. Raw: devname (string).",
+            "sampleValue": "FGVM02Q105060010",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "direction",
+            "description": "Message/packet direction. Raw: direction (string).",
+            "sampleValue": "incoming",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "dstcountry",
+            "description": "Name of the destination country. Raw: dstcountry (string).",
+            "sampleValue": "United States",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "dstintf",
+            "description": "Interface of the traffic's destination. Raw: dstintf (string).",
+            "sampleValue": "port11",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "dstip",
+            "description": "Destination IP address. Raw: dstip (string, IPv4/IPv6).",
+            "sampleValue": "35.197.51.42",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "dstintfrole",
+            "description": "Role of the destination interface. Raw: dstintfrole (string).",
+            "sampleValue": "undefined",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "dstport",
+            "description": "Port number of the traffic's destination. Raw: dstport (int). Conversion: int → INT32.",
+            "sampleValue": "443",
+            "fpltype": "int64",
+            "type": "INT32",
+            "nullable": true
+        },
+        {
+            "name": "eventtime",
+            "description": "Epoch time in nanoseconds the log was triggered by FortiGate. Raw: eventtime (epoch nanoseconds). Conversion: stored as INT64.",
+            "sampleValue": "1510775056",
+            "fpltype": "int64",
+            "type": "INT64",
+            "nullable": true
+        },
+        {
+            "name": "level",
+            "description": "Security level rating (e.g. notice, warning, error). Raw: level (string).",
+            "sampleValue": "notice",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "policyid",
+            "description": "ID of the firewall policy governing the traffic. Raw: policyid (int). Conversion: int → INT32.",
+            "sampleValue": "1",
+            "fpltype": "int64",
+            "type": "INT32",
+            "nullable": true
+        },
+        {
+            "name": "proto",
+            "description": "IP protocol number (6=TCP, 17=UDP, etc.). Raw: proto (int). Conversion: int → INT32.",
+            "sampleValue": "6",
+            "fpltype": "int64",
+            "type": "INT32",
+            "nullable": true
+        },
+        {
+            "name": "service",
+            "description": "Name of the service. Raw: service (string).",
+            "sampleValue": "HTTPS",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "srcintf",
+            "description": "Interface name of the traffic's origin. Raw: srcintf (string).",
+            "sampleValue": "port12",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "srccountry",
+            "description": "Name of the source country. Raw: srccountry (string).",
+            "sampleValue": "Reserved",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "sessionid",
+            "description": "ID for the session. Raw: sessionid (int). Conversion: int → INT32.",
+            "sampleValue": "8058",
+            "fpltype": "int64",
+            "type": "INT64",
+            "nullable": true
+        },
+        {
+            "name": "srcdomain",
+            "description": "Source domain (e.g. Active Directory domain) of the originating user or host. Raw: srcdomain (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "srcintfrole",
+            "description": "Role of the source interface. Raw: srcintfrole (string).",
+            "sampleValue": "undefined",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "srcip",
+            "description": "IP address of the traffic's origin. Raw: srcip (string, IPv4/IPv6).",
+            "sampleValue": "10.1.100.155",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "srcport",
+            "description": "Port number of the traffic's origin. Raw: srcport (int). Conversion: int → INT32.",
+            "sampleValue": "40772",
+            "fpltype": "int64",
+            "type": "INT32",
+            "nullable": true
+        },
+        {
+            "name": "time",
+            "description": "Hour clock when the log was recorded. Raw: time (string).",
+            "sampleValue": "11:44:16",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "tz",
+            "description": "Timezone offset of the log timestamp (e.g. -0800, +0000). Raw: tz (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "vd",
+            "description": "Name of the virtual domain in which the log was recorded. Raw: vd (string).",
+            "sampleValue": "vdom1",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "vrf",
+            "description": "Virtual Routing and Forwarding (VRF) identifier. Raw: vrf (int). Conversion: int → INT32.",
+            "fpltype": "int64",
+            "type": "INT32",
+            "nullable": true
+        },
+        {
+            "name": "msg",
+            "description": "Human-readable log message text. Raw: msg (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "app",
+            "description": "Name of the application. Raw: app (string).",
+            "sampleValue": "HTTPS.BROWSER",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "appcat",
+            "description": "Category of the application. Raw: appcat (string).",
+            "sampleValue": "Web.Client",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "user",
+            "description": "Authenticated user name. Raw: user (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "unauthuser",
+            "description": "Unauthenticated user name (e.g. source identity before authentication). Raw: unauthuser (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "group",
+            "description": "User group name. Raw: group (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "hostname",
+            "description": "Host name of a URL. Raw: hostname (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "url",
+            "description": "URL address. Raw: url (string).",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true
+        },
+        {
+            "name": "_fields",
+            "description": "Extended fields not modeled as top-level columns. Contents vary by logid (each FortiGate event/utm subtype emits its own set of extra key=value pairs). Raw: remainder of the log line after the modeled fields are extracted. Conversion: serialized as a JSON object and stored as UTF8 string with kusto_dynamic_json hint so KQL can walk it with . and [] operators.",
+            "fpltype": "string",
+            "type": "BYTE_ARRAY",
+            "convertedtype": "UTF8",
+            "nullable": true,
+            "logical_hint": "kusto_dynamic_json"
+        }
+    ]
+}
