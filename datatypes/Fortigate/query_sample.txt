@@ -1,0 +1,20 @@
+// list top 10 src IP based on total bandwidth.
+NetworkFortigateTraffic
+| where TimeGenerated > ago(1d)
+| where logid != "0000000020"
+| extend sent = coalesce(tolong(_fields.sentdelta), sentbyte),
+         rcvd = coalesce(tolong(_fields.rcvddelta), rcvdbyte)
+| summarize
+    TotalSentBytes = sum(sent),
+    TotalRcvdBytes = sum(rcvd),
+    EventCount = count(),
+    DistinctDsts = dcount(dstip) by srcip
+| extend TotalBytes = TotalSentBytes + TotalRcvdBytes
+| top 10 by TotalBytes desc    
+
+
+// output
+// srcip	TotalSentBytes	TotalRcvdBytes	EventCount	DistinctDsts	TotalBytes
+// 10.0.5.20	24130294655	288508467	42351	245	24418803122
+// 64.132.42.50	66417944	72770910	9153	28	139188854
+// 192.168.86.45	13362371	66369737	4531	289	79732108
