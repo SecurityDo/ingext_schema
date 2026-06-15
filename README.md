@@ -17,6 +17,7 @@ Each data type lives in its own directory under `datatypes/`. A directory may co
 | `lake_*.json`        | Parquet schema used by the index engine.                                                     |
 | `info_*.yaml`        | YAML schema with descriptions for the major fields, written to help an AI agent build KQL.   |
 | `query_samples.txt`  | Collection of sample KQL queries for the data type.                                          |
+| `query_samples.html` | Same query samples rendered as HTML (description, query, and an output table) for UI/agents. |
 | `eventSamples/`      | Example raw events in JSON.                                                                   |
 
 Not every data type includes all of these files yet.
