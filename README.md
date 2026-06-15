@@ -39,3 +39,25 @@ Event samples are sanitized: identifiers such as user names, email addresses, IP
 addresses, tenant/organization GUIDs, and geolocation have been replaced with
 placeholder values (for example, `contoso.com` and the `2001:db8::/32` documentation
 IP range). They illustrate the shape and field set of each event, not real data.
+
+### Sanitization requirement
+
+All event samples committed to this repository **must** be sanitized first. Never
+commit raw events containing real customer or tenant data. Before adding a sample,
+replace every real identifier with a consistent placeholder while keeping the JSON
+structure and field types intact:
+
+| Field type                         | Replace with                                              |
+| ---------------------------------- | --------------------------------------------------------- |
+| User names / email addresses / UPN | `contoso.com` names (e.g. `adele.vance@contoso.com`)      |
+| Tenant / organization / context ID | `00000000-0000-0000-0000-000000000001`                    |
+| Other GUIDs (session, message, app)| Placeholder GUIDs of the same format                      |
+| IP addresses                       | Documentation ranges: `2001:db8::/32` (v6), `192.0.2.0/24` (v4) |
+| Domain / organization name         | `contoso.onmicrosoft.com`                                 |
+| SIDs                               | `S-1-5-21-1111111111-2222222222-3333333333-1001`          |
+| Hostnames, message subjects, geo   | Generic placeholders                                      |
+
+Well-known, non-sensitive constants (such as Microsoft's Graph app ID
+`00000003-0000-0000-c000-000000000000`) may be left as-is. After sanitizing, confirm
+the sample is still valid JSON and grep for any leftover real identifiers before
+committing.
