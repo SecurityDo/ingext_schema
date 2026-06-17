@@ -51,3 +51,21 @@ examples:
   - description: Dropped and errored events per second by component ID.
     query: |
       sum by (id) (rate(platform_component_total{action=~"error|drop"}[5m]))
+  - description: Total bytes received by all datasources over the last hour (ingress volume / health check).
+    query: |
+      sum (increase(platform_component_bytes{component="datasource", action="input"}[1h]))
+  - description: Ingress bytes per source application over the last hour (top sources).
+    query: |
+      sum by (application) (increase(platform_component_bytes{component="datasource", action="input"}[1h]))
+  - description: Per-datasource ingest rate trend (for spike / outage anomaly detection).
+    query: |
+      sum by (application) (rate(platform_component_bytes{component="datasource", action="input"}[1h]))
+  - description: Top talker datasources by ingress volume over the last hour.
+    query: |
+      topk(5, sum by (id, application) (increase(platform_component_bytes{component="datasource", action="input"}[1h])))
+  - description: Router processing errors by router over the last hour (0 = healthy).
+    query: |
+      sum by (id, application) (increase(platform_component_total{component="router", action="error"}[1h]))
+  - description: Events dropped at routers and sinks by component over the last hour.
+    query: |
+      sum by (component, id, application) (increase(platform_component_total{component=~"router|datasink", action="drop"}[1h]))

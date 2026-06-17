@@ -48,3 +48,9 @@ examples:
   - description: Total bytes egressed per datalake index over the last hour (billing view).
     query: |
       sum by (index) (increase(platform_egress_bytes[1h]))
+  - description: Total bytes egressed by destination over the last hour (e.g. eventwatch vs datalake).
+    query: |
+      sum by (dest) (increase(platform_egress_bytes[1h]))
+  - description: Total bytes egressed by event type over the last hour.
+    query: |
+      sum by (eventType) (increase(platform_egress_bytes[1h]))

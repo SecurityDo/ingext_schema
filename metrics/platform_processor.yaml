@@ -44,3 +44,6 @@ examples:
     query: |
       sum by (processor) (rate(platform_processor_total{action="error"}[5m]))
         / sum by (processor) (rate(platform_processor_total[5m]))
+  - description: Pipe processing errors by pipe and processor over the last hour (locate the failing pipe).
+    query: |
+      sum by (pipe, processor) (increase(platform_processor_total{action="error"}[1h]))
