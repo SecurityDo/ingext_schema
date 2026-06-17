@@ -1,0 +1,15 @@
+{
+    "AADOperationType": "Update",
+    "ActivityDateTime": 1781613594138,
+    "ActivityDisplayName": "Update user",
+    "AdditionalDetails": "[{\"key\":\"UserType\",\"value\":\"Member\"}]",
+    "Category": "UserManagement",
+    "CorrelationId": "11111111-1111-1111-1111-111111111111",
+    "Id": "Directory_11111111-1111-1111-1111-111111111111_TJSJ7_35053574",
+    "InitiatedBy": "{\"app\":{\"appId\":null,\"displayName\":\"Azure MFA StrongAuthenticationService\",\"servicePrincipalId\":\"22222222-2222-2222-2222-222222222222\",\"servicePrincipalName\":null},\"linkableIdentifiers\":null,\"user\":null}",
+    "LoggedByService": "Core Directory",
+    "Result": "success",
+    "ResultReason": "",
+    "TargetResources": "[{\"displayName\":null,\"groupType\":null,\"id\":\"33333333-3333-3333-3333-333333333333\",\"modifiedProperties\":[{\"displayName\":\"StrongAuthenticationPhoneAppDetail\",\"newValue\":\"[{\\\"DeviceName\\\":\\\"iPhone 13 Pro Max\\\",\\\"DeviceToken\\\":\\\"apns2-0000000000000000000000000000000000000000000000000000000000000000\\\",\\\"DeviceTag\\\":\\\"SoftwareTokenActivated\\\",\\\"PhoneAppVersion\\\":\\\"6.8.47\\\",\\\"OathTokenTimeDrift\\\":0,\\\"DeviceId\\\":\\\"00000000-0000-0000-0000-000000000000\\\",\\\"Id\\\":\\\"44444444-4444-4444-4444-444444444444\\\",\\\"TimeInterval\\\":0,\\\"AuthenticationType\\\":3,\\\"NotificationType\\\":2,\\\"LastAuthenticatedTimestamp\\\":\\\"2026-06-16T12:39:53.8037561Z\\\",\\\"AuthenticatorFlavor\\\":\\\"Authenticator\\\",\\\"HashFunction\\\":null,\\\"TenantDeviceId\\\":null,\\\"SecuredPartitionId\\\":20027,\\\"SecuredKeyId\\\":7}]\",\"oldValue\":\"[{\\\"DeviceName\\\":\\\"iPhone 13 Pro Max\\\",\\\"DeviceToken\\\":\\\"apns2-0000000000000000000000000000000000000000000000000000000000000000\\\",\\\"DeviceTag\\\":\\\"SoftwareTokenActivated\\\",\\\"PhoneAppVersion\\\":\\\"6.8.47\\\",\\\"OathTokenTimeDrift\\\":0,\\\"DeviceId\\\":\\\"00000000-0000-0000-0000-000000000000\\\",\\\"Id\\\":\\\"44444444-4444-4444-4444-444444444444\\\",\\\"TimeInterval\\\":0,\\\"AuthenticationType\\\":3,\\\"NotificationType\\\":2,\\\"LastAuthenticatedTimestamp\\\":\\\"2026-06-15T12:36:08.63758Z\\\",\\\"AuthenticatorFlavor\\\":\\\"Authenticator\\\",\\\"HashFunction\\\":null,\\\"TenantDeviceId\\\":null,\\\"SecuredPartitionId\\\":20027,\\\"SecuredKeyId\\\":7}]\"},{\"displayName\":\"Included Updated Properties\",\"newValue\":\"\\\"StrongAuthenticationPhoneAppDetail\\\"\",\"oldValue\":null},{\"displayName\":\"TargetId.UserType\",\"newValue\":\"\\\"Member\\\"\",\"oldValue\":null},{\"displayName\":\"ActorId.ServicePrincipalNames\",\"newValue\":\"\\\"55555555-5555-5555-5555-555555555555\\\"\",\"oldValue\":null},{\"displayName\":\"SPN\",\"newValue\":\"\\\"55555555-5555-5555-5555-555555555555\\\"\",\"oldValue\":null}],\"type\":\"User\",\"userPrincipalName\":\"adele.vance@contoso.com\"}]",
+    "TimeGenerated": 1781613594138
+}
