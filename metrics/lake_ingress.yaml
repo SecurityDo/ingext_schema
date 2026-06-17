@@ -1,0 +1,33 @@
+---
+note: "All metrics are monotonic counters; use rate()/increase() over a time window, never the raw
+  value."
+description: datalake ingest metrics (production name for the lake_import_* schema)
+
+
+server: VictoriaMetrics
+
+queryLanguage:
+  - PromQL
+  - MetricsQL
+
+counters:
+  - name: lake_ingress_count
+    description: datalake ingest event count
+  - name: lake_ingress_bytes
+    description: datalake ingest byte count
+
+labels:
+  - name: account
+    description: account name
+    samples: ["titan"]
+  - name: index
+    description: datalake index full name "$datalake-$index"
+    samples: ["managed-AzureAuditLogs", "managed-Office365"]
+
+examples:
+  - description: Ingested events per second by index, last 5 minutes.
+    query: |
+      sum by (index) (rate(lake_ingress_count[5m]))
+  - description: Total bytes ingested per index over the last hour.
+    query: |
+      sum by (index) (increase(lake_ingress_bytes[1h]))
