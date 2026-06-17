@@ -1,0 +1,34 @@
+---
+note: "All metrics are monotonic counters; use rate()/increase() over a time window, never the raw
+  value."
+description: datalake realtime search metrics
+
+
+server: VictoriaMetrics
+
+queryLanguage: 
+  - PromQL
+  - MetricsQL
+
+counters:
+  - name: lake_realtime_search_count
+    description: datalake realtime search event count 
+  - name: lake_realtime_search_bytes
+    description: datalake realtime search event byte count
+
+labels:
+  - name: account
+    description: account name
+  - name: index
+    description: datalake index full name "$datalake-$index"
+    samples: ["managed-Office365"]
+  - name: provider
+    description: service provider name
+
+examples:
+  - description: Searched events per second by provider, last 5 minutes.
+    query: |
+      sum by (provider) (rate(lake_realtime_search_count[5m]))
+  - description: Total bytes searched per datalake index over the last hour.
+    query: |
+      sum by (index) (increase(lake_realtime_search_bytes[1h]))

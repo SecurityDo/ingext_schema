@@ -32,7 +32,7 @@ labels:
     description: datalake name
     samples: ["managed"]
   - name: index
-    description: datalake index name
+    description: datalake index name (bare index only, not the full "$datalake-$index" form used by the lake_* metrics)
     samples: ["Office365", "default", "NetworkFortigateTraffic", "NetworkFortigateEvent"]
   - name: application
     description: application name
