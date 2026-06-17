@@ -1,4 +1,4 @@
-schema: Azure Active Directory Sign-in Logs
+schema: AzureSigninLogs
 description: "Schema for the Azure Active Directory (Entra ID) SigninLogs table. Contains interactive and non-interactive user sign-in events, including authentication, conditional access, risk, device, and location details. Query the table as SigninLogs. Dynamic fields hinted as JSON (e.g. DeviceDetail, LocationDetails, Status) support dot/bracket access directly; plain String fields holding JSON text require parse_json() first. Reference: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/signinlogs"
 fields:
 

@@ -1,4 +1,4 @@
-schema: Office365 Management Audit
+schema: Office365
 description: Unified schema for Microsoft 365 audit events. Use 'applicableWorkloads' to determine if a field is valid for the queried workload.
 fields:
 

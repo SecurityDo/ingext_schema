@@ -1,4 +1,4 @@
-schema: Azure Active Directory Audit Logs
+schema: AzureAuditLogs
 description: "Schema for the Azure Active Directory (Entra ID) AuditLogs table. Contains system activity records for user and group management, application and directory changes, and other administrative operations. Query the table as AuditLogs. Reference: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/auditlogs"
 fields:
 
