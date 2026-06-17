@@ -1,0 +1,43 @@
+{
+    "name": "log_event",
+    "fields": [
+		{
+			"name": "timestamp",
+			"fpltype": "int64",
+			"type": "INT64",
+			"convertedtype": "TIMESTAMP_MILLIS"
+		},
+		{
+			"name": "size",
+			"fpltype": "int64",
+			"type": "INT32"
+		},
+		{
+			"name": "doc",
+			"fpltype": "string",
+			"type": "BYTE_ARRAY",
+			"convertedtype": "UTF8"
+		},
+		{
+			"name": "labels",
+			"fpltype": "map",
+			"type": "MAP",
+			"nullable": true,
+			"fields": [
+				{
+					"name": "key",
+					"fpltype": "string",
+					"type": "BYTE_ARRAY",
+					"convertedtype": "UTF8"
+				},
+				{
+					"name": "value",
+					"fpltype": "string",
+					"type": "BYTE_ARRAY",
+					"convertedtype": "UTF8"
+				}
+			]
+		}
+	]
+}
+

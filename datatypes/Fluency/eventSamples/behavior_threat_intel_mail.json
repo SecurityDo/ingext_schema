@@ -1,0 +1,97 @@
+{
+    "AttributeMap": {
+        "Customer": "Office365-default",
+        "IP": "__undefined",
+        "Operation": "TIMailData",
+        "RecordType": "28",
+        "ThreatDetectionMethod": "Spoof external domain",
+        "ThreatP1Sender": "bounce+abc123xyz@example.com",
+        "ThreatP2Sender": "j.sender@example.net",
+        "ThreatPolicyAction": "__undefined",
+        "ThreatPolicyIndicator": "__undefined",
+        "ThreatSubjectLine": "Quarterly Business Review",
+        "ThreatVerdict": "Phish",
+        "UserType": "4"
+    },
+    "attributes": [
+        {
+            "aliase": "Customer",
+            "key": "@customer",
+            "value": "Office365-default"
+        },
+        {
+            "aliase": "ThreatDetectionMethod",
+            "key": "@fields.DetectionMethod",
+            "value": "Spoof external domain"
+        },
+        {
+            "aliase": "Operation",
+            "key": "@fields.Operation",
+            "value": "TIMailData"
+        },
+        {
+            "aliase": "ThreatP1Sender",
+            "key": "@fields.P1Sender",
+            "value": "bounce+abc123xyz@example.com"
+        },
+        {
+            "aliase": "ThreatP2Sender",
+            "key": "@fields.P2Sender",
+            "value": "j.sender@example.net"
+        },
+        {
+            "aliase": "ThreatPolicyIndicator",
+            "key": "@fields.Policy",
+            "value": "__undefined"
+        },
+        {
+            "aliase": "ThreatPolicyAction",
+            "key": "@fields.PolicyAction",
+            "value": "__undefined"
+        },
+        {
+            "aliase": "RecordType",
+            "key": "@fields.RecordType",
+            "value": "28"
+        },
+        {
+            "aliase": "IP",
+            "key": "@fields.SenderIP",
+            "value": "__undefined"
+        },
+        {
+            "aliase": "ThreatSubjectLine",
+            "key": "@fields.Subject",
+            "value": "Quarterly Business Review"
+        },
+        {
+            "aliase": "UserType",
+            "key": "@fields.UserType",
+            "value": "4"
+        },
+        {
+            "aliase": "ThreatVerdict",
+            "key": "@fields.Verdict",
+            "value": "Phish"
+        }
+    ],
+    "behavior": "application activity",
+    "behaviorRule": "SCC_Threat_Intelligence_Mail_Data",
+    "description": "",
+    "history": {
+        "BehaviorFirstSeen": false,
+        "KeyBehaviorFirstSeen": true,
+        "KeyFirstSeen": true,
+        "ReOccurrence": false
+    },
+    "key": "bounce+abc123xyz@example.com",
+    "keyType": "username",
+    "originalKey": "bounce+abc123xyz@example.com",
+    "originalKeyType": "username",
+    "riskScore": 0,
+    "ruleDescription": "Security Compliance Center",
+    "scoreLevel": "0",
+    "sequence": 1781722099135130400,
+    "timestamp": 1781721720000,
+    "uuid": "12345678-90ab-cdef-1234-567890abcdef"
+}
