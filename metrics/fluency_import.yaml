@@ -1,0 +1,37 @@
+---
+note: "All metrics are monotonic counters; use rate()/increase() over a time window, never the raw
+  value."
+description: The import metrics toggled by the event parser (processor) via the "Platform_Metric_Counter()" function. 
+
+
+server: VictoriaMetrics
+
+queryLanguage: 
+  - PromQL
+  - MetricsQL
+
+counters:
+  - name: fluency_import_count
+    description: import event count 
+  - name: fluency_import_bytes
+    description: import byte count
+
+labels:
+  - name: eventType
+    description: import event type
+    samples:  ["FortiGateNGFW", "Linux"]
+  - name: syslogSender
+    description: the syslog sender field, normally IP address or server name 
+  - name: importSource
+    description: asset name
+  - name: deviceType
+    description: asset/device type
+    samples: ["FortiGate NGFW", "Application Server"]
+
+examples:
+  - description: Imported events per second by event type, last 5 minutes.
+    query: |
+      sum by (eventType) (rate(fluency_import_count[5m]))
+  - description: Total bytes imported per source asset over the last hour.
+    query: |
+      sum by (importSource) (increase(fluency_import_bytes[1h]))

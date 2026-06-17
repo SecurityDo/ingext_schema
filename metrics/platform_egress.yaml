@@ -1,0 +1,50 @@
+---
+note: "All metrics are monotonic counters; use rate()/increase() over a time window, never the raw
+  value."
+description: The egress metrics used for billing purpose.  
+
+server: VictoriaMetrics
+
+queryLanguage: 
+  - PromQL
+  - MetricsQL
+
+counters:  
+  - name: platform_egress_count
+    description: egress event count
+  - name: platform_egress_bytes
+    description: egress byte count
+
+labels:
+  - name: id
+    description: component ID
+    samples: ["sink_*"]
+  - name: eventType
+    description: event types
+    samples: ["Fortigate", "Office365"]
+  - name: name
+    description: component name
+    samples:  ["EventWatch", "DatalakeOffice365"]
+  - name: dest
+    description: event destination
+    samples:  ["eventwatch", "datalake"]
+  - name: datalake
+    description: datalake name
+    samples: ["managed"]
+  - name: index
+    description: datalake index name
+    samples: ["Office365", "default", "NetworkFortigateTraffic", "NetworkFortigateEvent"]
+  - name: application
+    description: application name
+    samples: ["Office365", "GSuite"]
+  - name: appInstance
+    description: application instance name
+    samples: ["Office365-default", "GSuite-default"]
+
+examples:
+  - description: Egress events per second by destination, last 5 minutes.
+    query: |
+      sum by (dest) (rate(platform_egress_count[5m]))
+  - description: Total bytes egressed per datalake index over the last hour (billing view).
+    query: |
+      sum by (index) (increase(platform_egress_bytes[1h]))

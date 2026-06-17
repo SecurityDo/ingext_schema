@@ -1,0 +1,42 @@
+---
+note: "All metrics are monotonic counters; use rate()/increase() over a time window, never the raw
+  value."
+description: The stream fabric processor metrics. 
+
+server: VictoriaMetrics
+
+queryLanguage: 
+  - PromQL
+  - MetricsQL
+
+counters:  
+  - name: platform_processor_total
+    description: processor event count 
+  - name: platform_processor_bytes
+    description: processor byte count
+
+labels:
+  - name: pipe
+    description: pipe component ID
+    samples: ["pipe_*"]
+  - name: processor
+    description: processor name
+    samples:  ["Office365_Adjustment"]
+  - name: action
+    description: processor processing result
+    samples: ["pass", "error", "abort", "drop"]
+  - name: application
+    description: application name
+    samples: ["Office365", "GSuite"]
+  - name: appInstance
+    description: application instance name
+    samples: ["Office365-default", "GSuite-default"]
+
+examples:
+  - description: Processed events per second by processor, last 5 minutes.
+    query: |
+      sum by (processor) (rate(platform_processor_total[5m]))
+  - description: Per-processor error ratio over the last 5 minutes.
+    query: |
+      sum by (processor) (rate(platform_processor_total{action="error"}[5m]))
+        / sum by (processor) (rate(platform_processor_total[5m]))

@@ -1,0 +1,42 @@
+---
+note: "All metrics are monotonic counters; use rate()/increase() over a time window, never the raw
+  value."
+description: The stream fabric component metrics. 
+
+server: VictoriaMetrics
+
+queryLanguage: 
+  - PromQL
+  - MetricsQL
+
+counters:
+  - name: platform_component_total
+    description: component event count
+  - name: platform_component_bytes
+    description: component byte count
+
+labels:
+
+  - name: component
+    description: stream fabric component type
+    samples:  ["datasource", "router", "pipe", "datasink"]
+  - name: action
+    description: stream actions   
+    samples: ["input", "output", "pass", "error", "drop", "ignore", "compressed"]
+  - name: id
+    description: component ID
+    samples: ["src_*", "sink_*", "rt_*", "pipe-*"]
+  - name: application
+    description: application name
+    samples: ["Office365", "GSuite"]
+  - name: appInstance
+    description: application instance name
+    samples: ["Office365-default", "GSuite-default"]
+
+examples:
+  - description: Events per second by component type and action, last 5 minutes.
+    query: |
+      sum by (component, action) (rate(platform_component_total[5m]))
+  - description: Dropped and errored events per second by component ID.
+    query: |
+      sum by (id) (rate(platform_component_total{action=~"error|drop"}[5m]))
