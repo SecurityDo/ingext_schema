@@ -1,7 +1,13 @@
 ---
 note: "All metrics are monotonic counters; use rate()/increase() over a time window, never the raw
   value."
-description: The stream fabric component metrics. 
+description: The stream fabric component metrics.
+
+flow: >
+  Data flows through the platform as datasource -> router -> datasink. Each router
+  contains at least one pipe, which handles the processing and directs the data to a
+  sink. So a single logical path is: datasource (src_*) -> router (rt_*, containing one
+  or more pipes pipe_*) -> datasink (sink_*).
 
 server: VictoriaMetrics
 
@@ -21,7 +27,12 @@ labels:
     description: stream fabric component type
     samples:  ["datasource", "router", "pipe", "datasink"]
   - name: action
-    description: stream actions   
+    description: >
+      stream action. "input" is the data received by the source or router. "pass" is data
+      passed through (e.g. forwarded by a router/pipe). "output" is data emitted by a
+      component (e.g. written out by a datasink). "compressed" is the compressed (on-wire)
+      byte count at a sink. "error" / "drop" / "ignore" are events that errored, were
+      dropped, or were ignored.
     samples: ["input", "output", "pass", "error", "drop", "ignore", "compressed"]
   - name: id
     description: component ID

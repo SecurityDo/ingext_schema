@@ -23,7 +23,11 @@ labels:
     description: processor name
     samples:  ["Office365_Adjustment"]
   - name: action
-    description: processor processing result
+    description: >
+      processor (pipe) processing result. "pass" processed and passed on. "abort" means the
+      pipe aborted its processing and handed the event to the next pipe within the same
+      router -- this is NORMAL routing, NOT an error. "drop" the event was dropped. "error"
+      a processing error occurred. Only "error" indicates a failure.
     samples: ["pass", "error", "abort", "drop"]
   - name: application
     description: application name
