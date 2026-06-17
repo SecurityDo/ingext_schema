@@ -1,0 +1,34 @@
+---
+note: "This is a gauge (instantaneous value). Query the raw value or use aggregation / *_over_time functions (max_over_time, avg_over_time, etc.); do NOT use rate()/increase()."
+description: the length metric from multiple management queues
+
+
+server: VictoriaMetrics
+
+queryLanguage: 
+  - PromQL
+  - MetricsQL
+
+gauges:
+  - name: ingext_queue_length
+    description: internal management queue length, measured as the number of pending items currently in the queue
+
+labels:
+  - name: provider
+    description: service provider name
+  - name: account
+    description: account name
+  - name: service
+    description: service name
+    samples: ["behavior", "ml", "datalake", "eventwatch"]
+
+examples:
+  - description: Current queue length by service.
+    query: |
+      sum by (service) (ingext_queue_length)
+  - description: Peak queue length per service over the last hour.
+    query: |
+      max by (service) (max_over_time(ingext_queue_length[1h]))
+  - description: Top 10 most-backlogged queues right now (by service and account).
+    query: |
+      topk(10, ingext_queue_length)
