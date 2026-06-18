@@ -27,11 +27,17 @@ Not every data type includes all of these files yet.
 - `AzureAudit`
 - `CloudTrail`
 - `Cortex`
+- `Fluency`
 - `Fortigate`
 - `GSuite`
 - `K8sContainerLog`
 - `Office365`
-- `Office365Resources`
+- `Office365Resources` — Entra ID / Microsoft 365 directory resource snapshots, with a schema per resource type:
+  - `office365User` — directory users (profile, licenses, group/role membership, MFA/SSPR registration)
+  - `office365Group` — groups (type/security flags, membership, dynamic membership rule)
+  - `office365Device` — registered/joined devices (OS, compliance, trust type, last sign-in)
+  - `office365Application` — application registrations (credentials, requested API permissions, redirect config)
+  - `office365InstalledApp` — service principals / enterprise applications (consent, credentials, exposed permissions)
 - `WindowsAudit`
 
 ## Note on samples
