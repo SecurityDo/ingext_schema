@@ -22,7 +22,7 @@ fields:
 
   - name: _key
     type: String
-    description: "Resource key used to identify/deduplicate the device record; typically the device's id (object id) or deviceId."
+    description: "Resource key used to identify/deduplicate the device record; typically the device's id (object id) or deviceId. Unique per resource: each _key holds the latest snapshot, so no arg_max/dedup is needed."
 
   # ==========================================
   # IDENTITY

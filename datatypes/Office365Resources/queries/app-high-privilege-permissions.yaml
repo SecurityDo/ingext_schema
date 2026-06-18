@@ -2,10 +2,9 @@ description: >-
   Finds application registrations that request high-privilege Microsoft Graph (or
   other API) application permissions (type == "Role", i.e. app-only consent that
   does not require a signed-in user). Flattens the nested requiredResourceAccess
-  structure and keeps only sensitive permissions. Uses arg_max to evaluate only
-  the most recent snapshot per app. This is a core app-governance report for
-  spotting over-privileged or risky service principals after an alert or during
-  access review.
+  structure and keeps only sensitive permissions. This is a core app-governance
+  report for spotting over-privileged or risky service principals after an alert
+  or during access review.
 datatype: office365Application
 kql: |
   let HighPrivPerms = dynamic([
@@ -18,7 +17,6 @@ kql: |
       "RoleManagement.ReadWrite.Directory"
   ]);
   office365Application
-  | summarize arg_max(timestamp, *) by _key
   | mv-expand rra = requiredResourceAccess
   | mv-expand ra = rra.resourceAccess
   | extend

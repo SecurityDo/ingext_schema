@@ -2,14 +2,12 @@ description: >-
   Inventory of enabled enterprise applications (service principals) in the tenant,
   classifying each as a Microsoft first-party app or a third-party / own-tenant app
   (via appOwnerOrganizationId) and counting any credentials (client secrets +
-  certificates) attached to the service principal. Uses arg_max to evaluate only
-  the most recent snapshot per app. Credentialed or third-party enterprise apps are
-  prime targets for consent/credential review after an alert.
+  certificates) attached to the service principal. Credentialed or third-party
+  enterprise apps are prime targets for consent/credential review after an alert.
 datatype: office365InstalledApp
 kql: |
   let MicrosoftTenantId = "f8cdef31-a31e-4b4a-93e4-5f571e91255a";
   office365InstalledApp
-  | summarize arg_max(timestamp, *) by _key
   | where accountEnabled == true
   | extend
       Publisher = iff(appOwnerOrganizationId == MicrosoftTenantId, "Microsoft (first-party)", "Third-party / own tenant"),

@@ -1,14 +1,12 @@
 description: >-
   Finds enabled devices that have not signed in for more than 90 days
   (approximateLastSignInDateTime older than the threshold), i.e. stale device
-  registrations that should be reviewed and cleaned up. Uses arg_max to evaluate
-  only the most recent snapshot per device. Stale, still-enabled device objects
-  expand the attack surface and are a common access-review finding.
+  registrations that should be reviewed and cleaned up. Stale, still-enabled
+  device objects expand the attack surface and are a common access-review finding.
 datatype: office365Device
 kql: |
   let StaleThreshold = 90d;
   office365Device
-  | summarize arg_max(timestamp, *) by _key
   | where accountEnabled == true
   | extend LastSeen = todatetime(approximateLastSignInDateTime)
   | where isnotempty(LastSeen) and LastSeen < ago(StaleThreshold)

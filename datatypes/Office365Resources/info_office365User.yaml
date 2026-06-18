@@ -21,7 +21,7 @@ fields:
 
   - name: _key
     type: String
-    description: "Resource key used to identify/deduplicate the user record; typically the user's userId or userPrincipalName."
+    description: "Resource key used to identify/deduplicate the user record; typically the user's userId or userPrincipalName. Unique per resource: each _key holds the latest snapshot, so no arg_max/dedup is needed."
 
   # ==========================================
   # IDENTITY & PROFILE

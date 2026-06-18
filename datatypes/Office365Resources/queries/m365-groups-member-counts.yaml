@@ -1,13 +1,11 @@
 description: >-
   Lists Microsoft 365 ("Unified") groups with their member counts and key
-  settings (visibility, mail/security flags), ordered by size. Uses arg_max to
-  evaluate only the most recent snapshot per group. Useful for group inventory,
-  spotting empty or oversized collaboration groups, and reviewing the visibility
-  of M365 groups during an access review.
+  settings (visibility, mail/security flags), ordered by size. Useful for group
+  inventory, spotting empty or oversized collaboration groups, and reviewing the
+  visibility of M365 groups during an access review.
 datatype: office365Group
 kql: |
   office365Group
-  | summarize arg_max(timestamp, *) by _key
   | where groupTypes has "Unified"
   | extend MemberCount = array_length(members)
   | project

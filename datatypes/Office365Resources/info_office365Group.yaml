@@ -22,7 +22,7 @@ fields:
 
   - name: _key
     type: String
-    description: "Resource key used to identify/deduplicate the group record; typically the group's id (object id)."
+    description: "Resource key used to identify/deduplicate the group record; typically the group's id (object id). Unique per resource: each _key holds the latest snapshot, so no arg_max/dedup is needed."
 
   # ==========================================
   # IDENTITY
