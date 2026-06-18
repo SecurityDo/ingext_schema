@@ -1,0 +1,130 @@
+{
+    "accountEnabled": true,
+    "assignedLicenses": [
+      {
+        "disabledPlans": [],
+        "skuId": "f245ecc8-75af-4f8e-b61f-27d8114de5f3"
+      }
+    ],
+    "assignedPlans": [
+      {
+        "assignedDateTime": "2025-11-25T22:51:51Z",
+        "capabilityStatus": "Enabled",
+        "service": "exchange",
+        "servicePlanId": "199a5c09-e0ca-4e37-8f7c-b05d533e1ea2"
+      },
+      {
+        "assignedDateTime": "2025-11-25T22:51:51Z",
+        "capabilityStatus": "Enabled",
+        "service": "SharePoint",
+        "servicePlanId": "c7699d2e-19aa-44de-8edf-1736da088ca1"
+      },
+      {
+        "assignedDateTime": "2025-11-25T22:51:51Z",
+        "capabilityStatus": "Enabled",
+        "service": "MicrosoftCommunicationsOnline",
+        "servicePlanId": "0feaeb32-d00e-4d66-bd5a-43b5b83db82c"
+      },
+      {
+        "assignedDateTime": "2025-11-25T22:51:51Z",
+        "capabilityStatus": "Enabled",
+        "service": "To-Do",
+        "servicePlanId": "5e62787c-c316-451f-b873-1d05acd4d12c"
+      },
+      {
+        "assignedDateTime": "2025-11-25T22:51:51Z",
+        "capabilityStatus": "Deleted",
+        "service": "CRM",
+        "servicePlanId": "40b010bb-0b69-4654-ac5e-ba161433f4b4"
+      }
+    ],
+    "authMethodCount": 3,
+    "authMethods": [
+      "microsoftAuthenticatorPush",
+      "mobilePhone",
+      "softwareOneTimePasscode"
+    ],
+    "businessPhones": [],
+    "companyName": null,
+    "createdDateTime": "2017-01-10T18:27:42Z",
+    "department": null,
+    "displayName": "Adele Vance",
+    "givenName": "Adele",
+    "groupIDs": [
+      "22222222-2222-2222-2222-000000000001",
+      "22222222-2222-2222-2222-000000000002",
+      "22222222-2222-2222-2222-000000000003",
+      "22222222-2222-2222-2222-000000000004",
+      "22222222-2222-2222-2222-000000000005"
+    ],
+    "groups": [
+      "All Users",
+      "Sales",
+      "Marketing",
+      "SecOps",
+      "Support"
+    ],
+    "id": "11111111-1111-1111-1111-111111111111",
+    "identities": [
+      {
+        "issuer": "contoso.onmicrosoft.com",
+        "issuerAssignedId": "adele.vance@contoso.com",
+        "signInType": "userPrincipalName"
+      }
+    ],
+    "jobTitle": null,
+    "mail": "adele.vance@contoso.com",
+    "mobilePhone": null,
+    "oauth2Applications": [
+      "Calendly",
+      "Zoom for Outlook",
+      "DocuSign",
+      "Contoso Internal App",
+      "ServiceNow"
+    ],
+    "officeLocation": null,
+    "passwordPolicies": "None",
+    "preferredLanguage": "en-US",
+    "roleIDs": [
+      "33333333-3333-3333-3333-000000000001"
+    ],
+    "roles": [
+      "Global Administrator"
+    ],
+    "surname": "Vance",
+    "usageLocation": "US",
+    "userPrincipalName": "adele.vance@contoso.com",
+    "userRegistration": {
+      "authMethods": [
+        "microsoftAuthenticatorPush",
+        "mobilePhone",
+        "softwareOneTimePasscode"
+      ],
+      "id": "11111111-1111-1111-1111-111111111111",
+      "isAdmin": true,
+      "isCapable": false,
+      "isEnabled": false,
+      "isMfaCapable": true,
+      "isMfaRegistered": true,
+      "isPasswordlessCapable": false,
+      "isRegistered": false,
+      "isSsprCapable": true,
+      "isSsprEnabled": true,
+      "isSsprRegistered": true,
+      "isSystemPreferredAuthenticationMethodEnabled": true,
+      "lastUpdatedDateTime": "2026-06-15T16:12:00.2419574Z",
+      "methodsRegistered": [
+        "mobilePhone",
+        "microsoftAuthenticatorPush",
+        "softwareOneTimePasscode"
+      ],
+      "systemPreferredAuthenticationMethods": [
+        "PhoneAppNotification"
+      ],
+      "userDisplayName": "Adele Vance",
+      "userPreferredMethodForSecondaryAuthentication": "sms",
+      "userPrincipalName": "adele.vance@contoso.com",
+      "userType": "member"
+    },
+    "userType": "Member"
+  }

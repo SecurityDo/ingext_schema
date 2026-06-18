@@ -1,0 +1,51 @@
+{
+    "name": "resource",
+    "dynamic": true,
+    "fields": [
+		{
+			"name": "timestamp",
+			"fpltype": "int64",
+			"type": "INT64",
+			"convertedtype": "TIMESTAMP_MILLIS"
+		},
+		{
+			"name": "size",
+			"fpltype": "int64",
+			"type": "INT32"
+		},
+		{
+			"name": "doc",
+			"fpltype": "string",
+			"type": "BYTE_ARRAY",
+			"convertedtype": "UTF8",
+			"logical_hint": "kusto_dynamic_json"
+		},
+		{
+                        "name": "_key",
+                        "fpltype": "string",
+                        "type": "BYTE_ARRAY",
+                        "convertedtype": "UTF8"
+                },
+		{
+			"name": "labels",
+			"fpltype": "map",
+			"type": "MAP",
+			"nullable": true,
+			"fields": [
+				{
+					"name": "key",
+					"fpltype": "string",
+					"type": "BYTE_ARRAY",
+					"convertedtype": "UTF8"
+				},
+				{
+					"name": "value",
+					"fpltype": "string",
+					"type": "BYTE_ARRAY",
+					"convertedtype": "UTF8"
+				}
+			]
+		}
+	]
+}
+
