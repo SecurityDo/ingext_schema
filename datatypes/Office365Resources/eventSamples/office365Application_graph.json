@@ -1,0 +1,170 @@
+{
+    "addIns": [],
+    "api": {
+      "acceptMappedClaims": null,
+      "knownClientApplications": [],
+      "oauth2PermissionScopes": [],
+      "preAuthorizedApplications": [],
+      "requestedAccessTokenVersion": null
+    },
+    "appId": "aef75665-0000-0000-0000-000000000001",
+    "appRoles": [],
+    "applicationTemplateId": null,
+    "certification": null,
+    "createdByAppId": "18ed3507-0000-0000-0000-000000000001",
+    "createdDateTime": "2026-05-06T18:51:51Z",
+    "defaultRedirectUri": null,
+    "deletedDateTime": null,
+    "description": null,
+    "disabledByMicrosoftStatus": null,
+    "displayName": "Contoso Audit Connector",
+    "groupMembershipClaims": null,
+    "id": "0ee039ca-0000-0000-0000-000000000001",
+    "identifierUris": [],
+    "info": {
+      "logoUrl": null,
+      "marketingUrl": null,
+      "privacyStatementUrl": null,
+      "supportUrl": null,
+      "termsOfServiceUrl": null
+    },
+    "isDeviceOnlyAuthSupported": null,
+    "isDisabled": null,
+    "isFallbackPublicClient": null,
+    "keyCredentials": [],
+    "nativeAuthenticationApisEnabled": null,
+    "notes": null,
+    "optionalClaims": null,
+    "parentalControlSettings": {
+      "countriesBlockedForMinors": [],
+      "legalAgeGroupRule": "Allow"
+    },
+    "passwordCredentials": [
+      {
+        "customKeyIdentifier": null,
+        "displayName": "Contoso Integration",
+        "endDateTime": "2028-05-05T18:58:11.826Z",
+        "hint": "abc",
+        "keyId": "9c9c801c-0000-0000-0000-000000000001",
+        "secretText": null,
+        "startDateTime": "2026-05-06T18:58:11.826Z"
+      }
+    ],
+    "publicClient": {
+      "redirectUris": []
+    },
+    "publisherDomain": "contoso.com",
+    "requestSignatureVerification": null,
+    "requiredResourceAccess": [
+      {
+        "resourceAccess": [
+          {
+            "displayType": "Application",
+            "id": "b0afded3-3588-46d8-8b3d-9842eff778da",
+            "permission": "AuditLog.Read.All",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
+            "permission": "Directory.Read.All",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "5b567255-7703-4780-807c-7be8301ae99b",
+            "permission": "Group.Read.All",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "40f97065-369a-49f4-947c-6a255697ae91",
+            "permission": "MailboxSettings.Read",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "246dd0d5-5bd0-4def-940b-0421030a5b68",
+            "permission": "Policy.Read.All",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "230c1aed-a721-4c5d-9cb4-a90514e508ef",
+            "permission": "Reports.Read.All",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "df021288-bdef-4463-88db-98f22de89214",
+            "permission": "User.Read.All",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "38d9df27-64da-44fd-b7c5-a6fbac20248f",
+            "permission": "UserAuthenticationMethod.Read.All",
+            "type": "Role"
+          }
+        ],
+        "resourceAppId": "00000003-0000-0000-c000-000000000000",
+        "resourceName": "Microsoft Graph"
+      },
+      {
+        "resourceAccess": [
+          {
+            "displayType": "Application",
+            "id": "e2cea78f-e743-4d8f-a16a-75b629a038ae",
+            "permission": "ServiceHealth.Read",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "594c1fb6-4f81-4475-ae41-0c394909246c",
+            "permission": "ActivityFeed.Read",
+            "type": "Role"
+          },
+          {
+            "displayType": "Application",
+            "id": "4807a72c-ad38-4250-94c9-4eabfe26cd55",
+            "permission": "ActivityFeed.ReadDlp",
+            "type": "Role"
+          }
+        ],
+        "resourceAppId": "c5393580-f805-4401-95e8-94b7a6ef2fc2",
+        "resourceName": "Office 365 Management APIs"
+      }
+    ],
+    "samlMetadataUrl": null,
+    "serviceManagementReference": null,
+    "servicePrincipalLockConfiguration": {
+      "allProperties": true,
+      "credentialsWithUsageSign": true,
+      "credentialsWithUsageVerify": true,
+      "identifierUris": false,
+      "isEnabled": true,
+      "tokenEncryptionKeyId": true
+    },
+    "signInAudience": "AzureADMyOrg",
+    "spa": {
+      "redirectUris": []
+    },
+    "tags": [],
+    "tokenEncryptionKeyId": null,
+    "uniqueName": null,
+    "verifiedPublisher": {
+      "addedDateTime": null,
+      "displayName": null,
+      "verifiedPublisherId": null
+    },
+    "web": {
+      "homePageUrl": null,
+      "implicitGrantSettings": {
+        "enableAccessTokenIssuance": false,
+        "enableIdTokenIssuance": false
+      },
+      "logoutUrl": null,
+      "redirectUriSettings": [],
+      "redirectUris": []
+    }
+  }
