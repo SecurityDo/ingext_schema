@@ -1,0 +1,53 @@
+{
+    "classification": null,
+    "createdDateTime": "2022-12-19T02:16:28Z",
+    "creationOptions": [
+      "AllowFileSharingForGuestUsers",
+      "SPSiteLanguage:1033",
+      "HubSiteId:00000000-0000-0000-0000-000000000000",
+      "ProvisionGroupHomepage"
+    ],
+    "deletedDateTime": null,
+    "description": "Contoso project workspace",
+    "displayName": "Contoso Project Team",
+    "expirationDateTime": null,
+    "groupTypes": [
+      "Unified"
+    ],
+    "id": "4db0f80b-0000-0000-0000-000000000001",
+    "infoCatalogs": [],
+    "isAssignableToRole": null,
+    "mail": "projectteam@contoso.com",
+    "mailEnabled": true,
+    "mailNickname": "projectteam",
+    "members": [
+      "403af654-0000-0000-0000-000000000001",
+      "be74e305-0000-0000-0000-000000000001",
+      "ef2a7ea4-0000-0000-0000-000000000001"
+    ],
+    "membershipRule": null,
+    "membershipRuleProcessingState": null,
+    "onPremisesDomainName": null,
+    "onPremisesLastSyncDateTime": null,
+    "onPremisesNetBiosName": null,
+    "onPremisesProvisioningErrors": [],
+    "onPremisesSamAccountName": null,
+    "onPremisesSecurityIdentifier": null,
+    "onPremisesSyncEnabled": null,
+    "preferredDataLocation": null,
+    "preferredLanguage": null,
+    "proxyAddresses": [
+      "SMTP:projectteam@contoso.com",
+      "smtp:projectteam@contoso.onmicrosoft.com",
+      "SPO:SPO_2ceb962b-0000-0000-0000-000000000001@SPO_a1e10289-0000-0000-0000-000000000001"
+    ],
+    "renewedDateTime": "2022-12-19T02:16:28Z",
+    "resourceBehaviorOptions": [],
+    "resourceProvisioningOptions": [],
+    "securityEnabled": false,
+    "securityIdentifier": "S-1-12-1-0000000000-0000000000-0000000000-0000000000",
+    "serviceProvisioningErrors": [],
+    "theme": null,
+    "uniqueName": null,
+    "visibility": "Private"
+  }
