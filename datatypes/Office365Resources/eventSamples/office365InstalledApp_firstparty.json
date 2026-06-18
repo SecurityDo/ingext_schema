@@ -1,0 +1,53 @@
+{
+    "accountEnabled": true,
+    "addIns": [],
+    "alternativeNames": [],
+    "appDescription": null,
+    "appDisplayName": "Teams ACL management service",
+    "appId": "6208afad-753e-4995-bbe1-1dfd204b3030",
+    "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+    "appRoleAssignmentRequired": false,
+    "appRoles": [],
+    "applicationTemplateId": null,
+    "createdByAppId": null,
+    "createdDateTime": "2021-05-19T18:10:42Z",
+    "deletedDateTime": null,
+    "description": null,
+    "disabledByMicrosoftStatus": null,
+    "displayName": "Teams ACL management service",
+    "homepage": null,
+    "id": "00da0565-0000-0000-0000-000000000001",
+    "info": {
+      "logoUrl": null,
+      "marketingUrl": null,
+      "privacyStatementUrl": null,
+      "supportUrl": null,
+      "termsOfServiceUrl": null
+    },
+    "isDisabled": null,
+    "keyCredentials": [],
+    "loginUrl": null,
+    "logoutUrl": null,
+    "notes": null,
+    "notificationEmailAddresses": [],
+    "oauth2PermissionScopes": [],
+    "passwordCredentials": [],
+    "preferredSingleSignOnMode": null,
+    "preferredTokenSigningKeyThumbprint": null,
+    "replyUrls": [],
+    "resourceSpecificApplicationPermissions": [],
+    "samlSingleSignOnSettings": null,
+    "servicePrincipalNames": [
+      "https://api.teams.contacts.skype.com",
+      "6208afad-753e-4995-bbe1-1dfd204b3030"
+    ],
+    "servicePrincipalType": "Application",
+    "signInAudience": "AzureADMultipleOrgs",
+    "tags": [],
+    "tokenEncryptionKeyId": null,
+    "verifiedPublisher": {
+      "addedDateTime": null,
+      "displayName": null,
+      "verifiedPublisherId": null
+    }
+  }
