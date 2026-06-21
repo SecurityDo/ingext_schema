@@ -22,14 +22,14 @@ fields:
 
   - name: _key
     type: String
-    description: "Resource key used to identify/deduplicate the finding; mapped to the CveId field. Each _key holds the latest snapshot for that CVE, so no arg_max/dedup is needed."
+    description: "Resource key used to identify/deduplicate the finding; mapped to the FindingId field (unique per finding instance, so the same CVE on multiple assets is kept separately). Each _key holds the latest snapshot for that finding, so no arg_max/dedup is needed."
 
   # ==========================================
   # VULNERABILITY IDENTITY & SCORING
   # ==========================================
   - name: CveId
     type: String
-    description: "The CVE identifier for the vulnerability; source of _key."
+    description: "The CVE identifier for the vulnerability."
     sampleValues: ["CVE-2026-28780"]
 
   - name: CvssScore
@@ -100,7 +100,7 @@ fields:
 
   - name: FindingId
     type: Integer
-    description: "Black Kite's unique numeric ID for this specific finding instance."
+    description: "Black Kite's unique numeric ID for this specific finding instance; source of _key."
     sampleValues: ["600000001"]
 
   - name: FindingDate
