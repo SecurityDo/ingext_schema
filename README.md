@@ -25,6 +25,8 @@ Not every data type includes all of these files yet.
 ## Data types
 
 - `AzureAudit`
+- `BlackKite` — Black Kite third-party cyber-risk findings, with a schema per resource type:
+  - `blackkiteFinding` — attack-surface vulnerability findings (affected domain/IP/product, CVE with CVSS/CWE/EPSS and CISA KEV status, severity/status, linked tickets)
 - `CloudTrail`
 - `Cortex`
 - `Fluency`
