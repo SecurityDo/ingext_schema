@@ -41,6 +41,10 @@ Not every data type includes all of these files yet.
   - `office365Device` — registered/joined devices (OS, compliance, trust type, last sign-in)
   - `office365Application` — application registrations (credentials, requested API permissions, redirect config)
   - `office365InstalledApp` — service principals / enterprise applications (consent, credentials, exposed permissions)
+- `SentinelOne` — SentinelOne endpoint resource snapshots, with a schema per resource type:
+  - `sentinelOneAgent` — installed agents/endpoints (hardware/OS, agent version and health, mitigation posture, scan and threat status, site/group placement)
+  - `sentinelOneApplication` — installed applications per endpoint (name/version/publisher, signed/risk level, install/update times, denormalized agent fields)
+  - `sentinelOneThreat` — detected threats (file/classification, confidence, analyst verdict, mitigation/incident status, behavioral indicators, agent context at detection and real time)
 - `WindowsAudit`
 
 ## Note on samples

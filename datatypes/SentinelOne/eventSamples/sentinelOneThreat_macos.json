@@ -1,0 +1,97 @@
+{
+  "id": "2000000000000000003",
+  "indicators": [
+    {
+      "category": "Persistence",
+      "description": "Process added a suspicious property list to achieve persistency"
+    },
+    {
+      "category": "Execution",
+      "description": "A launchctl command was executed"
+    },
+    {
+      "category": "Discovery",
+      "description": "Process performed system service discovery"
+    },
+    {
+      "category": "Discovery",
+      "description": "User accounts were queried"
+    },
+    {
+      "category": "Discovery",
+      "description": "Process attempted to discover group permissions on the endpoint"
+    },
+    {
+      "category": "Execution",
+      "description": "Shell script was executed"
+    },
+    {
+      "category": "General",
+      "description": "Detected an application with an entitlement that disable library validation"
+    },
+    {
+      "category": "Infostealer",
+      "description": "Keychain was queried"
+    },
+    {
+      "category": "Discovery",
+      "description": "Process ran system information discovery"
+    },
+    {
+      "category": "Defense Evasion",
+      "description": "Possible hidden information in image file"
+    }
+  ],
+  "mitigationStatus": [],
+  "threatInfo": {
+    "analystVerdict": "undefined",
+    "analystVerdictDescription": "Undefined",
+    "automaticallyResolved": false,
+    "classification": "Malware",
+    "classificationSource": "Static",
+    "cloudFilesHashVerdict": "",
+    "confidenceLevel": "suspicious",
+    "createdAt": "2026-05-22T06:26:10.623405Z",
+    "processUser": "alex.wilber",
+    "mitigationStatus": "not_mitigated",
+    "publisherName": "Grammarly, Inc",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "threatName": "Grammarly Desktop",
+    "whiteningOptions": null,
+    "incidentStatus": "unresolved",
+    "fileExtensionType": "",
+    "filePath": "/Applications/Grammarly Desktop.app/Contents/MacOS/Grammarly Desktop",
+    "fileSize": 157280,
+    "fileVerificationType": "SignedVerified",
+    "threatId": "2000000000000000003"
+  },
+  "agentDetectionInfo": {
+    "agentUuid": "00000000-0000-0000-0000-000000000001",
+    "agentVersion": "25.2.1.8151",
+    "groupName": "Workstations",
+    "siteName": "Contoso",
+    "accountName": "Contoso - Production",
+    "agentDomain": "",
+    "agentLastLoggedInUserName": "alex.wilber",
+    "agentMitigationMode": "detect",
+    "agentOsName": "macOS",
+    "agentIpV4": "127.0.0.1,192.0.2.22",
+    "externalIp": "198.51.100.23"
+  },
+  "agentRealtimeInfo": {
+    "agentComputerName": "alex-macbookpro",
+    "agentMachineType": "laptop",
+    "agentUuid": "00000000-0000-0000-0000-000000000001",
+    "agentVersion": "25.2.1.8151",
+    "groupName": "Workstations",
+    "siteName": "Contoso",
+    "accountName": "Contoso - Production",
+    "agentDomain": "",
+    "agentLastLoggedInUserName": "",
+    "agentMitigationMode": "detect",
+    "agentOsName": "macOS",
+    "agentIpV4": "",
+    "externalIp": ""
+  },
+  "createdOn": 1779431170623
+}
