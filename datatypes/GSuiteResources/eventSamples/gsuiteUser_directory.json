@@ -1,0 +1,43 @@
+{
+  "agreedToTerms": true,
+  "creationTime": "2026-05-04T08:31:15.000Z",
+  "customerId": "C00000000",
+  "emails": [
+    {
+      "address": "adele.vance@contoso.com",
+      "primary": true
+    },
+    {
+      "address": "adele.vance@contoso.io"
+    },
+    {
+      "address": "adele.vance@contoso.net"
+    }
+  ],
+  "etag": "\"00000000000000000000000000000000/00000000000000000000000000000000\"",
+  "id": "100000000000000000001",
+  "includeInGlobalAddressList": true,
+  "isEnforcedIn2Sv": true,
+  "isMailboxSetup": true,
+  "kind": "admin#directory#user",
+  "languages": [
+    {
+      "languageCode": "en",
+      "preference": "preferred"
+    }
+  ],
+  "lastLoginTime": "2026-06-10T12:08:00.000Z",
+  "name": {
+    "familyName": "Vance",
+    "fullName": "Adele Vance",
+    "givenName": "Adele"
+  },
+  "nonEditableAliases": [
+    "adele@contoso.io",
+    "adele@contoso.net"
+  ],
+  "orgUnitPath": "/",
+  "primaryEmail": "adele.vance@contoso.com",
+  "recoveryEmail": "adele.vance.recovery@example.com",
+  "recoveryPhone": "+12025550123"
+}

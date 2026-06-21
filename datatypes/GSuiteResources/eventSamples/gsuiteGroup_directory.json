@@ -1,0 +1,44 @@
+{
+  "adminCreated": true,
+  "description": "Group for all administrators",
+  "directMembersCount": "3",
+  "email": "administrators@contoso.com",
+  "etag": "\"00000000000000000000000000000000/00000000000000000000000000000000\"",
+  "id": "01abcde20fghij3",
+  "kind": "admin#directory#group",
+  "name": "Administrators",
+  "nonEditableAliases": [
+    "administrators@contoso.io",
+    "administrators@contoso.net",
+    "administrators@contoso.org"
+  ],
+  "members": [
+    {
+      "email": "adele.vance@contoso.com",
+      "etag": "\"00000000000000000000000000000000/11111111111111111111111111111111\"",
+      "id": "100000000000000000001",
+      "kind": "admin#directory#member",
+      "role": "MEMBER",
+      "status": "ACTIVE",
+      "type": "USER"
+    },
+    {
+      "email": "alex.wilber@contoso.com",
+      "etag": "\"00000000000000000000000000000000/22222222222222222222222222222222\"",
+      "id": "100000000000000000002",
+      "kind": "admin#directory#member",
+      "role": "MEMBER",
+      "status": "ACTIVE",
+      "type": "USER"
+    },
+    {
+      "email": "sam.cole@contoso.com",
+      "etag": "\"00000000000000000000000000000000/33333333333333333333333333333333\"",
+      "id": "100000000000000000003",
+      "kind": "admin#directory#member",
+      "role": "OWNER",
+      "status": "ACTIVE",
+      "type": "USER"
+    }
+  ]
+}

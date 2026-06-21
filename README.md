@@ -30,6 +30,9 @@ Not every data type includes all of these files yet.
 - `Fluency`
 - `Fortigate`
 - `GSuite`
+- `GSuiteResources` — Google Workspace (GSuite) directory resource snapshots, with a schema per resource type:
+  - `gsuiteUser` — directory users (profile/name, primary and alias emails, org unit, account/admin status, 2-Step Verification, recovery info)
+  - `gsuiteGroup` — directory groups (name/email, description, aliases, direct member count, expanded member list with role/status/type)
 - `K8sContainerLog`
 - `Office365`
 - `Office365Resources` — Entra ID / Microsoft 365 directory resource snapshots, with a schema per resource type:
