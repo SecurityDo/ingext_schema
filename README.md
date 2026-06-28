@@ -43,6 +43,8 @@ Not every data type includes all of these files yet.
   - `office365Device` — registered/joined devices (OS, compliance, trust type, last sign-in)
   - `office365Application` — application registrations (credentials, requested API permissions, redirect config)
   - `office365InstalledApp` — service principals / enterprise applications (consent, credentials, exposed permissions)
+- `Qualys` — Qualys resource snapshots, with a schema per resource type:
+  - `qualysHost` — tracked host assets (identity/FQDN and Qualys host IDs, IP, OS/hardware, last vuln & compliance scan and boot times, and a nested `agentInfo` Cloud Agent object; `timestamp` from `created`, `_key` from `name`)
 - `SentinelOne` — SentinelOne endpoint resource snapshots, with a schema per resource type:
   - `sentinelOneAgent` — installed agents/endpoints (hardware/OS, agent version and health, mitigation posture, scan and threat status, site/group placement)
   - `sentinelOneApplication` — installed applications per endpoint (name/version/publisher, signed/risk level, install/update times, denormalized agent fields)
