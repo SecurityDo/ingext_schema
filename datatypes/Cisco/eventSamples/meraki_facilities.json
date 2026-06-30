@@ -1,0 +1,87 @@
+[
+  {
+    "dport": 53,
+    "dst": "208.67.220.220",
+    "facility": "ip_flow_start",
+    "protocol": "udp",
+    "sport": 33443,
+    "src": "172.31.188.82",
+    "translated_port": 33301,
+    "translated_src_ip": "192.0.2.214"
+  },
+  {
+    "dport": 53,
+    "dst": "208.67.220.220",
+    "facility": "ip_flow_end",
+    "protocol": "udp",
+    "sport": 55603,
+    "src": "172.31.188.82",
+    "translated_port": 55603,
+    "translated_src_ip": "192.0.2.214"
+  },
+  {
+    "action": "allow",
+    "dport": 15600,
+    "dst": "239.255.255.250",
+    "facility": "flows",
+    "mac": "38:8C:EF:38:BD:74",
+    "protocol": "udp",
+    "sport": 47479,
+    "src": "192.168.116.5"
+  },
+  {
+    "dport": 53,
+    "dst": "172.16.19.100",
+    "facility": "vpn_firewall",
+    "pattern": "allow all",
+    "protocol": "udp",
+    "sport": 40581,
+    "src": "10.152.2.15"
+  },
+  {
+    "agent": "Android Version 11 Ztunnel/1.0",
+    "dport": 443,
+    "dst": "198.51.100.16",
+    "facility": "urls",
+    "http_method": "CONNECT",
+    "mac": "0A:B4:B9:86:95:C9",
+    "request": "CONNECT http://www.zscaler.com:80",
+    "sport": 38964,
+    "src": "192.168.115.20",
+    "url": "http://www.zscaler.com:80"
+  },
+  {
+    "dport": 53,
+    "dst": "172.16.19.100",
+    "facility": "vpn_firewall",
+    "pattern": "allow all",
+    "protocol": "udp",
+    "sport": 50174,
+    "src": "10.151.196.2"
+  },
+  {
+    "decision": "blocked",
+    "dport": 15600,
+    "dst": "192.168.119.255",
+    "facility": "l7_firewall",
+    "protocol": "udp",
+    "sport": 36905,
+    "src": "192.168.115.230"
+  },
+  {
+    "facility": "events",
+    "message": "type=wpa_deauth radio='0' vap='0' client_mac='24:C8:6E:11:6A:03' client_ip='172.21.137.91'"
+  },
+  {
+    "action": "block",
+    "disposition": "malicious",
+    "dst": "192.0.2.85:80",
+    "facility": "security_event",
+    "mac": "44:A3:BB:DB:E5:AC",
+    "name": "",
+    "sha256": "ea5154c98023e6be3de5626e59f2366ef70b1cf6b323b8ae60afa669c0b42d63",
+    "src": "192.168.112.46:49675",
+    "subType": "security_filtering_file_scanned",
+    "url": "http://download.windowsupdate.com/c/msdownload/update/others/2026/06/45555689_ee37b9aa549e8b7a68802635ee3ad0ded39c5050.cab"
+  }
+]
