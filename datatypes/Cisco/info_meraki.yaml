@@ -18,7 +18,7 @@ fields:
   - name: facility
     type: String
     description: "The event type/category. Determines which fields are populated."
-    sampleValues: ["flows", "firewall", "urls", "events", "ip_flow_start", "ip_flow_end", "vpn_firewall", "l7_firewall"]
+    sampleValues: ["flows", "firewall", "urls", "events", "ip_flow_start", "ip_flow_end", "vpn_firewall", "l7_firewall", "security_event"]
     applicableFacility: ["All"]
 
   - name: labels.device
@@ -37,15 +37,15 @@ fields:
   # ==========================================
   - name: src
     type: String
-    description: "Source IP address of the connection."
-    sampleValues: ["192.168.112.92", "172.29.99.204"]
-    applicableFacility: ["flows", "firewall", "ip_flow_start", "ip_flow_end", "urls", "vpn_firewall", "l7_firewall"]
+    description: "Source IP address of the connection. NOTE: in the security_event facility this field carries the port appended as IP:port (e.g. 192.168.112.46:49675); split on ':' to separate IP from port. In flow/firewall facilities it is a bare IP and the port is in sport."
+    sampleValues: ["192.168.112.92", "172.29.99.204", "192.168.112.46:49675"]
+    applicableFacility: ["flows", "firewall", "ip_flow_start", "ip_flow_end", "urls", "vpn_firewall", "l7_firewall", "security_event"]
 
   - name: dst
     type: String
-    description: "Destination IP address of the connection."
-    sampleValues: ["192.168.112.75", "208.67.220.220", "8.8.8.8"]
-    applicableFacility: ["flows", "firewall", "ip_flow_start", "ip_flow_end", "urls", "vpn_firewall", "l7_firewall"]
+    description: "Destination IP address of the connection. NOTE: in the security_event facility this field carries the port appended as IP:port (e.g. 23.217.9.85:80); split on ':' to separate IP from port. In flow/firewall facilities it is a bare IP and the port is in dport."
+    sampleValues: ["192.168.112.75", "208.67.220.220", "8.8.8.8", "23.217.9.85:80"]
+    applicableFacility: ["flows", "firewall", "ip_flow_start", "ip_flow_end", "urls", "vpn_firewall", "l7_firewall", "security_event"]
 
   - name: sport
     type: Integer
@@ -69,16 +69,16 @@ fields:
     type: String
     description: "MAC address of the client device involved in the flow."
     sampleValues: ["F8:4E:58:A2:CC:D2", "C8:A6:EF:3D:36:04"]
-    applicableFacility: ["flows", "firewall", "urls", "vpn_firewall"]
+    applicableFacility: ["flows", "firewall", "urls", "vpn_firewall", "security_event"]
 
   # ==========================================
   # FLOWS FACILITY
   # ==========================================
   - name: action
     type: String
-    description: "The flow disposition decided by the access policy."
-    sampleValues: ["allow", "deny"]
-    applicableFacility: ["flows"]
+    description: "The disposition applied to the event. For the flows facility this is the access-policy decision (allow/deny); for the security_event facility it is the threat-protection action taken on the scanned object (e.g. block/allow)."
+    sampleValues: ["allow", "deny", "block"]
+    applicableFacility: ["flows", "security_event"]
 
   # ==========================================
   # FIREWALL / VPN_FIREWALL FACILITIES
@@ -136,9 +136,9 @@ fields:
 
   - name: url
     type: String
-    description: "The destination URL accessed by the client."
-    sampleValues: ["https://bf74291tsy.bf.dynatrace.com:443"]
-    applicableFacility: ["urls"]
+    description: "The URL accessed by the client (urls facility) or, for the security_event facility, the URL the scanned/downloaded file was retrieved from."
+    sampleValues: ["https://bf74291tsy.bf.dynatrace.com:443", "http://download.windowsupdate.com/c/msdownload/update/others/2026/06/45555689_ee37b9aa549e8b7a68802635ee3ad0ded39c5050.cab"]
+    applicableFacility: ["urls", "security_event"]
 
   # ==========================================
   # EVENTS FACILITY (Device/system messages)
@@ -148,3 +148,30 @@ fields:
     description: "Free-text device or system event message (e.g. spanning-tree, port, and switching notifications)."
     sampleValues: ["Port 8 received a BPDU from F8:9E:28:C6:A7:7A, expected 00:84:1E:04:68:99"]
     applicableFacility: ["events"]
+
+  # ==========================================
+  # SECURITY_EVENT FACILITY (AMP / threat protection — file scanning, IDS/IPS)
+  # ==========================================
+  - name: subType
+    type: String
+    description: "The specific kind of security event. Identifies why the record was generated and which fields are meaningful (e.g. file-scan vs intrusion alerts)."
+    sampleValues: ["security_filtering_file_scanned", "security_filtering_disposition_change", "ids_alerted"]
+    applicableFacility: ["security_event"]
+
+  - name: disposition
+    type: String
+    description: "Advanced Malware Protection (AMP) verdict assigned to the scanned file/object. 'malicious' flags a confirmed-bad file (typically paired with action=block); 'clean'/'unknown' indicate no/insufficient threat signal."
+    sampleValues: ["malicious", "clean", "unknown"]
+    applicableFacility: ["security_event"]
+
+  - name: sha256
+    type: String
+    description: "SHA-256 hash of the scanned file/object. Primary IOC for pivoting on the file and for threat-intel lookups."
+    sampleValues: ["ea5154c98023e6be3de5626e59f2366ef70b1cf6b323b8ae60afa669c0b42d63"]
+    applicableFacility: ["security_event"]
+
+  - name: name
+    type: String
+    description: "Name of the detected threat/signature (or file name) for the security event. Often empty when only the file hash/URL is reported."
+    sampleValues: ["", "W32.Auto.ea5154"]
+    applicableFacility: ["security_event"]
