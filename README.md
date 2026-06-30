@@ -28,7 +28,9 @@ Not every data type includes all of these files yet.
 - `BlackKite` — Black Kite third-party cyber-risk findings, with a schema per resource type:
   - `blackkiteFinding` — attack-surface vulnerability findings (affected domain/IP/product, CVE with CVSS/CWE/EPSS and CISA KEV status, severity/status, linked tickets)
 - `CloudTrail`
-- `Cortex`
+- `Cortex` — PaloAlto Cortex XDR detections imported via the Cortex XDR API, with a schema per resource type:
+  - `CortexAlert` — individual XDR alerts (identity/classification, severity, affected agent/host, triggering rule, resolution/matching status, and a nested `events` causality-graph array; `timestamp` from `detection_timestamp`, joined to an incident via `case_id`)
+  - `CortexIncident` — alert groups/incidents (status, effective severity and per-severity alert counts, aggregated/predicted/manual scores, affected hosts and users, sources, and console deep link; `timestamp` from `creation_time`)
 - `Fluency`
 - `Fortigate`
 - `GSuite`
