@@ -1,0 +1,20 @@
+{
+    "category": "O365_Azure_MS Apps",
+    "clt_sip": "10.10.10.179",
+    "datetime": "Thu Jun 25 04:05:06 2026",
+    "department": "Sales%20Department",
+    "devicehostname": "CONTOSO-WS02",
+    "deviceowner": "avance",
+    "dns_req": "unitedstates.smartscreen.microsoft.com",
+    "dns_reqtype": "A",
+    "dns_resp": "192.0.2.10",
+    "durationms": "0",
+    "location": "Road%20Warrior",
+    "reqaction": "Allow",
+    "reqrulelabel": "Default Firewall DNS Rule",
+    "resaction": "Allow",
+    "resrulelabel": "Default Firewall DNS Rule",
+    "srv_dip": "192.0.2.156",
+    "srv_dport": "53",
+    "user": "adele.vance@contoso.com"
+}

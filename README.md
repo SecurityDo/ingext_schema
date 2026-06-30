@@ -52,6 +52,10 @@ Not every data type includes all of these files yet.
   - `sentinelOneApplication` — installed applications per endpoint (name/version/publisher, signed/risk level, install/update times, denormalized agent fields)
   - `sentinelOneThreat` — detected threats (file/classification, confidence, analyst verdict, mitigation/incident status, behavioral indicators, agent context at detection and real time)
 - `WindowsAudit`
+- `Zscaler` — Zscaler Internet Access (ZIA) NSS streaming log feeds, with a schema per feed type:
+  - `ZscalerWeb` — web proxy transactions (user/department/location/device, URL/host/method/user-agent, proxy action and rule, response code/sizes/timing, URL category class, cloud-app name/class, malware/threat, DLP, risk score; `timestamp` from `time`)
+  - `ZscalerFirewall` — cloud firewall sessions (user/device/tunnel, client and server source/dest IP:port across NAT, action and matched rule, network service/application, byte counts and durations, IP category, threat, destination country; `timestamp` from `datetime`)
+  - `ZscalerDNS` — DNS control requests (user/device/location, query name/type and answer, client and Zscaler-resolver addresses, domain category, and separate request/response actions and rules; `timestamp` from `datetime`)
 
 ## Note on samples
 
