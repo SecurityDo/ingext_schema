@@ -31,6 +31,8 @@ Not every data type includes all of these files yet.
 - `Cortex` — PaloAlto Cortex XDR detections imported via the Cortex XDR API, with a schema per resource type:
   - `CortexAlert` — individual XDR alerts (identity/classification, severity, affected agent/host, triggering rule, resolution/matching status, and a nested `events` causality-graph array; `timestamp` from `detection_timestamp`, joined to an incident via `case_id`)
   - `CortexIncident` — alert groups/incidents (status, effective severity and per-severity alert counts, aggregated/predicted/manual scores, affected hosts and users, sources, and console deep link; `timestamp` from `creation_time`)
+- `F5BigIPLTM` — F5 BIG-IP Local Traffic Manager (LTM) HTTP access logs:
+  - `F5BigIPLTM` — per-request load-balancer transactions (front-end virtual server and VIP, back-end pool and pool-member IP:port, client IP/user-agent/referer, request line and URI, response status/size/time; `timestamp` from `timestamp`)
 - `Fluency`
 - `Fortigate`
 - `GSuite`

@@ -1,0 +1,16 @@
+{
+    "bytes": 1537,
+    "clientIp": "10.133.34.51",
+    "httpStatus": 200,
+    "poolMemberIp": "10.48.11.32",
+    "poolMemberPort": 8888,
+    "poolName": "/HTTP-HTTPS/cmicprod.app/cmicprod_pool",
+    "referer": "https://cmicprod.jedunn.com/cmicprod/UIConsole/faces/console.jspx",
+    "requestLine": "POST /cmicprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage?Adf-Window-Id=w16ci3r0572&Adf-Page-Id=3 HTTP/1.1",
+    "requestUri": "/cmicprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage",
+    "responseTimeMs": 403,
+    "timestamp": "30/Jun/2026:09:41:43 -0500",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0",
+    "virtualIp": "172.16.19.150",
+    "virtualServer": "/HTTP-HTTPS/cmicprod.app/cmicprod_https_vs"
+}
