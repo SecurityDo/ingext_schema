@@ -1,0 +1,186 @@
+{
+    "agent_load_flags": "16",
+    "agent_local_time": "2026-07-01T15:11:48.102Z",
+    "agent_version": "7.38.21003.0",
+    "bios_manufacturer": "VMware, Inc.",
+    "bios_version": "VMW201.00V.24504846.B64.2501180339",
+    "build_number": "26100",
+    "chassis_type": "1",
+    "chassis_type_desc": "Other",
+    "cid": "00000000000000000000000000000001",
+    "config_id_base": "65994767",
+    "config_id_build": "21003",
+    "config_id_platform": "3",
+    "connection_ip": "10.1.1.211",
+    "connection_mac_address": "00-1a-2b-3c-4d-5f",
+    "cpu_signature": "788210",
+    "cpu_vendor": "0",
+    "criticality": "unassigned",
+    "default_gateway_ip": "10.1.1.1",
+    "device_id": "22222222222222222222222222222222",
+    "device_policies": {
+      "content-update": {
+        "applied": true,
+        "applied_date": "2025-04-17T00:20:01.352Z",
+        "assigned_date": "2025-04-17T00:20:01.352Z",
+        "policy_id": "a0000000000000000000000000000002",
+        "policy_type": "content-update",
+        "rule_groups": null,
+        "settings_hash": "8432119020014221986"
+      },
+      "device_control": {
+        "applied_date": "0001-01-01T00:00:00.000Z",
+        "assigned_date": "2025-01-09T16:58:03.235Z",
+        "policy_id": "a0000000000000000000000000000003",
+        "policy_type": "device-control",
+        "rule_groups": null,
+        "settings_hash": "5c398fe4"
+      },
+      "exposure-management": {
+        "applied": true,
+        "applied_date": "2026-01-27T05:02:51.464Z",
+        "assigned_date": "2026-01-27T04:51:43.082Z",
+        "policy_id": "a0000000000000000000000000000004",
+        "policy_type": "exposure-management",
+        "rule_groups": null,
+        "settings_hash": "50ae1642c392309066f3506a9e13f031b2e08be620fcef2a798a9b5afeecc362"
+      },
+      "firewall": {
+        "applied": true,
+        "applied_date": "2026-02-15T13:49:30.935Z",
+        "assigned_date": "2024-05-19T20:06:08.388Z",
+        "policy_id": "a0000000000000000000000000000005",
+        "policy_type": "firewall",
+        "rule_groups": null,
+        "rule_set_id": "a0000000000000000000000000000005",
+        "settings_hash": "58cc5fd9"
+      },
+      "global_config": {
+        "applied": true,
+        "applied_date": "2026-07-01T19:16:52.818Z",
+        "assigned_date": "2026-07-01T13:55:34.666Z",
+        "policy_id": "a0000000000000000000000000000006",
+        "policy_type": "globalconfig",
+        "rule_groups": null,
+        "settings_hash": "9ed84482"
+      },
+      "host-retention": {
+        "applied": true,
+        "applied_date": "2024-10-08T14:24:29.957Z",
+        "assigned_date": "2024-10-08T14:21:48.303Z",
+        "policy_id": "a0000000000000000000000000000007",
+        "policy_type": "host-retention",
+        "rule_groups": null,
+        "settings_hash": "fce339fc6cbb4dae36929fe363a81368f4a7e3f2c3a3d62ff7e3ef202ee48df5"
+      },
+      "logscale-collector": {
+        "applied": true,
+        "applied_date": "2026-02-18T13:49:33.017Z",
+        "assigned_date": "2026-02-18T13:48:13.701Z",
+        "policy_id": "a0000000000000000000000000000008",
+        "policy_type": "logscale-collector",
+        "rule_groups": null,
+        "settings_hash": "ac32b08b2f7bdc7457b34bb45ef9189909d6eb52c419bb15526fc1f2a62c9356"
+      },
+      "prevention": {
+        "applied": true,
+        "applied_date": "2026-01-13T23:23:48.420Z",
+        "assigned_date": "2026-01-13T23:09:33.684Z",
+        "policy_id": "a0000000000000000000000000000001",
+        "policy_type": "prevention",
+        "rule_groups": [],
+        "settings_hash": "2c94ca18"
+      },
+      "remote_response": {
+        "applied": true,
+        "applied_date": "2025-04-28T18:01:50.456Z",
+        "assigned_date": "2023-12-07T16:32:58.043Z",
+        "policy_id": "a0000000000000000000000000000009",
+        "policy_type": "remote-response",
+        "rule_groups": null,
+        "settings_hash": "bb9e4bd0"
+      },
+      "sensor_update": {
+        "applied": true,
+        "applied_date": "2026-07-01T19:13:28.016Z",
+        "assigned_date": "2026-07-01T19:10:15.369Z",
+        "policy_id": "a000000000000000000000000000000a",
+        "policy_type": "sensor-update",
+        "rule_groups": null,
+        "settings_hash": "tagged|1;101",
+        "uninstall_protection": "ENABLED"
+      },
+      "system-tray": {
+        "applied": true,
+        "applied_date": "2025-04-28T18:01:50.061Z",
+        "assigned_date": "2023-12-06T19:29:04.150Z",
+        "policy_id": "a000000000000000000000000000000b",
+        "policy_type": "system-tray",
+        "rule_groups": null,
+        "settings_hash": "64111ecabb0f2fff301bef6007dd2792f26df4fe37d52475b301883d5d05a856"
+      }
+    },
+    "external_ip": "192.0.2.114",
+    "filesystem_containment_status": "normal",
+    "first_seen": "2023-11-27T18:10:37Z",
+    "group_hash": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789",
+    "groups": [
+      "b0000000000000000000000000000001"
+    ],
+    "host_hidden_status": "visible",
+    "hostname": "CORP-VM03",
+    "kernel_version": "10.0.26100.8655",
+    "last_login_timestamp": "2026-07-03T18:49:16Z",
+    "last_login_user": "avance",
+    "last_login_user_sid": "S-1-5-21-1111111111-2222222222-3333333333-1007",
+    "last_reboot": "2026-06-13T16:49:16Z",
+    "last_seen": "2026-07-03T19:16:24Z",
+    "local_ip": "10.1.1.211",
+    "mac_address": "00-1a-2b-3c-4d-5f",
+    "machine_domain": "contoso.com",
+    "major_version": "10",
+    "meta": {
+      "version": "214531",
+      "version_string": "9:1063495907"
+    },
+    "minor_version": "0",
+    "modified_timestamp": "2026-07-03T19:30:06Z",
+    "notes": null,
+    "os_build": "26100",
+    "os_product_name": "Windows 11 Pro",
+    "os_version": "Windows 11",
+    "ou": [
+      "_Computers",
+      "Corporate",
+      "Contoso"
+    ],
+    "platform_id": "0",
+    "platform_name": "Windows",
+    "pod_annotations": [],
+    "pod_labels": [],
+    "pointer_size": "8",
+    "policies": [
+      {
+        "applied": true,
+        "applied_date": "2026-01-13T23:23:48.420Z",
+        "assigned_date": "2026-01-13T23:09:33.684Z",
+        "policy_id": "a0000000000000000000000000000001",
+        "policy_type": "prevention",
+        "rule_groups": [],
+        "settings_hash": "2c94ca18"
+      }
+    ],
+    "product_type": "1",
+    "product_type_desc": "Workstation",
+    "provision_status": "Provisioned",
+    "reduced_functionality_mode": "no",
+    "rtr_state": "enabled",
+    "safe_mode": "no",
+    "serial_number": "VMware-00 00 00 00 00 00 00 00-00 00 00 00 00 00 00 01",
+    "service_pack_minor": "0",
+    "site_name": "Default-First-Site-Name",
+    "status": "normal",
+    "system_manufacturer": "VMware, Inc.",
+    "system_product_name": "VMware20,1",
+    "tags": []
+  }

@@ -1,0 +1,282 @@
+{
+    "agent_id": "11111111111111111111111111111111",
+    "aggregate_id": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+    "aggregation_rule_id": null,
+    "aggregation_rule_name": null,
+    "alleged_filetype": "EXE",
+    "assigned_to_name": null,
+    "assigned_to_uid": null,
+    "assigned_to_uuid": null,
+    "child_process_ids": [
+        "pid:11111111111111111111111111111111:5332334943122",
+        "pid:11111111111111111111111111111111:5332517716971"
+    ],
+    "cid": "00000000000000000000000000000001",
+    "cloud_indicator": "false",
+    "cmdline": "\"C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE\" \"F:\\Data\\Workbook.xlsx\"",
+    "cms_rule_id": null,
+    "cms_rule_instance_id": null,
+    "cms_rule_instance_version": null,
+    "composite_id": "00000000000000000000000000000001:ind:11111111111111111111111111111111:5332331531211-4-3535888",
+    "confidence": null,
+    "context_timestamp": "2026-07-02T11:37:18.458Z",
+    "control_graph_id": "ctg:11111111111111111111111111111111:807454825018",
+    "crawled_timestamp": "2026-07-02T12:37:24.627Z",
+    "created_timestamp": "2026-07-02T11:38:25.766Z",
+    "data_domains": [
+        "Endpoint"
+    ],
+    "description": "Productivity app or one of its children wrote a registry key used for persistence",
+    "device": {
+        "agent_load_flags": "17",
+        "agent_local_time": "2026-07-01T23:41:23.073Z",
+        "agent_version": "7.38.21003.0",
+        "bios_manufacturer": "Dell Inc.",
+        "bios_version": "1.36.0",
+        "cid": "00000000000000000000000000000001",
+        "config_id_base": "65994767",
+        "config_id_build": "21003",
+        "config_id_platform": "3",
+        "device_id": "11111111111111111111111111111111",
+        "external_ip": "192.0.2.114",
+        "first_seen": "2023-12-12T14:29:24.000Z",
+        "groups": [
+            "b0000000000000000000000000000001"
+        ],
+        "hostinfo": {
+            "active_directory_dn_display": [
+                "_Computers",
+                "_Computers\\Corporate",
+                "_Computers\\Corporate\\Contoso"
+            ],
+            "domain": "contoso.com"
+        },
+        "hostname": "CORP-WS01",
+        "last_seen": "2026-07-02T12:22:14.000Z",
+        "local_ip": "10.1.1.28",
+        "mac_address": "00-1a-2b-3c-4d-5e",
+        "machine_domain": "contoso.com",
+        "major_version": "10",
+        "minor_version": "0",
+        "modified_timestamp": "2026-07-02T12:31:22.000Z",
+        "os_version": "Windows 11",
+        "ou": [
+            "_Computers",
+            "Corporate",
+            "Contoso"
+        ],
+        "platform_id": "0",
+        "platform_name": "Windows",
+        "pod_labels": null,
+        "product_type": "1",
+        "product_type_desc": "Workstation",
+        "site_name": "Default-First-Site-Name",
+        "status": "normal",
+        "system_manufacturer": "Dell Inc.",
+        "system_product_name": "Latitude 5530",
+        "tags": null
+    },
+    "display_name": "ProductivityAppAsepWrite",
+    "dns_requests": [
+        {
+            "domain_name": "messaging.engagement.office.com",
+            "interface_index": "0",
+            "load_time": "1782991884",
+            "request_type": "AAAA"
+        },
+        {
+            "domain_name": "contoso.sharepoint.com",
+            "interface_index": "0",
+            "load_time": "1782991885",
+            "request_type": "AAAA"
+        }
+    ],
+    "email_sent": null,
+    "event_correlation_id": "00000000-0000-0000-0000-000000000001",
+    "external": false,
+    "falcon_host_link": "https://falcon.us-2.crowdstrike.com/automated-leads/00000000000000000000000000000001:ind:11111111111111111111111111111111:5332331531211-4-3535888?_cid=00000000000000000000000000000002",
+    "filename": "EXCEL.EXE",
+    "filepath": "\\Device\\HarddiskVolume3\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+    "files_accessed": [
+        {
+            "filename": "IconCache.db",
+            "filepath": "\\Device\\HarddiskVolume3\\Users\\avance\\AppData\\Local",
+            "timestamp": "1782992245"
+        },
+        {
+            "filename": "Workbook.xlsm",
+            "filepath": "\\Device\\Mup\\;LanmanRedirector\\;G:0000000001f0a5f0\\CORP-FILE\\Corporate\\Groups\\Financial\\Uploads",
+            "timestamp": "1782992291"
+        }
+    ],
+    "files_written": [
+        {
+            "filename": "Workbook.xlsm.LNK",
+            "filepath": "\\Device\\HarddiskVolume3\\Users\\avance\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+            "timestamp": "1782992291"
+        },
+        {
+            "filename": "Uploads.LNK",
+            "filepath": "\\Device\\HarddiskVolume3\\Users\\avance\\AppData\\Roaming\\Microsoft\\Office\\Recent",
+            "timestamp": "1782992291"
+        }
+    ],
+    "global_prevalence": "common",
+    "grandparent_details": {
+        "cmdline": "C:\\Windows\\system32\\userinit.exe",
+        "filename": "userinit.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\Windows\\System32\\userinit.exe",
+        "local_process_id": "19132",
+        "md5": "31f0f1d03b9ff04087710c837f068430",
+        "process_graph_id": "pid:11111111111111111111111111111111:5331778161139",
+        "process_id": "5331778161139",
+        "sha256": "2ad7328945735b2ced312b625924461dd51f3f2dae5840dfff999a14fd128664",
+        "timestamp": "2026-07-02T11:22:08.000Z",
+        "user_graph_id": "uid:11111111111111111111111111111111:S-1-5-21-1111111111-2222222222-3333333333-6716",
+        "user_id": "S-1-5-21-1111111111-2222222222-3333333333-6716",
+        "user_name": "avance"
+    },
+    "id": "ind:11111111111111111111111111111111:5332331531211-4-3535888",
+    "indicator_id": "ind:11111111111111111111111111111111:5332331531211-4-3535888",
+    "ioc_context": [],
+    "ioc_values": null,
+    "is_aggregated": null,
+    "lead_id": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+    "linked_behavioral_detections": null,
+    "linked_case_ids": null,
+    "local_prevalence": "common",
+    "local_process_id": "2320",
+    "logon_domain": "CONTOSO",
+    "md5": "843217d1f17dddcba994f0e6efbbb250",
+    "mitre_attack": [
+        {
+            "pattern_id": 4,
+            "tactic": "Persistence",
+            "tactic_id": "TA0003",
+            "technique": "Registry Run Keys / Startup Folder",
+            "technique_id": "T1547.001"
+        }
+    ],
+    "name": "SpearPhish4",
+    "network_accesses": [
+        {
+            "access_timestamp": "1782991883",
+            "access_type": 0,
+            "connection_direction": "Outbound",
+            "isIPV6": false,
+            "local_address": "10.1.1.96",
+            "local_port": "52757",
+            "protocol": "TCP",
+            "remote_address": "10.1.0.102",
+            "remote_port": "3268"
+        },
+        {
+            "access_timestamp": "1782992532",
+            "access_type": 0,
+            "connection_direction": "Outbound",
+            "isIPV6": false,
+            "local_address": "10.1.1.96",
+            "local_port": "62929",
+            "protocol": "TCP",
+            "remote_address": "10.1.0.102",
+            "remote_port": "389"
+        }
+    ],
+    "objective": "Keep Access",
+    "origin_cid": "00000000000000000000000000000001",
+    "parent_details": {
+        "cmdline": "C:\\WINDOWS\\Explorer.EXE",
+        "filename": "explorer.exe",
+        "filepath": "\\Device\\HarddiskVolume3\\Windows\\explorer.exe",
+        "local_process_id": "18628",
+        "md5": "f3f37ba479a8db2ecb408417a3c20664",
+        "process_graph_id": "pid:11111111111111111111111111111111:5331778997860",
+        "process_id": "5331778997860",
+        "sha256": "ae616daa61bca36d0a0eba959ff5cbd09b7095c10cfbc2fdcfacf9acf43f21f9",
+        "timestamp": "2026-07-02T11:21:38Z",
+        "user_graph_id": "uid:11111111111111111111111111111111:S-1-5-21-1111111111-2222222222-3333333333-6716",
+        "user_id": "S-1-5-21-1111111111-2222222222-3333333333-6716",
+        "user_name": "avance"
+    },
+    "parent_process_id": "5331778997860",
+    "pattern_disposition": 0,
+    "pattern_disposition_description": "Detection, standard detection.",
+    "pattern_disposition_details": {
+        "blocking_unsupported_or_disabled": false,
+        "bootup_safeguard_enabled": false,
+        "containment_file_system": false,
+        "critical_process_disabled": false,
+        "detect": false,
+        "fs_operation_blocked": false,
+        "handle_operation_downgraded": false,
+        "inddet_mask": false,
+        "indicator": false,
+        "kill_action_failed": false,
+        "kill_parent": false,
+        "kill_process": false,
+        "kill_subprocess": false,
+        "mfa_required": false,
+        "operation_blocked": false,
+        "policy_disabled": false,
+        "prevention_provisioning_enabled": false,
+        "process_blocked": false,
+        "quarantine_file": false,
+        "quarantine_machine": false,
+        "registry_operation_blocked": false,
+        "response_action_already_applied": false,
+        "response_action_failed": false,
+        "response_action_triggered": false,
+        "rooting": false,
+        "sensor_only": false,
+        "suspend_parent": false,
+        "suspend_process": false
+    },
+    "pattern_id": 4,
+    "platform": "Windows",
+    "poly_id": "AADsHosR8bZPG4RbZ3fYMHkkpOREg8UP5aYyN9r-ldJWTgAATiEazy5lIn4H_rSHFiD15cmebgCFPYh0sCBntK_gQpbbCg==",
+    "prevention_policy_id": "a0000000000000000000000000000001",
+    "prevention_policy_name": "ActiveWin",
+    "process_id": "5332331531211",
+    "process_start_time": "1782991874",
+    "product": "automated-lead-context",
+    "quarantined_files": null,
+    "resolution": null,
+    "scenario": "malicious_document",
+    "seconds_to_resolved": 0,
+    "seconds_to_triaged": 0,
+    "severity": null,
+    "severity_name": null,
+    "sha1": "0000000000000000000000000000000000000000",
+    "sha256": "3bcf6222a10bf3f8b043e4137c8509bdc64309eb1ae95f956363f7c8299b0f2d",
+    "show_in_ui": true,
+    "source_hosts": [
+        "CORP-WS01"
+    ],
+    "source_ips": [
+        "10.1.1.28"
+    ],
+    "source_products": [
+        "Automated Leads"
+    ],
+    "source_vendors": [
+        "CrowdStrike"
+    ],
+    "status": "new",
+    "tactic": "Persistence",
+    "tactic_id": "TA0003",
+    "tags": null,
+    "technique": "Registry Run Keys / Startup Folder",
+    "technique_id": "T1547.001",
+    "timestamp": "2026-07-02T11:37:18.538Z",
+    "tree_id": "807454825018",
+    "tree_root": "5332331531211",
+    "triggering_process_graph_id": "pid:11111111111111111111111111111111:5332331531211",
+    "type": "signal",
+    "updated_timestamp": "2026-07-02T12:37:24.627Z",
+    "user_id": "S-1-5-21-1111111111-2222222222-3333333333-6716",
+    "user_name": "avance",
+    "user_names": [
+        "avance"
+    ],
+    "user_principal": "adele.vance@contoso.com"
+}
