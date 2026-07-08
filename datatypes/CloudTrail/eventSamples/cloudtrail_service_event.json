@@ -1,0 +1,25 @@
+{
+    "awsRegion": "us-east-2",
+    "eventCategory": "Management",
+    "eventID": "d85c67d2-92b8-3663-8eaa-f91f1dbffc03",
+    "eventName": "SharedSnapshotVolumeCreated",
+    "eventSource": "ec2.amazonaws.com",
+    "eventTime": "2026-07-01T20:42:34Z",
+    "eventType": "AwsServiceEvent",
+    "eventVersion": "1.11",
+    "managementEvent": true,
+    "readOnly": false,
+    "recipientAccountId": "123456789012",
+    "requestParameters": null,
+    "responseElements": null,
+    "serviceEventDetails": {
+        "snapshotId": "snap-0123456789abcdef0"
+    },
+    "sharedEventID": "4c907d96-45e3-4c92-8082-e14cd529c7d7",
+    "sourceIPAddress": "ec2.amazonaws.com",
+    "userAgent": "ec2.amazonaws.com",
+    "userIdentity": {
+        "accountId": "123456789012",
+        "invokedBy": "ec2.amazonaws.com"
+    }
+}

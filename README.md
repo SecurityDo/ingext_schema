@@ -27,7 +27,8 @@ Not every data type includes all of these files yet.
 - `AzureAudit`
 - `BlackKite` — Black Kite third-party cyber-risk findings, with a schema per resource type:
   - `blackkiteFinding` — attack-surface vulnerability findings (affected domain/IP/product, CVE with CVSS/CWE/EPSS and CISA KEV status, severity/status, linked tickets)
-- `CloudTrail`
+- `CloudTrail` — AWS CloudTrail audit events (control-plane and object-level activity across an AWS account), stored as a dynamic JSON document:
+  - `CloudTrail` — one API-level event: the actor (`userIdentity`, a polymorphic object keyed by `type` — IAMUser/Root/AssumedRole/AWSService/AWSAccount/FederatedUser/IdentityCenterUser/WebIdentityUser), the operation (`eventName` on `eventSource`), region/account, source IP and user-agent, outcome (`responseElements`/`errorCode`), and service-specific `requestParameters`/`responseElements`. Four `eventCategory` classes — Management (control plane), Data (S3/Lambda/DynamoDB object ops), NetworkActivity (VPC endpoint), Insight (anomaly detection); `eventType` distinguishes AwsApiCall / AwsConsoleSignIn / AwsServiceEvent. `timestamp` from `eventTime`
 - `CrowdStrike` — CrowdStrike Falcon EDR alerts imported via the Falcon Alerts API:
   - `FalconAlert` — Falcon alerts on an endpoint, in two shapes selected by the `type` field: `automated-lead` (the AI-generated summary/lead — risk `score`, aggregated `mitre_attack[]`, and a `threatgraph_indicators[]` rollup of the correlated detections) and `signal` (a supporting/contextual detection with full process detail — triggering `cmdline`/hashes, `parent_details`/`grandparent_details` lineage, MITRE tactic/technique, prevention disposition, and behavioral context arrays). A signal links to its lead via `aggregate_id == lead.lead_id`; `timestamp` from the top-level `timestamp` (`created_timestamp` for detection recency)
 - `CrowdStrikeResources` — CrowdStrike Falcon resource snapshots imported via the Falcon API:

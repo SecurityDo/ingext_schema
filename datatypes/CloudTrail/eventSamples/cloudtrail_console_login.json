@@ -1,0 +1,36 @@
+{
+    "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/console/home?ca-oauth-flow-id=7eb1&hashArgs=%23&isauthcode=true&nc2=h_uta_mc&oauthStart=1782916517085&state=hashArgsFromTB_us-east-2_1f352ea3d31045a7",
+        "MFAUsed": "No",
+        "MobileVersion": "No"
+    },
+    "awsRegion": "us-east-2",
+    "eventCategory": "Management",
+    "eventID": "39a4e4e9-fdc6-4965-ba76-cb0e3b655d56",
+    "eventName": "ConsoleLogin",
+    "eventSource": "signin.amazonaws.com",
+    "eventTime": "2026-07-01T14:35:23Z",
+    "eventType": "AwsConsoleSignIn",
+    "eventVersion": "1.11",
+    "managementEvent": true,
+    "readOnly": false,
+    "recipientAccountId": "123456789012",
+    "requestParameters": null,
+    "responseElements": {
+        "ConsoleLogin": "Success"
+    },
+    "sourceIPAddress": "192.0.2.15",
+    "tlsDetails": {
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "us-east-2.signin.aws.amazon.com",
+        "tlsVersion": "TLSv1.3"
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "userIdentity": {
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "principalId": "AIDAEXAMPLEEXAMPLE001",
+        "type": "IAMUser",
+        "userName": "alice"
+    }
+}

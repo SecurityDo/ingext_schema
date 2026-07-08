@@ -1,0 +1,47 @@
+{
+    "additionalEventData": {
+        "ExtendedRequestId": "EXAMPLEExtendedRequestIdBase64Sanitized="
+    },
+    "awsRegion": "us-east-1",
+    "eventCategory": "Management",
+    "eventID": "e5880e5b-41c8-3c46-ab1e-d6f9de96443a",
+    "eventName": "AssumeRole",
+    "eventSource": "sts.amazonaws.com",
+    "eventTime": "2026-07-02T02:08:23Z",
+    "eventType": "AwsApiCall",
+    "eventVersion": "1.11",
+    "managementEvent": true,
+    "readOnly": true,
+    "recipientAccountId": "123456789012",
+    "requestID": "1d39c420-f36d-4aa5-9e43-7fec5f33c1c4",
+    "requestParameters": {
+        "durationSeconds": 3600,
+        "roleArn": "arn:aws:iam::123456789012:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS",
+        "roleSessionName": "aws-go-sdk-1782004103323787490"
+    },
+    "resources": [
+        {
+            "ARN": "arn:aws:iam::123456789012:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS",
+            "accountId": "123456789012",
+            "type": "AWS::IAM::Role"
+        }
+    ],
+    "responseElements": {
+        "assumedRoleUser": {
+            "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForAmazonEKS/aws-go-sdk-1782004103323787490",
+            "assumedRoleId": "AROAEXAMPLEEXAMPLE002:aws-go-sdk-1782004103323787490"
+        },
+        "credentials": {
+            "accessKeyId": "ASIAEXAMPLEEXAMPLE003",
+            "expiration": "2026-07-02T03:08:23Z",
+            "sessionToken": "IQoJb3JpZ2luX2VjEXAMPLESANITIZEDSESSIONTOKEN//////////wEXAMPLE"
+        }
+    },
+    "sharedEventID": "a0a349fd-6526-4d75-b848-0cc980a862d0",
+    "sourceIPAddress": "eks.amazonaws.com",
+    "userAgent": "eks.amazonaws.com",
+    "userIdentity": {
+        "invokedBy": "eks.amazonaws.com",
+        "type": "AWSService"
+    }
+}
