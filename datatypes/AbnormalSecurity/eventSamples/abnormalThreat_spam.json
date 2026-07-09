@@ -1,0 +1,51 @@
+{
+    "messages": [
+        {
+            "abxMessageId": 3377638848946946000,
+            "abxMessageIdStr": "3377638848946945925",
+            "abxPortalUrl": "https://portal.abnormalsecurity.com/home/threat-center/remediation-history/3377638848946945925",
+            "attachmentCount": 0,
+            "attachmentNames": [],
+            "attackStrategy": "Unknown Sender",
+            "attackType": "Spam",
+            "attackVector": "Text",
+            "attackedParty": "Employee (Other)",
+            "autoRemediated": false,
+            "ccEmails": [],
+            "customerOverride": null,
+            "fromAddress": "maggie@example.com",
+            "fromName": "maggie duckstad",
+            "impersonatedParty": "None / Others",
+            "internetMessageId": "<00000000-0000-0000-0000-000000000001@example.com>",
+            "isRead": false,
+            "links": [],
+            "postRemediated": false,
+            "receivedTime": "2026-07-09T13:42:33Z",
+            "recipientAddress": "adele.vance@contoso.com",
+            "remediationStatus": "Remediated",
+            "remediationTimestamp": "2026-07-09T13:42:35.838Z",
+            "replyToEmails": [],
+            "returnPath": "maggie@example.com",
+            "senderDomain": "example.com",
+            "senderIpAddress": "2001:db8:208:12f::11",
+            "sentTime": "2026-07-09T13:42:22Z",
+            "source": "spam",
+            "subject": "You have the openings, we have the candidates",
+            "summaryInsights": [
+                "Unusual Sender",
+                "Potential Scam or Extortion",
+                "Unusual Sender Domain"
+            ],
+            "tenantId": 1142,
+            "tenantName": "contoso_construction",
+            "threatId": "00000000-0000-0000-0000-000000000abc",
+            "toAddresses": [
+                "adele.vance@contoso.com"
+            ],
+            "urlCount": 0,
+            "urls": []
+        }
+    ],
+    "threatId": "00000000-0000-0000-0000-000000000abc",
+    "timestamp": "2026-07-09T13:42:33Z"
+}

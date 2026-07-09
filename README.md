@@ -24,6 +24,8 @@ Not every data type includes all of these files yet.
 
 ## Data types
 
+- `AbnormalSecurity` — Abnormal Security threat events imported via the Threats API (Email/Inbound Email Security):
+  - `AbnormalThreat` — one detected threat campaign (`threatId`), holding a `messages[]` array with one element per malicious email in the campaign. Each message carries the sender/recipient (`fromAddress`/`senderDomain`/`senderIpAddress`/`recipientAddress`/`toAddresses[]`), subject, Abnormal's verdict (`attackType`/`attackStrategy`/`attackVector`/`attackedParty`/`impersonatedParty`/`summaryInsights[]`), content (`urls[]`/`links[]`/`attachmentNames[]`), and remediation state (`remediationStatus`/`autoRemediated`/`remediationTimestamp`). The array is dynamic — `mv-expand messages` and reach in with dot notation; `timestamp` from the top-level `timestamp` (`messages.receivedTime` for delivery time)
 - `AzureAudit`
 - `BlackKite` — Black Kite third-party cyber-risk findings, with a schema per resource type:
   - `blackkiteFinding` — attack-surface vulnerability findings (affected domain/IP/product, CVE with CVSS/CWE/EPSS and CISA KEV status, severity/status, linked tickets)
