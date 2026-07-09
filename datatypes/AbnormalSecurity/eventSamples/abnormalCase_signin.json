@@ -1,0 +1,95 @@
+{
+   "abx_metadata": {
+      "event_type": "CASE",
+      "timestamp": "2026-07-06T21:36:04.059186854Z",
+      "trace_id": "00000000-0000-0000-0000-000000000002"
+   },
+   "abx_body": {
+      "schema_version": "1.0.0",
+      "case_id": 20240281,
+      "customer": 769,
+      "tenant": "contoso_construction",
+      "first_observed": "2026-07-06T20:48:44+00:00",
+      "date_created": "2026-07-06T21:35:47.293265+00:00",
+      "first_customer_visible_time": "2026-07-06T21:35:47.259914+00:00",
+      "trigger_event": "SIGN_IN",
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "case_status": "ACTION_REQUIRED",
+      "remediation_status": "NOT_REMEDIATED",
+      "entity": {
+         "entity_type": "USER_ACCOUNT",
+         "identifier": "jared.doss@contoso.com"
+      },
+      "description": "Account Compromised",
+      "insights": [
+         {
+            "signal": "Anonymizing IP Service Used",
+            "description": "Observed sign-ins from anonymous IP addresses."
+         },
+         {
+            "signal": "High-Risk Sign-In",
+            "description": "Observed 1 risky sign-in."
+         },
+         {
+            "signal": "Sign-In Baseline Deviation",
+            "description": "Observed 1 sign-in that Abnormal considers abnormal for this account. For example, the user logged in from Springfield, Illinois, United States and logged in from subnet with CIDR 192.0.2 . Based on recent user history, this behaviour is abnormal."
+         }
+      ],
+      "genai_summary": [
+         "Observed sign-in from Springfield, Illinois using hosting provider VPN (tzulo) and Safari browser - not seen in last 30 days.",
+         "Sign-in from anonymous IP 192.0.2.250 (tzulo), typically used by actors to hide sign-in information."
+      ],
+      "event_timeline": [
+         {
+            "timestamp": "2026-07-06T20:48:45.224000+00:00",
+            "event_type": "RISK_EVENT",
+            "platform": "ES_O365",
+            "insights": [
+               {
+                  "signal": "Anonymizing IP Service Used",
+                  "description": "Observed sign-ins from 192.0.2.250, which is an anonymous IP (for example, Tor browser or anonymous VPN). These IP addresses are typically used by actors who want to hide their sign-in information (IP address, location, device, and so on) for potentially malicious intent."
+               }
+            ],
+            "ip_address": "192.0.2.250",
+            "description": "aiConfirmedSigninSafe",
+            "risk_event_source": 3,
+            "location": {
+               "city": "Springfield",
+               "state": "Illinois",
+               "country": "United States"
+            }
+         },
+         {
+            "timestamp": "2026-07-06T20:48:44+00:00",
+            "event_type": "SIGN_IN",
+            "platform": "ES_O365",
+            "insights": [
+               {
+                  "signal": "High-Risk Sign-In",
+                  "description": "Based on historical attack patterns, Abnormal has determined this combination of signals to be risky: location, ISP, and IP organization ."
+               },
+               {
+                  "signal": "Sign-In Baseline Deviation",
+                  "description": "Based on historical user and company statistics for CIDR 24 and location , Abnormal has determined this sign-in to be abnormal."
+               }
+            ],
+            "location": {
+               "city": "Springfield",
+               "state": "Illinois",
+               "country": "United States"
+            },
+            "isp": "tzulo",
+            "ip_organization": "tzulo",
+            "cidr_24": "192.0.2",
+            "ip_address": "192.0.2.250",
+            "operating_system": "macos 10.15.7",
+            "browser": "safari 18.6.0",
+            "application": "office 365 sharepoint online",
+            "signin_event_status": "SIGNIN_STATUS_SUCCESS"
+         }
+      ],
+      "platforms": ["ES_O365", "ES_O365"],
+      "event_type": "CASE"
+   }
+}
