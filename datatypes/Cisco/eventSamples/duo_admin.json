@@ -1,0 +1,62 @@
+[
+  {
+    "action": "ad_sync_finish",
+    "description": "{\"Duration\": \"0:00:01\", \"Users added\": 0, \"Users modified\": 0, \"Users seen\": 6, \"Users removed\": 0, \"Errors\": \"User jsmith-admin (cn=jsmith-admin,ou=managers,dc=contoso,dc=local): \\\"jsmith-admin\\\" is already an alias of user \\\"jsmith\\\".\", \"authproxy_identifiers\": [\"DIAPROXY000000000001\"], \"Sync Ref. Code\": \"a1b2c3d4e5f60718293a4b5c6d7e8f90\"}",
+    "descriptionFields": {
+      "Duration": "0:00:01",
+      "Errors": "User jsmith-admin (cn=jsmith-admin,ou=managers,dc=contoso,dc=local): \"jsmith-admin\" is already an alias of user \"jsmith\".",
+      "Sync Ref. Code": "a1b2c3d4e5f60718293a4b5c6d7e8f90",
+      "Users added": 0,
+      "Users modified": 0,
+      "Users removed": 0,
+      "Users seen": 6,
+      "authproxy_identifiers": [
+        "DIAPROXY000000000001"
+      ]
+    },
+    "isotimestamp": "2026-07-21T12:08:32+00:00",
+    "object": "AD Sync",
+    "timestamp": 1784635712,
+    "username": "Active Directory User Sync: AD Sync"
+  },
+  {
+    "action": "admin_login",
+    "description": "{\"ip_address\": \"192.0.2.45\", \"factor\": \"push\", \"primary_auth_method\": \"Password\"}",
+    "descriptionFields": {
+      "factor": "push",
+      "ip_address": "192.0.2.45",
+      "primary_auth_method": "Password"
+    },
+    "isotimestamp": "2026-07-21T13:41:09+00:00",
+    "object": "",
+    "timestamp": 1784641269,
+    "username": "adele.vance@contoso.com"
+  },
+  {
+    "action": "bypass_create",
+    "description": "{\"bypass\": \"generated\", \"count\": 1, \"valid_secs\": 3600, \"remaining_uses\": 1, \"auto_generated\": true}",
+    "descriptionFields": {
+      "auto_generated": true,
+      "bypass": "generated",
+      "count": 1,
+      "remaining_uses": 1,
+      "valid_secs": 3600
+    },
+    "isotimestamp": "2026-07-21T14:15:52+00:00",
+    "object": "acontractor",
+    "timestamp": 1784643352,
+    "username": "adele.vance@contoso.com"
+  },
+  {
+    "action": "user_update",
+    "description": "{\"status\": \"Active\", \"notes\": \"Re-enabled after helpdesk ticket HD-4471\"}",
+    "descriptionFields": {
+      "notes": "Re-enabled after helpdesk ticket HD-4471",
+      "status": "Active"
+    },
+    "isotimestamp": "2026-07-21T14:17:03+00:00",
+    "object": "acontractor",
+    "timestamp": 1784643423,
+    "username": "adele.vance@contoso.com"
+  }
+]

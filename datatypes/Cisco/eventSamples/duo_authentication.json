@@ -1,0 +1,231 @@
+[
+  {
+    "access_device": {
+      "browser": "DuoWinLogon",
+      "browser_version": "5.2.1",
+      "epkey": null,
+      "flash_version": null,
+      "hostname": "WKSTN-0142",
+      "ip": "0.0.0.0",
+      "is_encryption_enabled": "unknown",
+      "is_firewall_enabled": "unknown",
+      "is_password_set": "unknown",
+      "java_version": null,
+      "location": {
+        "city": null,
+        "country": null,
+        "state": null
+      },
+      "os": "Windows",
+      "os_version": "10.0.19045.6456"
+    },
+    "adaptive_trust_assessments": {},
+    "alias": "unknown",
+    "application": {
+      "key": "DIAPP0000000000000001",
+      "name": "Microsoft RDP"
+    },
+    "auth_device": {
+      "ip": null,
+      "key": null,
+      "location": {
+        "city": null,
+        "country": null,
+        "state": null
+      },
+      "name": null,
+      "serial": null,
+      "type": null
+    },
+    "email": null,
+    "event_type": "authentication",
+    "factor": "remembered_device",
+    "isotimestamp": "2026-07-21T12:35:39.000000+00:00",
+    "ood_software": null,
+    "rbfs_triggered_attacks": null,
+    "reason": "remembered_device",
+    "result": "success",
+    "timestamp": 1784637339,
+    "trusted_endpoint_status": "unknown",
+    "txid": "1a2b3c4d-0000-4000-8000-000000000001",
+    "user": {
+      "groups": [
+        "DUO_Users (from AD sync \"AD Sync\")"
+      ],
+      "key": "DUUSER00000000000001",
+      "name": "avance"
+    }
+  },
+  {
+    "access_device": {
+      "browser": "Chrome",
+      "browser_version": "138.0.7204.101",
+      "epkey": null,
+      "flash_version": null,
+      "hostname": null,
+      "ip": "192.0.2.45",
+      "is_encryption_enabled": "unknown",
+      "is_firewall_enabled": "unknown",
+      "is_password_set": "unknown",
+      "java_version": null,
+      "location": {
+        "city": "Seattle",
+        "country": "United States",
+        "state": "Washington"
+      },
+      "os": "Mac OS X",
+      "os_version": "15.5.0"
+    },
+    "adaptive_trust_assessments": {},
+    "alias": "unknown",
+    "application": {
+      "key": "DIAPP0000000000000002",
+      "name": "Microsoft 365"
+    },
+    "auth_device": {
+      "ip": "192.0.2.77",
+      "key": "DPPHONE0000000000001",
+      "location": {
+        "city": "Seattle",
+        "country": "United States",
+        "state": "Washington"
+      },
+      "name": "555-555-0142",
+      "serial": null,
+      "type": "phone"
+    },
+    "email": "adele.vance@contoso.com",
+    "event_type": "authentication",
+    "factor": "duo_push",
+    "isotimestamp": "2026-07-21T13:02:11.000000+00:00",
+    "ood_software": null,
+    "rbfs_triggered_attacks": null,
+    "reason": "user_approved",
+    "result": "success",
+    "timestamp": 1784638931,
+    "trusted_endpoint_status": "trusted",
+    "txid": "3f2a19c4-7b8e-4a55-9d31-0c6f1a2b4d88",
+    "user": {
+      "groups": [
+        "DUO_Users (from AD sync \"AD Sync\")"
+      ],
+      "key": "DUUSER00000000000001",
+      "name": "avance"
+    }
+  },
+  {
+    "access_device": {
+      "browser": "Firefox",
+      "browser_version": "141.0",
+      "epkey": null,
+      "flash_version": null,
+      "hostname": null,
+      "ip": "198.51.100.23",
+      "is_encryption_enabled": "unknown",
+      "is_firewall_enabled": "unknown",
+      "is_password_set": "unknown",
+      "java_version": null,
+      "location": {
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "state": "North Holland"
+      },
+      "os": "Windows",
+      "os_version": "10.0"
+    },
+    "adaptive_trust_assessments": {},
+    "alias": "unknown",
+    "application": {
+      "key": "DIAPP0000000000000002",
+      "name": "Microsoft 365"
+    },
+    "auth_device": {
+      "ip": "192.0.2.77",
+      "key": "DPPHONE0000000000001",
+      "location": {
+        "city": "Seattle",
+        "country": "United States",
+        "state": "Washington"
+      },
+      "name": "555-555-0142",
+      "serial": null,
+      "type": "phone"
+    },
+    "email": "adele.vance@contoso.com",
+    "event_type": "authentication",
+    "factor": "duo_push",
+    "isotimestamp": "2026-07-21T13:04:47.000000+00:00",
+    "ood_software": null,
+    "rbfs_triggered_attacks": null,
+    "reason": "user_marked_fraud",
+    "result": "fraud",
+    "timestamp": 1784639087,
+    "trusted_endpoint_status": "not trusted",
+    "txid": "b71c5e02-4d3f-49a1-8e6c-2a5079ff31de",
+    "user": {
+      "groups": [
+        "DUO_Users (from AD sync \"AD Sync\")"
+      ],
+      "key": "DUUSER00000000000001",
+      "name": "avance"
+    }
+  },
+  {
+    "access_device": {
+      "browser": "Cisco AnyConnect",
+      "browser_version": null,
+      "epkey": null,
+      "flash_version": null,
+      "hostname": null,
+      "ip": "203.0.113.88",
+      "is_encryption_enabled": "unknown",
+      "is_firewall_enabled": "unknown",
+      "is_password_set": "unknown",
+      "java_version": null,
+      "location": {
+        "city": "Denver",
+        "country": "United States",
+        "state": "Colorado"
+      },
+      "os": null,
+      "os_version": null
+    },
+    "adaptive_trust_assessments": {},
+    "alias": "unknown",
+    "application": {
+      "key": "DIAPP0000000000000003",
+      "name": "Cisco AnyConnect VPN"
+    },
+    "auth_device": {
+      "ip": null,
+      "key": null,
+      "location": {
+        "city": null,
+        "country": null,
+        "state": null
+      },
+      "name": null,
+      "serial": null,
+      "type": null
+    },
+    "email": null,
+    "event_type": "authentication",
+    "factor": "bypass_code",
+    "isotimestamp": "2026-07-21T14:19:05.000000+00:00",
+    "ood_software": null,
+    "rbfs_triggered_attacks": null,
+    "reason": "bypass_user",
+    "result": "success",
+    "timestamp": 1784643545,
+    "trusted_endpoint_status": "unknown",
+    "txid": "9c40d8b6-1e77-4c02-b3aa-6d5518e9c7f4",
+    "user": {
+      "groups": [
+        "DUO_Users (from AD sync \"AD Sync\")",
+        "Contractors"
+      ],
+      "key": "DUUSER00000000000002",
+      "name": "acontractor"
+    }
+  }
+]
