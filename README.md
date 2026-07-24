@@ -61,10 +61,12 @@ Not every data type includes all of these files yet.
   - `office365InstalledApp` — service principals / enterprise applications (consent, credentials, exposed permissions)
 - `Qualys` — Qualys resource snapshots, with a schema per resource type:
   - `qualysHost` — tracked host assets (identity/FQDN and Qualys host IDs, IP, OS/hardware, last vuln & compliance scan and boot times, and a nested `agentInfo` Cloud Agent object; `timestamp` from `created`, `_key` from `name`)
-- `SentinelOne` — SentinelOne endpoint resource snapshots, with a schema per resource type:
+- `SentinelOne` — SentinelOne endpoint resource snapshots and event streams, with a schema per resource/event type:
   - `sentinelOneAgent` — installed agents/endpoints (hardware/OS, agent version and health, mitigation posture, scan and threat status, site/group placement)
   - `sentinelOneApplication` — installed applications per endpoint (name/version/publisher, signed/risk level, install/update times, denormalized agent fields)
-  - `sentinelOneThreat` — detected threats (file/classification, confidence, analyst verdict, mitigation/incident status, behavioral indicators, agent context at detection and real time)
+  - `SentinelOneThreat` — detected threats (file/classification with sha1/sha256, confidence, analyst verdict, mitigation/incident status, behavioral indicators mapped to MITRE ATT&CK tactics/techniques, detection engines and `storyline`, and denormalized agent context at detection and real time including `networkInterfaces`); `_key` from `id` (equals `threatInfo.threatId`), `timestamp` from `createdOn`
+  - `SentinelOneActivity` — append-only console/endpoint activity & audit events, one per record: the numeric `activityType` selects the event kind and the keys present in the per-type `data` object, with human text in `primaryDescription`/`secondaryDescription`; denormalized account/site/group scope, optional `agentId`/`threatId`/`userId` links. `_key` from `id`, `timestamp` from `createdAt`
+  - `SentinelOneAlert` — SentinelOne Singularity/Unified normalized alerts, one per detection: classification/severity/confidence/`analystVerdict`, workflow `status` and mitigation `result`, the affected `asset`, the triggering `process` (cmdLine/parent and file hashes), and `detectionSource` (vendor/product). Links to the underlying threat via `externalId` and correlates via `storylineId`; `_key` from `id` (a UUID), `timestamp` from `createdAt`
 - `WindowsAudit`
 - `Zscaler` — Zscaler streaming log feeds — ZIA NSS feeds and ZPA LSS feeds — with a schema per feed type:
   - `ZscalerWeb` — web proxy transactions (user/department/location/device, URL/host/method/user-agent, proxy action and rule, response code/sizes/timing, URL category class, cloud-app name/class, malware/threat, DLP, risk score; `timestamp` from `time`)

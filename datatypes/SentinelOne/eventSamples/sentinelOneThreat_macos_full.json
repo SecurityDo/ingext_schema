@@ -1,0 +1,241 @@
+{
+  "agentDetectionInfo": {
+    "accountId": "1000000000000000001",
+    "accountName": "Contoso - Production",
+    "agentDetectionState": null,
+    "agentDomain": "contoso.com",
+    "agentIpV4": "127.0.0.1,192.0.2.22",
+    "agentIpV6": "2001:db8::1,fe80::1,::1",
+    "agentLastLoggedInUpn": null,
+    "agentLastLoggedInUserMail": null,
+    "agentLastLoggedInUserName": "root",
+    "agentMitigationMode": "protect",
+    "agentOsName": "macOS",
+    "agentOsRevision": "15.6.1 (24G90)",
+    "agentRegisteredAt": "2025-06-11T00:56:45.339925Z",
+    "agentUuid": "00000000-0000-0000-0000-000000000001",
+    "agentVersion": "25.3.4.8365",
+    "assetVersion": "",
+    "cloudProviders": {},
+    "externalIp": "198.51.100.23",
+    "groupId": "1000000000000000004",
+    "groupName": "Workstations",
+    "siteId": "1000000000000000002",
+    "siteName": "Contoso"
+  },
+  "agentRealtimeInfo": {
+    "accountId": "1000000000000000001",
+    "accountName": "Contoso - Production",
+    "activeThreats": 0,
+    "agentComputerName": "alex-macbookpro",
+    "agentDecommissionedAt": null,
+    "agentDomain": "contoso.com",
+    "agentId": "2000000000000000002",
+    "agentInfected": false,
+    "agentIsActive": false,
+    "agentIsDecommissioned": false,
+    "agentMachineType": "laptop",
+    "agentMitigationMode": "protect",
+    "agentNetworkStatus": "connected",
+    "agentOsName": "macOS",
+    "agentOsRevision": "15.6.1 (24G90)",
+    "agentOsType": "macos",
+    "agentUuid": "00000000-0000-0000-0000-000000000001",
+    "agentVersion": "25.3.4.8365",
+    "groupId": "1000000000000000004",
+    "groupName": "Workstations",
+    "networkInterfaces": [
+      {
+        "id": "2000000000000000101",
+        "inet": [
+          "192.0.2.22"
+        ],
+        "inet6": [
+          "2001:db8::1"
+        ],
+        "name": "Wi-Fi",
+        "physical": "00:00:5e:00:53:01"
+      },
+      {
+        "id": "2000000000000000102",
+        "inet": [
+          "127.0.0.1"
+        ],
+        "inet6": [
+          "::1",
+          "fe80::1"
+        ],
+        "name": "lo0",
+        "physical": "00:00:00:00:00:00"
+      }
+    ],
+    "operationalState": "na",
+    "rebootRequired": false,
+    "scanAbortedAt": null,
+    "scanFinishedAt": null,
+    "scanStartedAt": null,
+    "scanStatus": "none",
+    "siteId": "1000000000000000002",
+    "siteName": "Contoso",
+    "storageName": null,
+    "storageType": null,
+    "userActionsNeeded": []
+  },
+  "containerInfo": {
+    "id": null,
+    "image": null,
+    "isContainerQuarantine": null,
+    "labels": null,
+    "name": null
+  },
+  "ecsInfo": {
+    "clusterName": null,
+    "serviceArn": null,
+    "serviceName": null,
+    "taskArn": null,
+    "taskAvailabilityZone": null,
+    "taskDefinitionArn": null,
+    "taskDefinitionFamily": null,
+    "taskDefinitionRevision": null,
+    "type": null,
+    "version": null
+  },
+  "id": "2000000000000000003",
+  "indicators": [
+    {
+      "category": "General",
+      "description": "Process modified a system file",
+      "ids": [
+        181
+      ],
+      "tactics": [
+        {
+          "name": "Defense Evasion",
+          "source": "MITRE",
+          "techniques": [
+            {
+              "link": "https://attack.mitre.org/techniques/T1211/",
+              "name": "Exploitation for Defense Evasion"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "kubernetesInfo": {
+    "cluster": null,
+    "controllerKind": null,
+    "controllerLabels": null,
+    "controllerName": null,
+    "isContainerQuarantine": null,
+    "namespace": null,
+    "namespaceLabels": null,
+    "node": null,
+    "nodeLabels": null,
+    "pod": null,
+    "podLabels": null
+  },
+  "mitigationStatus": [
+    {
+      "action": "quarantine",
+      "actionsCounters": null,
+      "agentSupportsReport": true,
+      "groupNotFound": false,
+      "lastUpdate": "2026-07-16T21:19:57.431809Z",
+      "latestReport": null,
+      "mitigationEndedAt": "2026-07-16T21:19:57.421081Z",
+      "mitigationStartedAt": "2026-07-16T21:19:57.421080Z",
+      "reportId": "2000000000000000201",
+      "status": "success"
+    },
+    {
+      "action": "kill",
+      "actionsCounters": null,
+      "agentSupportsReport": true,
+      "groupNotFound": false,
+      "lastUpdate": "2026-07-16T21:19:57.330920Z",
+      "latestReport": null,
+      "mitigationEndedAt": "2026-07-16T21:19:57.315123Z",
+      "mitigationStartedAt": "2026-07-16T21:19:57.315122Z",
+      "reportId": "2000000000000000202",
+      "status": "success"
+    },
+    {
+      "action": "remediate",
+      "actionsCounters": null,
+      "agentSupportsReport": true,
+      "groupNotFound": false,
+      "lastUpdate": "2026-07-16T21:19:57.531036Z",
+      "latestReport": null,
+      "mitigationEndedAt": "2026-07-16T21:19:57.525743Z",
+      "mitigationStartedAt": "2026-07-16T21:19:57.525742Z",
+      "reportId": "2000000000000000203",
+      "status": "success"
+    }
+  ],
+  "threatInfo": {
+    "analystVerdict": "undefined",
+    "analystVerdictDescription": "Undefined",
+    "automaticallyResolved": false,
+    "browserType": null,
+    "certificateId": "<Type=Apple/ID=com.apple.mds>",
+    "classification": "Malware",
+    "classificationSource": "Static",
+    "cloudFilesHashVerdict": null,
+    "collectionId": "2000000000000000009",
+    "confidenceLevel": "suspicious",
+    "createdAt": "2026-07-16T21:19:57.140774Z",
+    "detectionEngines": [
+      {
+        "key": "pre_execution",
+        "title": "On-Write Static AI"
+      }
+    ],
+    "detectionType": "static",
+    "engines": [
+      "On-Write DFI"
+    ],
+    "externalTicketExists": false,
+    "externalTicketId": null,
+    "failedActions": false,
+    "fileExtension": null,
+    "fileExtensionType": null,
+    "filePath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds",
+    "fileSize": 5048752,
+    "fileVerificationType": "SignedVerified",
+    "identifiedAt": "2026-07-16T21:19:54Z",
+    "incidentStatus": "in_progress",
+    "incidentStatusDescription": "In progress",
+    "initiatedBy": "agent_policy",
+    "initiatedByDescription": "Agent Policy",
+    "initiatingUserId": null,
+    "initiatingUsername": null,
+    "isFileless": false,
+    "isValidCertificate": true,
+    "macroModules": null,
+    "maliciousProcessArguments": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds",
+    "md5": null,
+    "mitigatedPreemptively": false,
+    "mitigationStatus": "mitigated",
+    "mitigationStatusDescription": "Mitigated",
+    "originatorProcess": "launchd",
+    "pendingActions": false,
+    "processUser": "root",
+    "publisherName": "Apple Inc.",
+    "reachedEventsLimit": null,
+    "rebootRequired": false,
+    "rootProcessUpn": null,
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "storyline": "00000000-0000-0000-0000-0000000000AA",
+    "threatId": "2000000000000000003",
+    "threatName": "mds",
+    "updatedAt": "2026-07-24T03:55:29.440474Z"
+  },
+  "whiteningOptions": [
+    "path",
+    "certificate",
+    "hash"
+  ],
+  "createdOn": 1784236797140
+}

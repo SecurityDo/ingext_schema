@@ -1,0 +1,42 @@
+{
+  "analystVerdict": "TRUE_POSITIVE_UNDEFINED",
+  "asset": {
+    "agentUuid": "00000000-0000-0000-0000-000000000001",
+    "id": "s1assetplaceholder00000001",
+    "name": "alex-pc",
+    "osType": "WINDOWS",
+    "type": "UNKNOWN"
+  },
+  "assignee": null,
+  "classification": "RANSOMWARE",
+  "confidenceLevel": "MALICIOUS",
+  "createdAt": "2026-07-22T16:58:21.660Z",
+  "description": "Windows process events analysis detected DLL Hijacking.",
+  "detectedAt": "2026-07-22T16:57:13.046Z",
+  "detectionSource": {
+    "engine": null,
+    "product": "EDR",
+    "vendor": "SentinelOne"
+  },
+  "externalId": "2000000000000000003",
+  "firstSeenAt": "2026-07-22T16:57:13.046Z",
+  "id": "00000000-0000-0000-0000-0000000000a1",
+  "lastSeenAt": "2026-07-22T16:59:26.862Z",
+  "name": "Dr.Fone_Installer.exe - DLL Hijacking detected",
+  "noteExists": false,
+  "process": {
+    "cmdLine": "\"C:\\Users\\alex.wilber\\Downloads\\Dr.Fone_Installer.exe\"",
+    "file": {
+      "md5": null,
+      "path": "\\Device\\HarddiskVolume3\\Users\\alex.wilber\\Downloads\\Dr.Fone_Installer.exe",
+      "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "parentName": "msedge.exe"
+  },
+  "result": "MITIGATED",
+  "severity": "CRITICAL",
+  "status": "NEW",
+  "storylineId": "00000000000000A1",
+  "updatedAt": "2026-07-22T16:59:26.862Z"
+}
