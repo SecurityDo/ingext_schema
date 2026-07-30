@@ -1,0 +1,47 @@
+description: >-
+  Expand one security recommendation into the devices it affects. The
+  recommendation record holds counts but no device information at all, so the
+  device list always comes from a join, and which table to join depends on the id
+  prefix: 'sca-_-scid-NNN' recommendations resolve through
+  msDefenderSecureConfig.recommendationReference (non-compliant, applicable
+  devices), 'va-_-vendor-_-product' recommendations through
+  msDefenderVulnerability.RecommendationReference (devices with an open CVE on
+  that product). Both branches are unioned here, so the query works whichever kind
+  of id is set in Recommendation.
+datatype: msDefenderRecommendation
+kql: |
+  let Recommendation = "sca-_-scid-2513";
+  let ConfigDevices =
+      msDefenderSecureConfig
+      | where recommendationReference == Recommendation
+      | where isApplicable == true and isCompliant == false
+      | summarize Detail = any(configurationName), Findings = count()
+                  by DeviceId = deviceId, DeviceName = deviceName
+      | extend Source = "secure-config";
+  let VulnDevices =
+      msDefenderVulnerability
+      | where RecommendationReference == Recommendation and isnotempty(CveId)
+      | summarize Findings = dcount(CveId), MaxCvss = max(CvssScore)
+                  by DeviceId, DeviceName
+      | extend Source = "vulnerability",
+               Detail = strcat(tostring(Findings), " CVEs, max CVSS ", tostring(MaxCvss))
+      | project DeviceId, DeviceName, Findings, Detail, Source;
+  union ConfigDevices, VulnDevices
+  | join kind=leftouter (
+        msDefenderMachine
+        | where isnull(mergedIntoMachineId) and isExcluded != true
+        | project MachineId = id, osPlatform, version, exposureLevel, riskScore,
+                  deviceValue, managedBy, rbacGroupName, LastSeen = todatetime(lastSeen)
+    ) on $left.DeviceId == $right.MachineId
+  | project
+      DeviceName, DeviceId, Source, Findings, Detail, exposureLevel, riskScore,
+      deviceValue, managedBy, rbacGroupName, osPlatform, version, LastSeen
+  | order by deviceValue asc, Findings desc, DeviceName asc
+tags: [microsoft, defender, mde, mdvm, recommendations, remediation, join, device, security]
+expected_output: |
+  Devices affected by the selected recommendation (sanitized).
+
+  DeviceName              DeviceId                                  Source         Findings  Detail                                           exposureLevel  riskScore  deviceValue  managedBy  rbacGroupName         osPlatform  version  LastSeen
+  corp-dc01.contoso.com   5c9f0b1bc857bb1b346a6d76c85cb46fc814aa4b  secure-config  1         Block Adobe Reader from creating child processes  High           High       High         Intune     Domain Controllers    WindowsServer2022  21H2  2026-07-30T17:02:19Z
+  corp-ws042.contoso.com  9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1  secure-config  1         Block Adobe Reader from creating child processes  High           Medium     Normal       Intune     Windows Workstations  Windows10   22H2     2026-07-30T15:02:16Z
+  corp-ws101.contoso.com  1e5bc9d7e413ddd7902c2932e418702b84d0cc07  secure-config  1         Block Adobe Reader from creating child processes  Medium         High       Normal       Intune     Windows Workstations  Windows11   24H2     2026-07-30T17:48:26Z

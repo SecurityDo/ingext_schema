@@ -1,0 +1,18 @@
+{
+  "configurationCategory": "OS",
+  "configurationId": "scid-37",
+  "configurationImpact": 5,
+  "configurationName": "Enable 'Domain member: Digitally encrypt or sign secure channel data (always)'",
+  "configurationSubcategory": null,
+  "deviceId": "9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1",
+  "deviceName": "corp-ws042.contoso.com",
+  "isApplicable": true,
+  "isCompliant": true,
+  "isExpectedUserImpact": false,
+  "osPlatform": "Windows10",
+  "osVersion": "10.0.19045.1889",
+  "rbacGroupId": 140,
+  "rbacGroupName": "Windows Workstations",
+  "recommendationReference": "sca-_-scid-37",
+  "timestamp": "2026-07-30 10:32:16"
+}

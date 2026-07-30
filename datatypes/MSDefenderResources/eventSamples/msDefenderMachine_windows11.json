@@ -1,0 +1,81 @@
+{
+  "aadDeviceId": "00000000-0000-0000-0000-000000000001",
+  "agentVersion": "10.8830.26100.8875",
+  "computerDnsName": "corp-ws101.contoso.com",
+  "deviceValue": "Normal",
+  "exclusionReason": null,
+  "exposureLevel": "Medium",
+  "firstSeen": "2025-07-09T14:56:17.4552771Z",
+  "healthStatus": "Active",
+  "id": "1e5bc9d7e413ddd7902c2932e418702b84d0cc07",
+  "ipAddresses": [
+    {
+      "ipAddress": "169.254.20.4",
+      "macAddress": "00155D000101",
+      "operationalStatus": "Down",
+      "type": "Ethernet"
+    },
+    {
+      "ipAddress": "10.1.1.211",
+      "macAddress": "00155D000102",
+      "operationalStatus": "Up",
+      "type": "Ethernet"
+    },
+    {
+      "ipAddress": "169.254.249.79",
+      "macAddress": "00155D000103",
+      "operationalStatus": "Down",
+      "type": "IEEE80211"
+    },
+    {
+      "ipAddress": "169.254.72.96",
+      "macAddress": "00155D000104",
+      "operationalStatus": "Down",
+      "type": "IEEE80211"
+    },
+    {
+      "ipAddress": "10.1.2.180",
+      "macAddress": "00155D000105",
+      "operationalStatus": "Down",
+      "type": "IEEE80211"
+    },
+    {
+      "ipAddress": "169.254.64.230",
+      "macAddress": "00155D000106",
+      "operationalStatus": "Down",
+      "type": "Ethernet"
+    },
+    {
+      "ipAddress": "127.0.0.1",
+      "macAddress": null,
+      "operationalStatus": "Up",
+      "type": "SoftwareLoopback"
+    },
+    {
+      "ipAddress": "::1",
+      "macAddress": null,
+      "operationalStatus": "Up",
+      "type": "SoftwareLoopback"
+    }
+  ],
+  "isAadJoined": true,
+  "isExcluded": false,
+  "isPotentialDuplication": false,
+  "lastExternalIpAddress": "192.0.2.114",
+  "lastIpAddress": "10.1.1.211",
+  "lastSeen": "2026-07-30T17:48:26.0607394Z",
+  "machineTags": [],
+  "managedBy": "Intune",
+  "managedByStatus": "Unknown",
+  "mergedIntoMachineId": null,
+  "onboardingStatus": "Onboarded",
+  "osArchitecture": "64-bit",
+  "osBuild": 26100,
+  "osPlatform": "Windows11",
+  "osProcessor": "x64",
+  "rbacGroupId": 140,
+  "rbacGroupName": "Windows Workstations",
+  "riskScore": "None",
+  "version": "24H2",
+  "vmMetadata": null
+}

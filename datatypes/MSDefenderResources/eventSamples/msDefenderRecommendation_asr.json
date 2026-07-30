@@ -1,0 +1,38 @@
+{
+  "activeAlert": false,
+  "associatedThreats": [
+    "00000000-0000-0000-0000-0000000000a1",
+    "00000000-0000-0000-0000-0000000000a2",
+    "00000000-0000-0000-0000-0000000000a3",
+    "00000000-0000-0000-0000-0000000000a4",
+    "00000000-0000-0000-0000-0000000000a5",
+    "00000000-0000-0000-0000-0000000000a6",
+    "00000000-0000-0000-0000-0000000000a7",
+    "00000000-0000-0000-0000-0000000000a8"
+  ],
+  "configScoreImpact": 8.97,
+  "exposedCriticalDevices": 22,
+  "exposedMachinesCount": 193,
+  "exposureImpact": 10.615099009900991,
+  "hasUnpatchableCve": false,
+  "id": "sca-_-scid-2513",
+  "nonProductivityImpactedAssets": 180,
+  "productName": "windows_server_2022",
+  "publicExploit": false,
+  "recommendationCategory": "Security controls",
+  "recommendationName": "Block Adobe Reader from creating child processes",
+  "recommendedProgram": "",
+  "recommendedVendor": "",
+  "recommendedVersion": "",
+  "relatedComponent": "Windows Server 2022",
+  "remediationType": "ConfigurationChange",
+  "severityScore": 9,
+  "status": "Active",
+  "subCategory": "Attack Surface Reduction",
+  "tags": [
+    "UserImpactAssessment"
+  ],
+  "totalMachineCount": 261,
+  "vendor": "microsoft",
+  "weaknesses": 1
+}
