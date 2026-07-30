@@ -1,0 +1,289 @@
+[
+  {
+    "actorDisplayName": null,
+    "additionalData": {},
+    "alertPolicyId": null,
+    "alertWebUrl": "https://security.microsoft.com/alerts/da00000000-0000-0000-0000-0000000000c3_1?tid=00000000-0000-0000-0000-000000000002",
+    "assignedTo": null,
+    "categories": [
+      "Discovery",
+      "Execution"
+    ],
+    "category": "Execution",
+    "classification": null,
+    "comments": [],
+    "createdDateTime": "2026-07-27T14:32:28.89Z",
+    "customDetails": {},
+    "description": "PowerMad script was detected on this device. PowerMad script is an Active Directory (AD) exploitation tool built for man-in-the-middle attacks. Attackers use it to perform discovery and re-configuration of the AD-Integrated DNS for LLMNR/NBS spoofing attacks.",
+    "detectionSource": "microsoftDefenderForEndpoint",
+    "detectorId": "692cc67c-baa6-4d28-b9dd-910b7b2e9b73",
+    "determination": null,
+    "evidence": [
+      {
+        "@odata.type": "#microsoft.graph.security.deviceEvidence",
+        "azureAdDeviceId": null,
+        "createdDateTime": "2026-07-27T14:32:29.02Z",
+        "defenderAvStatus": "unknown",
+        "detailedRoles": [
+          "PrimaryDevice"
+        ],
+        "deviceDnsName": "azstackhci01.contoso.com",
+        "dnsDomain": "contoso.com",
+        "firstSeenDateTime": "2026-07-02T16:31:01.444749Z",
+        "healthStatus": "active",
+        "hostName": "azstackhci01",
+        "ipInterfaces": [
+          "10.0.252.237",
+          "10.0.252.10",
+          "10.0.250.21",
+          "10.0.250.131",
+          "fe80::4da1:88ae:f44c:867f",
+          "169.254.4.5",
+          "fe80::59ec:1a34:7750:7e67",
+          "127.0.0.1",
+          "::1"
+        ],
+        "lastExternalIpAddress": "192.0.2.10",
+        "lastIpAddress": "10.0.250.131",
+        "loggedOnUsers": [
+          {
+            "accountName": "da.pgupta",
+            "domainName": "CONTOSO"
+          }
+        ],
+        "mdeDeviceId": "0000000000000000000000000000000000000f01",
+        "ntDomain": null,
+        "onboardingStatus": "onboarded",
+        "osBuild": 26100,
+        "osPlatform": "AzureStackHCI",
+        "rbacGroupId": 996,
+        "rbacGroupName": "UnassignedGroup",
+        "remediationStatus": "active",
+        "remediationStatusDetails": null,
+        "resourceAccessEvents": [],
+        "riskScore": "medium",
+        "roles": [],
+        "tags": [
+          "Critical asset"
+        ],
+        "verdict": "suspicious",
+        "version": "24H2",
+        "vmMetadata": {
+          "cloudProvider": "azure",
+          "resourceId": "/subscriptions/00000000-0000-0000-0000-0000000000f1/resourceGroups/contoso-prod-hci-eastus-rg/providers/Microsoft.HybridCompute/machines/AZSTACKHCI01",
+          "subscriptionId": "00000000-0000-0000-0000-0000000000f1",
+          "vmId": "00000000-0000-0000-0000-0000000000f2"
+        }
+      },
+      {
+        "@odata.type": "#microsoft.graph.security.userEvidence",
+        "createdDateTime": "2026-07-27T14:32:29.02Z",
+        "detailedRoles": [],
+        "remediationStatus": "active",
+        "remediationStatusDetails": null,
+        "roles": [],
+        "stream": null,
+        "tags": [],
+        "userAccount": {
+          "accountName": "HciOrchestrator",
+          "activeDirectoryObjectGuid": null,
+          "azureAdUserId": null,
+          "displayName": null,
+          "domainName": "AZSTACKHCI01",
+          "resourceAccessEvents": [],
+          "tenantId": null,
+          "userPrincipalName": null,
+          "userSid": "S-1-5-21-1111111111-2222222222-3333333333-1008"
+        },
+        "verdict": "suspicious"
+      },
+      {
+        "@odata.type": "#microsoft.graph.security.processEvidence",
+        "createdDateTime": "2026-07-27T14:32:29.02Z",
+        "detailedRoles": [],
+        "detectionStatus": "detected",
+        "imageFile": {
+          "fileName": "powershell.exe",
+          "filePath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0",
+          "filePublisher": "Microsoft Corporation",
+          "fileSize": 454656,
+          "issuer": null,
+          "md5": null,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha256Ac": null,
+          "signer": null
+        },
+        "mdeDeviceId": "0000000000000000000000000000000000000f01",
+        "parentProcessCreationDateTime": "2026-07-02T20:25:13.3870524Z",
+        "parentProcessId": 23168,
+        "parentProcessImageFile": {
+          "fileName": "Contoso.HciOrchestratorService.WinSvcHost.exe",
+          "filePath": "C:\\Agents\\Contoso.HciOrchestrator\\content",
+          "filePublisher": "Contoso Corporation",
+          "fileSize": 70656,
+          "issuer": null,
+          "md5": null,
+          "sha1": null,
+          "sha256": null,
+          "sha256Ac": null,
+          "signer": null
+        },
+        "processCommandLine": "\"powershell.exe\" -Version 5.1 -s -NoLogo -NoProfile -EncodedCommand SQBtAHAAbwByAHQALQBNAG8AZAB1AGwAZQAgACcAQwA6AFwAQQBnAGUAbgB0AHMAXABDAG8AbgB0AG8AcwBvAC4ASABjAGkATwByAGMAaABlAHMAdAByAGEAdABvAHIAXABjAG8AbgB0AGUAbgB0AFwAQwBsAG8AdQBkAEUAbgBnAGkAbgBlAC4AZABsAGwAJwA7ACAASQBtAHAAbwByAHQALQBNAG8AZAB1AGwAZQAgACcAQwA6AFwAQQBnAGUAbgB0AHMAXABDAG8AbgB0AG8AcwBvAC4ASABjAGkATwByAGMAaABlAHMAdAByAGEAdABvAHIAXABjAG8AbgB0AGUAbgB0AFwARABpAGEAZwBuAG8AcwB0AGkAYwBzAC4AZABsAGwAJwA7AA==",
+        "processCreationDateTime": "2026-07-27T14:30:18.6117397Z",
+        "processId": 24548,
+        "remediationStatus": "active",
+        "remediationStatusDetails": null,
+        "roles": [],
+        "tags": [],
+        "userAccount": {
+          "accountName": "HciOrchestrator",
+          "activeDirectoryObjectGuid": null,
+          "azureAdUserId": null,
+          "displayName": null,
+          "domainName": "AZSTACKHCI01",
+          "resourceAccessEvents": [],
+          "tenantId": null,
+          "userPrincipalName": null,
+          "userSid": "S-1-5-21-1111111111-2222222222-3333333333-1008"
+        },
+        "verdict": "suspicious"
+      }
+    ],
+    "firstActivityDateTime": "2026-07-27T14:30:30.2713211Z",
+    "id": "da00000000-0000-0000-0000-0000000000c3_1",
+    "incidentId": "101129",
+    "incidentWebUrl": "https://security.microsoft.com/incident2/101129/overview?tid=00000000-0000-0000-0000-000000000002",
+    "investigationState": "unsupportedAlertType",
+    "lastActivityDateTime": "2026-07-27T14:30:30.2713211Z",
+    "lastUpdateDateTime": "2026-07-27T14:32:33.79Z",
+    "mitreTechniques": [
+      "T1016",
+      "T1059.001",
+      "T1069"
+    ],
+    "productName": "Microsoft Defender for Endpoint",
+    "providerAlertId": "00000000-0000-0000-0000-0000000000c3_1",
+    "recommendedActions": "A. Validate the PowerMad script threat as follows:\n1. Contact the user that ran the script to verify whether the activity was legitimate. Ensure that the user's account has not been compromised and that the user doesn't have unnecessary administrative privileges.\n2. Check the device timeline for other suspicious activities.\n3. Locate unfamiliar processes in the process tree. Check files for prevalence, their locations, and digital signatures.\n4. Submit relevant files for deep analysis and review file behaviors.\n5. Identify unusual system activity with system owners.\n\nB. Scope the incident. Find related machines, network addresses, and files in the incident graph.\n\nC. Contain and mitigate the breach. Stop suspicious processes, isolate affected devices, decommission compromised accounts or reset passwords, block IP addresses and URLs, and install security updates.\n\nD. Contact your incident response team, or contact Microsoft support for investigation and remediation services.",
+    "resolvedDateTime": null,
+    "serviceSource": "microsoftDefenderForEndpoint",
+    "severity": "medium",
+    "status": "new",
+    "systemTags": [
+      "Critical asset"
+    ],
+    "tenantId": "00000000-0000-0000-0000-000000000002",
+    "threatDisplayName": null,
+    "threatFamilyName": null,
+    "title": "PowerMad script detected"
+  },
+  {
+    "actorDisplayName": null,
+    "additionalData": {},
+    "alertPolicyId": null,
+    "alertWebUrl": "https://security.microsoft.com/alerts/da00000000-0000-0000-0000-0000000000c7_1?tid=00000000-0000-0000-0000-000000000002",
+    "assignedTo": "API-Automated Investigation and Response",
+    "categories": [
+      "Malware"
+    ],
+    "category": "Malware",
+    "classification": null,
+    "comments": [],
+    "createdDateTime": "2026-07-29T22:32:54.56Z",
+    "customDetails": {},
+    "description": "Malware and unwanted software are undesirable applications that perform annoying, disruptive, or harmful actions on affected machines. Some of these undesirable applications can replicate and spread from one machine to another. Others are able to receive commands from remote attackers and perform activities associated with cyber attacks.\n\nThis detection might indicate that the malware was stopped from delivering its payload. However, it is prudent to check the machine for signs of infection.",
+    "detectionSource": "antivirus",
+    "detectorId": "d60f5b90-ecd8-4d77-8186-a801597ec762",
+    "determination": null,
+    "evidence": [
+      {
+        "@odata.type": "#microsoft.graph.security.deviceEvidence",
+        "azureAdDeviceId": "00000000-0000-0000-0000-0000000000f3",
+        "createdDateTime": "2026-07-29T22:32:54.6633333Z",
+        "defenderAvStatus": "unknown",
+        "detailedRoles": [
+          "PrimaryDevice"
+        ],
+        "deviceDnsName": "srv-app-02.contoso.com",
+        "dnsDomain": "contoso.com",
+        "firstSeenDateTime": "2026-05-20T17:10:14.3220124Z",
+        "healthStatus": "active",
+        "hostName": "srv-app-02",
+        "ipInterfaces": [
+          "10.0.18.67",
+          "fe80::3ec0:4d3c:40fa:7ad",
+          "127.0.0.1",
+          "::1"
+        ],
+        "lastExternalIpAddress": "192.0.2.20",
+        "lastIpAddress": "10.0.18.67",
+        "loggedOnUsers": [],
+        "mdeDeviceId": "0000000000000000000000000000000000000f02",
+        "ntDomain": null,
+        "onboardingStatus": "onboarded",
+        "osBuild": 26100,
+        "osPlatform": "WindowsServer2025",
+        "rbacGroupId": 996,
+        "rbacGroupName": "UnassignedGroup",
+        "remediationStatus": "active",
+        "remediationStatusDetails": null,
+        "resourceAccessEvents": [],
+        "riskScore": "none",
+        "roles": [],
+        "tags": [],
+        "verdict": "suspicious",
+        "version": "24H2",
+        "vmMetadata": {
+          "cloudProvider": "azure",
+          "resourceId": "/subscriptions/00000000-0000-0000-0000-0000000000f4/resourceGroups/contoso-arc-centralus-rg/providers/Microsoft.HybridCompute/machines/SRV-APP-02",
+          "subscriptionId": "00000000-0000-0000-0000-0000000000f4",
+          "vmId": "00000000-0000-0000-0000-0000000000f5"
+        }
+      },
+      {
+        "@odata.type": "#microsoft.graph.security.fileEvidence",
+        "createdDateTime": "2026-07-29T22:32:54.6633333Z",
+        "detailedRoles": [],
+        "detectionStatus": "prevented",
+        "fileDetails": {
+          "fileName": "Dumping Google Chrome Passwords .py",
+          "filePath": "C:\\ProgramData\\Contoso\\Collector\\Workspace\\Archive_Extraction\\__temp\\188\\Module 4",
+          "filePublisher": null,
+          "fileSize": 2065,
+          "issuer": null,
+          "md5": "d41d8cd98f00b204e9800998ecf8427e",
+          "sha1": "356a192b7913b04c54574d18c28d46e6395428ab",
+          "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+          "sha256Ac": null,
+          "signer": null
+        },
+        "mdeDeviceId": "0000000000000000000000000000000000000f02",
+        "remediationStatus": "prevented",
+        "remediationStatusDetails": "Entity was pre-remediated by Windows Defender",
+        "roles": [],
+        "tags": [],
+        "verdict": "malicious"
+      }
+    ],
+    "firstActivityDateTime": "2026-07-29T22:31:39.0509525Z",
+    "id": "da00000000-0000-0000-0000-0000000000c7_1",
+    "incidentId": "101195",
+    "incidentWebUrl": "https://security.microsoft.com/incident2/101195/overview?tid=00000000-0000-0000-0000-000000000002",
+    "investigationState": "successfullyRemediated",
+    "lastActivityDateTime": "2026-07-29T22:31:39.0509525Z",
+    "lastUpdateDateTime": "2026-07-29T22:41:13.01Z",
+    "mitreTechniques": [],
+    "productName": "Microsoft Defender for Endpoint",
+    "providerAlertId": "00000000-0000-0000-0000-0000000000c7_1",
+    "recommendedActions": "Collect artifacts and determine scope\n•\tReview the machine timeline for suspicious activities that may have occurred before and after the time of the alert, and record additional related artifacts (files, IPs/URLs) \n•\tLook for the presence of relevant artifacts on other systems. Identify commonalities and differences between potentially compromised systems.\n•\tSubmit relevant files for deep analysis and review resulting detailed behavioral information.\n•\tSubmit undetected files to the MMPC malware portal\n\nInitiate containment & mitigation \n•\tContact the user to verify intent and initiate local remediation actions as needed.\n•\tUpdate AV signatures and run a full scan. The scan might reveal and remove previously-undetected malware components.\n•\tEnsure that the machine has the latest security updates. In particular, ensure that you have installed the latest software, web browser, and Operating System versions.\n•\tIf credential theft is suspected, reset all relevant users passwords.\n•\tBlock communication with relevant URLs or IPs at the organization's perimeter.",
+    "resolvedDateTime": "2026-07-29T22:41:12.8149557Z",
+    "serviceSource": "microsoftDefenderForEndpoint",
+    "severity": "informational",
+    "status": "resolved",
+    "systemTags": [],
+    "tenantId": "00000000-0000-0000-0000-000000000002",
+    "threatDisplayName": "Trojan:Python/PSWStealer.K!AMTB",
+    "threatFamilyName": "PSWStealer",
+    "title": "'PSWStealer' malware was prevented"
+  }
+]

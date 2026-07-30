@@ -1,0 +1,105 @@
+{
+  "actorDisplayName": null,
+  "additionalData": {},
+  "alertPolicyId": "0000000000000000000000d2",
+  "alertWebUrl": "https://security.microsoft.com/alerts/ca0000000000000000000000c4?tid=00000000-0000-0000-0000-000000000002",
+  "assignedTo": null,
+  "categories": [
+    "SuspiciousActivity"
+  ],
+  "category": "SuspiciousActivity",
+  "classification": null,
+  "comments": [],
+  "createdDateTime": "2026-07-27T16:21:29.6233333Z",
+  "customDetails": {},
+  "description": "Activity policy 'Delegate Access Granted to User's Mailbox' was triggered by 'Diego Siciliani (Entra) (entra.dsiciliani@contoso.onmicrosoft.com)'",
+  "detectionSource": "cloudAppSecurity",
+  "detectorId": "MCAS_ALERT_CABINET_EVENT_MATCH_AUDIT",
+  "determination": null,
+  "evidence": [
+    {
+      "@odata.type": "#microsoft.graph.security.userEvidence",
+      "createdDateTime": "2026-07-27T16:21:29.7133333Z",
+      "detailedRoles": [],
+      "remediationStatus": "none",
+      "remediationStatusDetails": null,
+      "roles": [],
+      "stream": null,
+      "tags": [
+        "Critical asset"
+      ],
+      "userAccount": {
+        "accountName": "entra.dsiciliani",
+        "activeDirectoryObjectGuid": null,
+        "azureAdUserId": "00000000-0000-0000-0000-0000000000a3",
+        "displayName": "Diego Siciliani (Entra)",
+        "domainName": null,
+        "resourceAccessEvents": [],
+        "tenantId": null,
+        "userPrincipalName": "entra.dsiciliani@contoso.onmicrosoft.com",
+        "userSid": "S-1-12-1-1111111111-2222222222-3333333333-4444444441"
+      },
+      "verdict": "suspicious"
+    },
+    {
+      "@odata.type": "#microsoft.graph.security.cloudApplicationEvidence",
+      "appId": 20893,
+      "createdDateTime": "2026-07-27T16:21:29.7133333Z",
+      "detailedRoles": [],
+      "displayName": "Microsoft Exchange Online",
+      "instanceId": 0,
+      "instanceName": "Microsoft Exchange Online",
+      "remediationStatus": "none",
+      "remediationStatusDetails": null,
+      "roles": [],
+      "saasAppId": 20893,
+      "stream": null,
+      "tags": [],
+      "verdict": "suspicious"
+    },
+    {
+      "@odata.type": "#microsoft.graph.security.ipEvidence",
+      "countryLetterCode": "US",
+      "createdDateTime": "2026-07-27T16:21:29.7133333Z",
+      "detailedRoles": [],
+      "ipAddress": "192.0.2.10",
+      "location": {
+        "city": null,
+        "countryName": null,
+        "latitude": null,
+        "longitude": null,
+        "state": null
+      },
+      "remediationStatus": "none",
+      "remediationStatusDetails": null,
+      "roles": [
+        "contextual"
+      ],
+      "stream": null,
+      "tags": [],
+      "verdict": "suspicious"
+    }
+  ],
+  "firstActivityDateTime": "2026-07-27T16:20:58.563Z",
+  "id": "ca0000000000000000000000c4",
+  "incidentId": "101125",
+  "incidentWebUrl": "https://security.microsoft.com/incident2/101125/overview?tid=00000000-0000-0000-0000-000000000002",
+  "investigationState": "unsupportedAlertType",
+  "lastActivityDateTime": "2026-07-27T16:20:58.563Z",
+  "lastUpdateDateTime": "2026-07-27T16:21:30.93Z",
+  "mitreTechniques": [],
+  "productName": "Microsoft Defender for Cloud Apps",
+  "providerAlertId": "0000000000000000000000c4",
+  "recommendedActions": "",
+  "resolvedDateTime": null,
+  "serviceSource": "microsoftDefenderForCloudApps",
+  "severity": "medium",
+  "status": "new",
+  "systemTags": [
+    "Critical asset"
+  ],
+  "tenantId": "00000000-0000-0000-0000-000000000002",
+  "threatDisplayName": null,
+  "threatFamilyName": null,
+  "title": "Delegate Access Granted to User's Mailbox"
+}

@@ -1,0 +1,223 @@
+[
+  {
+    "actorDisplayName": null,
+    "additionalData": {
+      "Alert generation status": "Full alert created",
+      "AlertPolicyTitle": "Privileged Account Permissions Changed",
+      "AlertType": "00000000-0000-0000-0000-0000000000e1_00000000-0000-0000-0000-0000000000d3",
+      "Analytic Rule Ids": "[\"00000000-0000-0000-0000-0000000000d3\"]",
+      "Analytic Rule Name": "Privileged Account Permissions Changed",
+      "AnalyticsTemplateId": "0433c8a3-9aa6-4577-beef-2ea23be41137",
+      "Correlation Id": "00000000-0000-0000-0000-0000000000e2",
+      "Data Sources": "[\"contoso-sentinel-centralus-laws\"]",
+      "Event Grouping": "SingleAlert",
+      "Intent": 8,
+      "Intent@odata.type": "#Int64",
+      "OriginalAlertProductName": "Microsoft Sentinel",
+      "OriginalAlertProviderName": "Azure Sentinel",
+      "OriginatingAlertSource": "Azure Sentinel",
+      "ProcessedBySentinel": "True",
+      "Query": "// The query_now parameter represents the time (in UTC) at which the scheduled analytics rule ran to produce this alert.\nset query_now = datetime(2026-07-18T15:52:51.6083199Z);\nlet admin_users = (IdentityInfo\n  | where TimeGenerated > ago(2d)\n  | summarize arg_max(TimeGenerated, *) by AccountUPN\n  | where AssignedRoles contains \"admin\" or GroupMembership has \"Admin\"\n  | summarize by tolower(AccountUPN));\n  AuditLogs\n  | where Category =~ \"RoleManagement\"\n  | where OperationName has \"Add eligible member\"\n  | extend TargetUserPrincipalName = tostring(TargetResources[0].userPrincipalName)\n  | where tolower(TargetUserPrincipalName) in (admin_users)\n  | extend TargetAadUserId = tostring(TargetResources[0].id)\n  | extend Group = tostring(TargetResources[0].displayName)\n  | extend RoleAddedTo = iif(isnotempty(TargetUserPrincipalName), TargetUserPrincipalName, Group)\n  | extend mod_props = TargetResources[0].modifiedProperties\n  | extend InitiatingAppName = tostring(InitiatedBy.app.displayName)\n  | extend InitiatingAppServicePrincipalId = tostring(InitiatedBy.app.servicePrincipalId)\n  | extend InitiatingUserPrincipalName = tostring(InitiatedBy.user.userPrincipalName)\n  | extend InitiatingAadUserId = tostring(InitiatedBy.user.id)\n  | extend InitiatingIPAddress = tostring(InitiatedBy.user.ipAddress)\n  | extend RoleAddedBy = iif(isnotempty(InitiatingAppName), InitiatingAppName, InitiatingUserPrincipalName)\n  | mv-expand mod_props\n  | where mod_props.displayName == \"Role.DisplayName\"\n  | extend UserAgent = tostring(AdditionalDetails[0].value)\n  | extend RoleAdded = tostring(parse_json(tostring(mod_props.newValue)))\n  | extend TargetAccountName = tostring(split(TargetUserPrincipalName, \"@\")[0]), TargetAccountUPNSuffix = tostring(split(TargetUserPrincipalName, \"@\")[1])\n  | extend InitiatingAccountName = tostring(split(InitiatingUserPrincipalName, \"@\")[0]), InitiatingAccountUPNSuffix = tostring(split(InitiatingUserPrincipalName, \"@\")[1])\n  | project-reorder TimeGenerated, OperationName, TargetUserPrincipalName, RoleAddedTo, RoleAdded, RoleAddedBy, InitiatingUserPrincipalName, InitiatingAppName",
+      "Query End Time UTC": "2026-07-18 15:52:52Z",
+      "Query Period": "2.00:00:00",
+      "Query Start Time UTC": "2026-07-16 15:52:51Z",
+      "Search Query Results Overall Count": "1",
+      "SystemAlertId": "00000000-0000-0000-0000-0000000000e3",
+      "Trigger Operator": "GreaterThan",
+      "Trigger Threshold": "0",
+      "WorkspaceId": "00000000-0000-0000-0000-0000000000e1",
+      "WorkspaceName": "contoso-sentinel-centralus-laws"
+    },
+    "alertPolicyId": "00000000-0000-0000-0000-0000000000d3",
+    "alertWebUrl": "https://security.microsoft.com/alerts/sn00000000-0000-0000-0000-0000000000c5?tid=00000000-0000-0000-0000-000000000002",
+    "assignedTo": "entra.mbowen@contoso.onmicrosoft.com",
+    "categories": [
+      "PrivilegeEscalation"
+    ],
+    "category": "PrivilegeEscalation",
+    "classification": "falsePositive",
+    "comments": [
+      {
+        "comment": null,
+        "createdByDisplayName": "entra.mbowen@contoso.onmicrosoft.com",
+        "createdDateTime": "2026-07-27T19:25:07.1624648Z"
+      }
+    ],
+    "createdDateTime": "2026-07-18T15:58:04.05Z",
+    "customDetails": {},
+    "description": "Detects changes to permissions assigned to admin users. Threat actors may try and increase permission scope by adding additional roles to already privileged accounts.\nReview any modifications to ensure they were made legitimately.\nRef: https://docs.microsoft.com/azure/active-directory/fundamentals/security-operations-privileged-accounts#changes-to-privileged-accounts",
+    "detectionSource": "unknownFutureValue",
+    "detectorId": "00000000-0000-0000-0000-0000000000e1_00000000-0000-0000-0000-000",
+    "determination": "notMalicious",
+    "evidence": [
+      {
+        "@odata.type": "#microsoft.graph.security.userEvidence",
+        "createdDateTime": "2026-07-18T15:58:04.1466667Z",
+        "detailedRoles": [],
+        "remediationStatus": "none",
+        "remediationStatusDetails": null,
+        "roles": [],
+        "stream": null,
+        "tags": [
+          "Critical asset"
+        ],
+        "userAccount": {
+          "accountName": "entra.mbowen",
+          "activeDirectoryObjectGuid": null,
+          "azureAdUserId": "00000000-0000-0000-0000-0000000000a4",
+          "displayName": "Megan Bowen (Entra)",
+          "domainName": null,
+          "resourceAccessEvents": [],
+          "tenantId": null,
+          "userPrincipalName": "entra.mbowen@contoso.onmicrosoft.com",
+          "userSid": "S-1-12-1-1111111111-2222222222-3333333333-4444444442"
+        },
+        "verdict": "suspicious"
+      }
+    ],
+    "firstActivityDateTime": "2026-07-16T19:48:40.9602004Z",
+    "id": "sn00000000-0000-0000-0000-0000000000c5",
+    "incidentId": "100879",
+    "incidentWebUrl": "https://security.microsoft.com/incident2/100879/overview?tid=00000000-0000-0000-0000-000000000002",
+    "investigationState": "unsupportedAlertType",
+    "lastActivityDateTime": "2026-07-16T19:48:40.9602004Z",
+    "lastUpdateDateTime": "2026-07-27T19:25:07.2066667Z",
+    "mitreTechniques": [
+      "T1078",
+      "T1078.004"
+    ],
+    "productName": "Microsoft Sentinel",
+    "providerAlertId": "00000000-0000-0000-0000-0000000000c5",
+    "recommendedActions": "",
+    "resolvedDateTime": "2026-07-27T19:25:07.1624648Z",
+    "serviceSource": "unknownFutureValue",
+    "severity": "medium",
+    "status": "resolved",
+    "systemTags": [
+      "Critical asset"
+    ],
+    "tenantId": "00000000-0000-0000-0000-000000000002",
+    "threatDisplayName": null,
+    "threatFamilyName": null,
+    "title": "Privileged Account Permissions Changed"
+  },
+  {
+    "actorDisplayName": null,
+    "additionalData": {
+      "Alert generation status": "Full alert created",
+      "AlertPolicyTitle": "User added to Microsoft Entra ID Privileged Groups",
+      "AlertType": "00000000-0000-0000-0000-0000000000e1_00000000-0000-0000-0000-0000000000d4",
+      "Analytic Rule Ids": "[\"00000000-0000-0000-0000-0000000000d4\"]",
+      "Analytic Rule Name": "User added to Microsoft Entra ID Privileged Groups",
+      "AnalyticsTemplateId": "4d94d4a9-dc96-410a-8dea-4d4d4584188b",
+      "Correlation Id": "00000000-0000-0000-0000-0000000000e4",
+      "Data Sources": "[\"contoso-sentinel-centralus-laws\"]",
+      "Event Grouping": "SingleAlert",
+      "Intent": 12,
+      "Intent@odata.type": "#Int64",
+      "OriginalAlertProductName": "Microsoft Sentinel",
+      "OriginalAlertProviderName": "Azure Sentinel",
+      "OriginatingAlertSource": "Azure Sentinel",
+      "ProcessedBySentinel": "True",
+      "Query": "// The query_now parameter represents the time (in UTC) at which the scheduled analytics rule ran to produce this alert.\nset query_now = datetime(2026-07-29T21:40:34.5521546Z);\nlet OperationList = dynamic([\"Add member to role\",\"Add eligible member to role\"]);\nlet PrivilegedGroups = dynamic([\"UserAccountAdmins\",\"PrivilegedRoleAdmins\",\"TenantAdmins\",\"PrivilegedAuthenticationAdmins\"]);\nAuditLogs\n| where Category =~ \"RoleManagement\"\n| where OperationName in~ (OperationList)\n| mv-apply TargetResource = TargetResources on \n  (\n      where TargetResource.type =~ \"User\"\n      | extend TargetUserPrincipalName = tostring(TargetResource.userPrincipalName),\n               modProps = TargetResource.modifiedProperties\n  )\n| mv-apply Property = modProps on \n  (\n      where Property.displayName =~ \"Role.WellKnownObjectName\"\n      | extend DisplayName = trim('\"',tostring(Property.displayName)),\n               GroupName = trim('\"',tostring(Property.newValue))\n  )\n| extend InitiatingAppId = InitiatedBy.app.appId\n| extend InitiatingAppName = tostring(InitiatedBy.app.displayName)\n| extend InitiatingAppServicePrincipalId = tostring(InitiatedBy.app.servicePrincipalId)\n| extend InitiatingAppServicePrincipalName = tostring(InitiatedBy.app.servicePrincipalName)\n| extend InitiatingUserPrincipalName = tostring(InitiatedBy.user.userPrincipalName)\n| extend InitiatingAadUserId = tostring(InitiatedBy.user.id)\n| extend InitiatingIpAddress = tostring(iff(isnotempty(InitiatedBy.user.ipAddress), InitiatedBy.user.ipAddress, InitiatedBy.app.ipAddress))\n| extend InitiatingUserRoles = InitiatedBy.user.roles\n| where GroupName in~ (PrivilegedGroups)\n// If you don't want to alert for operations from PIM, remove below filtering for MS-PIM.\n//| where InitiatingAppName != \"MS-PIM\" and InitiatingAppName != \"MS-PIM-Fairfax\"\n| project TimeGenerated, AADOperationType, Category, OperationName, AADTenantId, InitiatingUserPrincipalName, InitiatingAadUserId, InitiatingAppId, InitiatingAppName, InitiatingAppServicePrincipalName, InitiatingAppServicePrincipalId, InitiatingIpAddress, DisplayName, GroupName, InitiatingUserRoles, TargetUserPrincipalName\n| extend AccountName = tostring(split(InitiatingUserPrincipalName,'@',0)[0]), AccountUPNSuffix = tostring(split(InitiatingUserPrincipalName,'@',1)[0])\n| extend TargetName = tostring(split(TargetUserPrincipalName,'@',0)[0]), TargetUPNSuffix = tostring(split(TargetUserPrincipalName,'@',1)[0])",
+      "Query End Time UTC": "2026-07-29 21:40:35Z",
+      "Query Period": "01:00:00",
+      "Query Start Time UTC": "2026-07-29 20:40:34Z",
+      "Search Query Results Overall Count": "1",
+      "SystemAlertId": "00000000-0000-0000-0000-0000000000e5",
+      "Trigger Operator": "GreaterThan",
+      "Trigger Threshold": "0",
+      "WorkspaceId": "00000000-0000-0000-0000-0000000000e1",
+      "WorkspaceName": "contoso-sentinel-centralus-laws"
+    },
+    "alertPolicyId": "00000000-0000-0000-0000-0000000000d4",
+    "alertWebUrl": "https://security.microsoft.com/alerts/sn00000000-0000-0000-0000-0000000000c6?tid=00000000-0000-0000-0000-000000000002",
+    "assignedTo": null,
+    "categories": [
+      "Persistence",
+      "PrivilegeEscalation"
+    ],
+    "category": "Persistence",
+    "classification": null,
+    "comments": [],
+    "createdDateTime": "2026-07-29T21:45:41.4366667Z",
+    "customDetails": {},
+    "description": "This will alert when a user is added to any of the Privileged Groups.\nFor further information on AuditLogs please see https://docs.microsoft.com/azure/active-directory/reports-monitoring/reference-audit-activities.\nFor Administrator role permissions in Microsoft Entra ID please see https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles",
+    "detectionSource": "unknownFutureValue",
+    "detectorId": "00000000-0000-0000-0000-0000000000e1_00000000-0000-0000-0000-000",
+    "determination": null,
+    "evidence": [
+      {
+        "@odata.type": "#microsoft.graph.security.userEvidence",
+        "createdDateTime": "2026-07-29T21:45:41.5333333Z",
+        "detailedRoles": [],
+        "remediationStatus": "none",
+        "remediationStatusDetails": null,
+        "roles": [],
+        "stream": null,
+        "tags": [
+          "Critical asset"
+        ],
+        "userAccount": {
+          "accountName": "entra.nwilke",
+          "activeDirectoryObjectGuid": null,
+          "azureAdUserId": "00000000-0000-0000-0000-0000000000a5",
+          "displayName": "Nestor Wilke (Entra)",
+          "domainName": null,
+          "resourceAccessEvents": [],
+          "tenantId": null,
+          "userPrincipalName": "entra.nwilke@contoso.onmicrosoft.com",
+          "userSid": "S-1-12-1-1111111111-2222222222-3333333333-4444444443"
+        },
+        "verdict": "suspicious"
+      },
+      {
+        "@odata.type": "#microsoft.graph.security.userEvidence",
+        "createdDateTime": "2026-07-29T21:45:41.5333333Z",
+        "detailedRoles": [],
+        "remediationStatus": "none",
+        "remediationStatusDetails": null,
+        "roles": [],
+        "stream": null,
+        "tags": [],
+        "userAccount": {
+          "accountName": null,
+          "activeDirectoryObjectGuid": null,
+          "azureAdUserId": "00000000-0000-0000-0000-0000000000a6",
+          "displayName": null,
+          "domainName": null,
+          "resourceAccessEvents": [],
+          "tenantId": null,
+          "userPrincipalName": null,
+          "userSid": null
+        },
+        "verdict": "suspicious"
+      }
+    ],
+    "firstActivityDateTime": "2026-07-29T20:56:42.7868598Z",
+    "id": "sn00000000-0000-0000-0000-0000000000c6",
+    "incidentId": "101188",
+    "incidentWebUrl": "https://security.microsoft.com/incident2/101188/overview?tid=00000000-0000-0000-0000-000000000002",
+    "investigationState": "unsupportedAlertType",
+    "lastActivityDateTime": "2026-07-29T20:56:42.7868598Z",
+    "lastUpdateDateTime": "2026-07-29T21:45:42.64Z",
+    "mitreTechniques": [
+      "T1098",
+      "T1078"
+    ],
+    "productName": "Microsoft Sentinel",
+    "providerAlertId": "00000000-0000-0000-0000-0000000000c6",
+    "recommendedActions": "",
+    "resolvedDateTime": null,
+    "serviceSource": "unknownFutureValue",
+    "severity": "medium",
+    "status": "new",
+    "systemTags": [
+      "Critical asset"
+    ],
+    "tenantId": "00000000-0000-0000-0000-000000000002",
+    "threatDisplayName": null,
+    "threatFamilyName": null,
+    "title": "User added to Microsoft Entra ID Privileged Groups"
+  }
+]

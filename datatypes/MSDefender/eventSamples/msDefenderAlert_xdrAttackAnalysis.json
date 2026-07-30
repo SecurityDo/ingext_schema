@@ -1,0 +1,99 @@
+{
+  "actorDisplayName": null,
+  "additionalData": {},
+  "alertPolicyId": null,
+  "alertWebUrl": "https://security.microsoft.com/alerts/r00000000-0000-0000-0000-0000000000c1_aml?tid=00000000-0000-0000-0000-000000000001",
+  "assignedTo": null,
+  "categories": [
+    "CredentialAccess",
+    "Collection"
+  ],
+  "category": "SuspiciousActivity",
+  "classification": null,
+  "comments": [],
+  "createdDateTime": "2026-07-10T01:21:29.0133333Z",
+  "customDetails": {},
+  "description": "Attack signals and irregular activity indicated a potential malicious pattern, suggesting a possible user account compromise.",
+  "detectionSource": "microsoft365Defender",
+  "detectorId": "00000000-0000-bbdb-012a-f6347fa106b5",
+  "determination": null,
+  "evidence": [
+    {
+      "@odata.type": "#microsoft.graph.security.userEvidence",
+      "createdDateTime": "2026-07-10T01:21:29.2133333Z",
+      "detailedRoles": [],
+      "remediationStatus": "none",
+      "remediationStatusDetails": null,
+      "roles": [
+        "compromised"
+      ],
+      "stream": null,
+      "tags": [],
+      "userAccount": {
+        "accountName": "adele.vance",
+        "activeDirectoryObjectGuid": null,
+        "azureAdUserId": "00000000-0000-0000-0000-0000000000a1",
+        "displayName": "Adele Vance",
+        "domainName": "contoso.com",
+        "resourceAccessEvents": [],
+        "tenantId": null,
+        "userPrincipalName": "adele.vance@contoso.com",
+        "userSid": "S-1-5-21-1111111111-2222222222-3333333333-1001"
+      },
+      "verdict": "malicious"
+    },
+    {
+      "@odata.type": "#microsoft.graph.security.ipEvidence",
+      "countryLetterCode": null,
+      "createdDateTime": "2026-07-10T01:21:29.2133333Z",
+      "detailedRoles": [],
+      "ipAddress": "192.0.2.91",
+      "location": null,
+      "remediationStatus": "none",
+      "remediationStatusDetails": null,
+      "roles": [],
+      "stream": null,
+      "tags": [],
+      "verdict": "suspicious"
+    },
+    {
+      "@odata.type": "#microsoft.graph.security.ipEvidence",
+      "countryLetterCode": null,
+      "createdDateTime": "2026-07-15T13:43:15.9233333Z",
+      "detailedRoles": [],
+      "ipAddress": "192.0.2.62",
+      "location": null,
+      "remediationStatus": "none",
+      "remediationStatusDetails": null,
+      "roles": [],
+      "stream": null,
+      "tags": [],
+      "verdict": "suspicious"
+    }
+  ],
+  "firstActivityDateTime": "2026-07-10T00:30:34.226Z",
+  "id": "r00000000-0000-0000-0000-0000000000c1_aml",
+  "incidentId": "42438",
+  "incidentWebUrl": "https://security.microsoft.com/incident2/42438/overview?tid=00000000-0000-0000-0000-000000000001",
+  "investigationState": "unsupportedAlertType",
+  "lastActivityDateTime": "2026-07-15T03:53:34Z",
+  "lastUpdateDateTime": "2026-07-15T13:43:16.0466667Z",
+  "mitreTechniques": [
+    "T1114",
+    "T1110",
+    "T1212",
+    "T1539"
+  ],
+  "productName": "Microsoft Defender XDR",
+  "providerAlertId": "00000000-0000-0000-0000-0000000000c1_aml",
+  "recommendedActions": "A. Validate the alert.\r\n1. Search for the relevant sign in event in the AADSignInEventsBeta table in advanced hunting by using the AccountObjectId value as provided in the alert evidences.\r\n2. Investigate if the login was performed by the user.\r\n3. Investigate if the user previously accessed suspicious mails or websites.\r\n\r\nB. Scope the incident. Find related accounts and devices in the incident graph.\r\n\r\nC. Contain and mitigate the breach. Decommission compromised accounts or reset passwords. Quarantine affected devices to prevent lateral movement.\r\n\r\nD. Contact your incident response team, or contact Microsoft support for investigation and remediation services.",
+  "resolvedDateTime": null,
+  "serviceSource": "microsoft365Defender",
+  "severity": "medium",
+  "status": "new",
+  "systemTags": [],
+  "tenantId": "00000000-0000-0000-0000-000000000001",
+  "threatDisplayName": null,
+  "threatFamilyName": null,
+  "title": "Potential user account compromise identified through attack analysis"
+}
