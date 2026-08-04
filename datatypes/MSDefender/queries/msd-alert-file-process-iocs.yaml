@@ -11,17 +11,12 @@ description: >-
   entities it called malicious come first.
 datatype: MSDefenderAlert
 kql: |
-  // latest snapshot per record: this engine's dynamic schema does not support
-  // arg_max(<col>, *), so take the max timestamp per id and join it back
-  let LatestAlert =
-      MSDefenderAlert
-      | where timestamp > ago(7d)
-      | summarize LastUpdate = max(todatetime(lastUpdateDateTime)) by AlertId = id;
+  // latest snapshot per record: the same id is re-emitted on every change, so
+  // reduce to the newest lastUpdateDateTime per id before anything else
   MSDefenderAlert
   | where timestamp > ago(7d)
-  | join kind=inner LatestAlert on $left.id == $right.AlertId
-  | where todatetime(lastUpdateDateTime) == LastUpdate
-  | project-away AlertId, LastUpdate
+  | extend LastUpdate = todatetime(lastUpdateDateTime)
+  | summarize arg_max(LastUpdate, *) by id
   | mv-expand ev = evidence
   | extend EvType = tostring(ev["@odata.type"])
   | where EvType in ("#microsoft.graph.security.processEvidence", "#microsoft.graph.security.fileEvidence")
@@ -47,13 +42,13 @@ kql: |
   | extend EncodedCommand = extract(@"-Encoded[Cc]ommand\s+([A-Za-z0-9+/=]{20,})", 1, CmdLine)
   | extend DecodedCommand = iff(isnotempty(EncodedCommand),
              replace_regex(base64_decode_tostring(EncodedCommand), @"[^\x20-\x7E]", ""), "")
-  | extend Kind = iff(EvType endswith "processEvidence", "process", "file")
+  | extend IocType = iff(EvType endswith "processEvidence", "process", "file")
   | project
       timestamp,
       Severity = severity,
       Title = title,
       ThreatFamily = threatFamilyName,
-      Kind,
+      IocType,
       Verdict,
       FullPath = iff(isempty(FilePath), FileName, strcat(FilePath, "\\", FileName)),
       FileSize,
@@ -76,6 +71,6 @@ tags: [msdefender, defender-xdr, defender-for-endpoint, ioc, hashes, hunting, ma
 expected_output: |
   Normalized file/process indicators from processEvidence and fileEvidence (sanitized; hashes are placeholders).
 
-  timestamp                 Severity       Title                                Kind     Verdict     FullPath                                                                                     FileSize  Publisher              Sha256                                                            ParentImage                                     CmdLine                                              DecodedCommand                                             RunAs            DetectionStatus  RemediationStatus  RemediationDetails
+  timestamp                 Severity       Title                                IocType  Verdict     FullPath                                                                                     FileSize  Publisher              Sha256                                                            ParentImage                                     CmdLine                                              DecodedCommand                                             RunAs            DetectionStatus  RemediationStatus  RemediationDetails
   2026-07-29T22:32:54.560Z  informational  'PSWStealer' malware was prevented   file     malicious   C:\ProgramData\Contoso\Collector\Workspace\...\Module 4\Dumping Google Chrome Passwords .py  2065                             5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9                                                                                                                                                                              prevented        prevented          Entity was pre-remediated by Windows Defender
   2026-07-27T14:32:28.890Z  medium         PowerMad script detected             process  suspicious  C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe                                     454656    Microsoft Corporation  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  Contoso.HciOrchestratorService.WinSvcHost.exe  "powershell.exe" -Version 5.1 -s -NoLogo -NoProfile  Import-Module 'C:\Agents\Contoso.HciOrchestrator\...'      HciOrchestrator  detected         active
