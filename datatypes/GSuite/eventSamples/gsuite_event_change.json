@@ -1,0 +1,32 @@
+{
+  "actor": {
+    "callerType": "USER",
+    "email": "sam.cole@contoso.com",
+    "profileId": "100000000000000000002"
+  },
+  "etag": "\"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC/JJJJJJJJJJJJJJJJJJJJJJJJJJJ\"",
+  "event": {
+    "name": "change_event",
+    "parameters": {
+      "calendar_event_type": "default",
+      "calendar_id": "sam.cole@contoso.com",
+      "client_side_encrypted": "no",
+      "end_time": 63921628800,
+      "event_id": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "event_title": "Weekly Team Review",
+      "organizer_calendar_id": "sam.cole@contoso.com",
+      "recurrence_rule": false,
+      "recurring": "no",
+      "start_time": 63921625200
+    },
+    "type": "event_change"
+  },
+  "id": {
+    "applicationName": "calendar",
+    "customerId": "C00000000",
+    "time": "2026-08-04T20:38:56.256Z",
+    "uniqueQualifier": "-1000000000000000008"
+  },
+  "kind": "admin#reports#activity",
+  "ownerDomain": "contoso.com"
+}

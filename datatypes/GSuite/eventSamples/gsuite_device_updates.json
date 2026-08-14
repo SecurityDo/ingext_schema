@@ -1,0 +1,33 @@
+{
+  "actor": {
+    "callerType": "USER",
+    "email": "sam.cole@contoso.com",
+    "profileId": "100000000000000000002"
+  },
+  "etag": "\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/LLLLLLLLLLLLLLLLLLLLLLLLLLL\"",
+  "event": {
+    "name": "DEVICE_SYNC_EVENT",
+    "parameters": {
+      "DEVICE_ID": "00000000-0000-0000-0000-000000000001",
+      "DEVICE_IS_MISSING_SCREENLOCK": "false",
+      "DEVICE_IS_NOT_ENCRYPTED": "true",
+      "DEVICE_MODEL": "Virtual Machine",
+      "DEVICE_OS_IS_OUTDATED": "true",
+      "DEVICE_TYPE": "WINDOWS",
+      "IOS_VENDOR_ID": false,
+      "LAST_SYNC_AUDIT_DATE": 1785872529159,
+      "OS_VERSION": "Windows 10.0.26200.8328",
+      "RESOURCE_ID": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "SERIAL_NUMBER": false,
+      "USER_EMAIL": "sam.cole@contoso.com"
+    },
+    "type": "device_updates"
+  },
+  "id": {
+    "applicationName": "mobile",
+    "customerId": "C00000000",
+    "time": "2026-08-04T19:42:09.159Z",
+    "uniqueQualifier": "-1000000000000000010"
+  },
+  "kind": "admin#reports#activity"
+}

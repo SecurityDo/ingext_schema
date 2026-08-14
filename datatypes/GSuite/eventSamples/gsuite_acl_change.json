@@ -1,0 +1,40 @@
+{
+  "actor": {
+    "email": "sam.cole@contoso.com",
+    "profileId": "100000000000000000002"
+  },
+  "etag": "\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/IIIIIIIIIIIIIIIIIIIIIIIIIII\"",
+  "event": {
+    "name": "change_user_access",
+    "parameters": {
+      "actor_is_collaborator_account": false,
+      "billable": true,
+      "doc_id": "10000000000000000000000000000002",
+      "doc_title": "Project Plan Draft",
+      "doc_type": "document",
+      "is_encrypted": false,
+      "new_value": [
+        "owner"
+      ],
+      "old_value": [
+        "none"
+      ],
+      "old_visibility": "unknown",
+      "owner": "sam.cole@contoso.com",
+      "owner_is_shared_drive": false,
+      "owner_is_team_drive": false,
+      "primary_event": false,
+      "target_user": "sam.cole@contoso.com",
+      "visibility": "private",
+      "visibility_change": "none"
+    },
+    "type": "acl_change"
+  },
+  "id": {
+    "applicationName": "drive",
+    "customerId": "C00000000",
+    "time": "2026-08-04T13:22:33.007Z",
+    "uniqueQualifier": "-1000000000000000007"
+  },
+  "kind": "admin#reports#activity"
+}

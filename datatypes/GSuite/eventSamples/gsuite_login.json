@@ -1,0 +1,68 @@
+[
+  {
+    "_ip": {
+      "city": "Example City",
+      "country": "United States",
+      "countryCode": "US",
+      "isp": "Example ISP",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "org": "Example Hosting"
+    },
+    "actor": {
+      "email": "adele.vance@contoso.com",
+      "profileId": "100000000000000000001"
+    },
+    "etag": "\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/BBBBBBBBBBBBBBBBBBBBBBBBBBB\"",
+    "event": {
+      "name": "login_success",
+      "parameters": {
+        "is_suspicious": false,
+        "login_challenge_method": [
+          "password"
+        ],
+        "login_type": "google_password"
+      },
+      "type": "login"
+    },
+    "id": {
+      "applicationName": "login",
+      "customerId": "C00000000",
+      "time": "2026-08-04T18:09:24.574Z",
+      "uniqueQualifier": "1000000000000000001"
+    },
+    "ipAddress": "192.0.2.10",
+    "kind": "admin#reports#activity"
+  },
+  {
+    "_ip": {
+      "city": "Example City",
+      "country": "United States",
+      "countryCode": "US",
+      "isp": "Example ISP",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "org": "Example Hosting"
+    },
+    "actor": {
+      "email": "adele.vance@contoso.com",
+      "profileId": "100000000000000000001"
+    },
+    "etag": "\"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC/DDDDDDDDDDDDDDDDDDDDDDDDDDD\"",
+    "event": {
+      "name": "logout",
+      "parameters": {
+        "login_type": "google_password"
+      },
+      "type": "login"
+    },
+    "id": {
+      "applicationName": "login",
+      "customerId": "C00000000",
+      "time": "2026-08-04T21:11:29.174Z",
+      "uniqueQualifier": "-1000000000000000002"
+    },
+    "ipAddress": "192.0.2.10",
+    "kind": "admin#reports#activity"
+  }
+]

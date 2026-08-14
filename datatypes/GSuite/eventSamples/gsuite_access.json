@@ -1,0 +1,71 @@
+[
+  {
+    "actor": {
+      "email": "sam.cole@contoso.com",
+      "profileId": "100000000000000000002"
+    },
+    "etag": "\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/GGGGGGGGGGGGGGGGGGGGGGGGGGG\"",
+    "event": {
+      "name": "access_url",
+      "parameters": {
+        "accessed_url": [
+          "https://analytics.example.com/api/google/data/connector/000000000000000000000001"
+        ],
+        "actor_is_collaborator_account": false,
+        "billable": false,
+        "originating_app_id": "000000000001",
+        "primary_event": true
+      },
+      "type": "access"
+    },
+    "id": {
+      "applicationName": "drive",
+      "customerId": "C00000000",
+      "time": "2026-08-04T11:32:34.038Z",
+      "uniqueQualifier": "1000000000000000005"
+    },
+    "kind": "admin#reports#activity"
+  },
+  {
+    "_ip": {
+      "city": "Example City",
+      "country": "United States",
+      "countryCode": "US",
+      "isp": "Example ISP",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "org": "Example Hosting"
+    },
+    "actor": {
+      "email": "sam.cole@contoso.com",
+      "profileId": "100000000000000000002"
+    },
+    "etag": "\"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC/HHHHHHHHHHHHHHHHHHHHHHHHHHH\"",
+    "event": {
+      "name": "view",
+      "parameters": {
+        "actor_is_collaborator_account": false,
+        "billable": true,
+        "doc_id": "10000000000000000000000000000001",
+        "doc_title": "Q3 Vendor Invoice.pdf",
+        "doc_type": "pdf",
+        "is_encrypted": false,
+        "originating_app_id": "000000000002",
+        "owner": "alex.wilber@contoso.com",
+        "owner_is_shared_drive": false,
+        "owner_is_team_drive": false,
+        "primary_event": true,
+        "visibility": "shared_internally"
+      },
+      "type": "access"
+    },
+    "id": {
+      "applicationName": "drive",
+      "customerId": "C00000000",
+      "time": "2026-08-04T20:43:56.199Z",
+      "uniqueQualifier": "-1000000000000000006"
+    },
+    "ipAddress": "192.0.2.10",
+    "kind": "admin#reports#activity"
+  }
+]

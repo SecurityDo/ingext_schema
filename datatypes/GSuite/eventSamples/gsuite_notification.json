@@ -1,0 +1,38 @@
+{
+  "_ip": {
+    "city": "Example City",
+    "country": "United States",
+    "countryCode": "US",
+    "isp": "Example ISP",
+    "latitude": 47.6062,
+    "longitude": -122.3321,
+    "org": "Example Hosting"
+  },
+  "actor": {
+    "callerType": "USER",
+    "email": "sam.cole@contoso.com",
+    "profileId": "100000000000000000002"
+  },
+  "etag": "\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/KKKKKKKKKKKKKKKKKKKKKKKKKKK\"",
+  "event": {
+    "name": "notification_triggered",
+    "parameters": {
+      "calendar_id": "sam.cole@contoso.com",
+      "event_id": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "notification_message_id": "<calendar-00000000-0000-0000-0000-000000000001@google.com>",
+      "notification_method": "email",
+      "notification_type": "new_event",
+      "recipient_email": "megan.bowen@contoso.com",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)"
+    },
+    "type": "notification"
+  },
+  "id": {
+    "applicationName": "calendar",
+    "customerId": "C00000000",
+    "time": "2026-08-04T16:29:17.998Z",
+    "uniqueQualifier": "-1000000000000000009"
+  },
+  "kind": "admin#reports#activity",
+  "ownerDomain": "contoso.com"
+}

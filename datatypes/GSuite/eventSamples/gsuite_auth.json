@@ -1,0 +1,81 @@
+[
+  {
+    "_ip": {
+      "city": "Example City",
+      "country": "United States",
+      "countryCode": "US",
+      "isp": "Example ISP",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "org": "Example Hosting"
+    },
+    "actor": {
+      "email": "sam.cole@contoso.com",
+      "profileId": "100000000000000000002"
+    },
+    "etag": "\"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC/EEEEEEEEEEEEEEEEEEEEEEEEEEE\"",
+    "event": {
+      "name": "authorize",
+      "parameters": {
+        "app_name": "Example Workspace Add-on",
+        "client_id": "000000000000-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.apps.googleusercontent.com",
+        "client_type": "WEB",
+        "scope": [
+          "https://www.googleapis.com/auth/calendar.addons.execute",
+          "https://www.googleapis.com/auth/gmail.addons.execute",
+          "https://www.googleapis.com/auth/script.external_request",
+          "https://www.googleapis.com/auth/script.locale",
+          "https://www.googleapis.com/auth/userinfo.email",
+          "https://www.googleapis.com/auth/userinfo.profile"
+        ],
+        "scope_data": false
+      },
+      "type": "auth"
+    },
+    "id": {
+      "applicationName": "token",
+      "customerId": "C00000000",
+      "time": "2026-08-04T21:26:02.710Z",
+      "uniqueQualifier": "-1000000000000000003"
+    },
+    "ipAddress": "192.0.2.10",
+    "kind": "admin#reports#activity"
+  },
+  {
+    "_ip": {
+      "city": "Example City",
+      "country": "United States",
+      "countryCode": "US",
+      "isp": "Example ISP",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "org": "Example Hosting"
+    },
+    "actor": {
+      "email": "adele.vance@contoso.com",
+      "profileId": "100000000000000000001"
+    },
+    "etag": "\"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC/FFFFFFFFFFFFFFFFFFFFFFFFFFF\"",
+    "event": {
+      "name": "revoke",
+      "parameters": {
+        "app_name": "Google Chrome",
+        "client_id": "77185425430.apps.googleusercontent.com",
+        "client_type": "NATIVE_DESKTOP",
+        "scope": [
+          "https://www.google.com/accounts/OAuthLogin"
+        ],
+        "scope_data": false
+      },
+      "type": "auth"
+    },
+    "id": {
+      "applicationName": "token",
+      "customerId": "C00000000",
+      "time": "2026-08-04T21:11:29.822Z",
+      "uniqueQualifier": "1000000000000000004"
+    },
+    "ipAddress": "192.0.2.10",
+    "kind": "admin#reports#activity"
+  }
+]
