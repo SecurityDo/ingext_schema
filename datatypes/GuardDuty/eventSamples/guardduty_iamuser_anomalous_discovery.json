@@ -1,0 +1,95 @@
+{
+    "AccountId": "123456789012",
+    "Arn": "arn:aws:guardduty:af-south-1:123456789012:detector/00000000000000000000000000000001/finding/00000000000000000000000000000011",
+    "Confidence": null,
+    "CreatedAt": "2026-09-02T15:03:31.037Z",
+    "Description": "The IAM identity helpdesk (IAMUser:AIDAEXAMPLEPRINCIPAL1) invoked the following APIs:\n- ec2.amazonaws.com: DescribeInstances, DescribeAddresses, DescribeImages, DescribeVolumes, DescribeNetworkInterfaces, DescribeSubnets, DescribeInstanceAttribute, DescribeInstanceStatus, DescribeVpcs, DescribeApplicationStatus completed without error.\n- Additional 6 API calls from 3 other services.\n\nOne or more API calls were invoked from 192.0.2.47 located in Example Country from Example Networks (ASN=64496).\n\nGuardDuty considers these invocations suspicious because:\n- The organization EXAMPLE NETWORKS LTD (ASN=64496) has not been previously observed for this account.",
+    "Id": "00000000000000000000000000000011",
+    "Partition": "aws",
+    "Region": "af-south-1",
+    "Resource": {
+        "AccessKeyDetails": {
+            "AccessKeyId": "ASIAEXAMPLEKEY000001",
+            "PrincipalId": "AIDAEXAMPLEPRINCIPAL1",
+            "UserName": "helpdesk",
+            "UserType": "IAMUser"
+        },
+        "ContainerDetails": null,
+        "EbsVolumeDetails": null,
+        "EcsClusterDetails": null,
+        "EksClusterDetails": null,
+        "InstanceDetails": null,
+        "KubernetesDetails": null,
+        "LambdaDetails": null,
+        "RdsDbInstanceDetails": null,
+        "RdsDbUserDetails": null,
+        "ResourceType": "AccessKey",
+        "S3BucketDetails": null
+    },
+    "SchemaVersion": "2.0",
+    "Service": {
+        "Action": {
+            "ActionType": "AWS_API_CALL",
+            "AwsApiCallAction": {
+                "AffectedResources": {},
+                "Api": "DescribeInstances",
+                "CallerType": "Remote IP",
+                "DomainDetails": null,
+                "ErrorCode": null,
+                "RemoteAccountDetails": null,
+                "RemoteIpDetails": {
+                    "City": {
+                        "CityName": "Example City"
+                    },
+                    "Country": {
+                        "CountryCode": null,
+                        "CountryName": "Example Country"
+                    },
+                    "GeoLocation": {
+                        "Lat": 47.6062,
+                        "Lon": -122.3321
+                    },
+                    "IpAddressV4": "192.0.2.47",
+                    "IpAddressV6": null,
+                    "Organization": {
+                        "Asn": "64496",
+                        "AsnOrg": "EXAMPLE NETWORKS LTD",
+                        "Isp": "Example Networks",
+                        "Org": "Example Networks"
+                    }
+                },
+                "ServiceName": "ec2.amazonaws.com",
+                "UserAgent": null
+            },
+            "DnsRequestAction": null,
+            "KubernetesApiCallAction": null,
+            "KubernetesPermissionCheckedDetails": null,
+            "KubernetesRoleBindingDetails": null,
+            "KubernetesRoleDetails": null,
+            "NetworkConnectionAction": null,
+            "PortProbeAction": null,
+            "RdsLoginAttemptAction": null
+        },
+        "AdditionalInfo": {
+            "Type": "default",
+            "Value": "{\"anomalies\":{\"anomalousAPIs\":\"ec2.amazonaws.com:[DescribeInstances:success , DescribeAddresses:success , DescribeImages:success , DescribeVolumes:success , DescribeNetworkInterfaces:success , DescribeSubnets:success , DescribeInstanceAttribute:success , DescribeInstanceStatus:success , DescribeVpcs:success , DescribeApplicationStatus:success] , ssm.amazonaws.com:[DescribeInstanceInformation:success , DescribeInstanceProperties:success , GetServiceSetting:success , DescribeSessions:success] , compute-optimizer.amazonaws.com:[GetEC2InstanceRecommendations:success] , logs.amazonaws.com:[DescribeMetricFilters:success]\"},\"profiledBehavior\":{\"frequentProfiledAPIsAccountProfiling\":\"DescribeTags , PutInventory , PutComplianceItems , GetParameter , PutEvaluations , BatchGetResourceConfig , DescribeImages , GetDocument , DescribeInstances , GetManifest\",\"frequentProfiledAPIsUserIdentityProfiling\":\"\",\"frequentProfiledASNsAccountProfiling\":\"asnNumber: 16509 asnOrg: Amazon.com, Inc. asnNumber: 8075 asnOrg: Microsoft Corporation asnNumber: 64499 asnOrg: Example ISP A\",\"frequentProfiledASNsUserIdentityProfiling\":\"\",\"frequentProfiledUserAgentsAccountProfiling\":\"aws-sdk-go , AWS Service , aws-sdk-go-v2 , aws-sdk-java , OTHER , aws-cli , AWS Internal , browser\",\"frequentProfiledUserAgentsUserIdentityProfiling\":\"\",\"frequentProfiledUserNamesAccountProfiling\":\"contoso-prod-ec2-role , contoso-sandbox-ec2-role , contoso-dev-ec2-role , contoso-staging-ec2-role , AWSServiceRoleForConfig , AWSBackupDefaultServiceRole , AWSServiceRoleForSecurityHub , AWSServiceRoleForAccessAnalyzer , AWS-QuickSetup-SSM-EnableExplorer-00000-v3 , AWSServiceRoleForAmazonSSM\",\"frequentProfiledUserTypesAccountProfiling\":\"ASSUMED_ROLE , IAM_USER\",\"infrequentProfiledAPIsAccountProfiling\":\"\",\"infrequentProfiledAPIsUserIdentityProfiling\":\"ListPipelineExecutions , GetServiceSetting , ListPipelines , ListIndexes , ListNotificationHubs , DescribeRegions\",\"infrequentProfiledASNsAccountProfiling\":\"asnNumber: 65534 asnOrg: Amazon VPC Endpoint asnNumber: 13335 asnOrg: Cloudflare, Inc. asnNumber: 0 asnOrg: UNKNOWN asnNumber: 64500 asnOrg: Example ISP B asnNumber: 64501 asnOrg: Example ISP C\",\"infrequentProfiledASNsUserIdentityProfiling\":\"asnNumber: 64499 asnOrg: Example ISP A\",\"infrequentProfiledUserAgentsAccountProfiling\":\"\",\"infrequentProfiledUserAgentsUserIdentityProfiling\":\"browser\",\"infrequentProfiledUserNamesAccountProfiling\":\"\",\"infrequentProfiledUserTypesAccountProfiling\":\"\",\"rareProfiledAPIsAccountProfiling\":\"\",\"rareProfiledAPIsUserIdentityProfiling\":\"DescribeMetricFilters , DescribeParameters , DescribeInstanceStatus , DescribeInstances\",\"rareProfiledASNsAccountProfiling\":\"asnNumber: 64502 asnOrg: Example ISP D asnNumber: 64503 asnOrg: Example ISP E\",\"rareProfiledASNsUserIdentityProfiling\":\"asnNumber: 16509 asnOrg: Amazon.com, Inc.\",\"rareProfiledUserAgentsAccountProfiling\":\"\",\"rareProfiledUserAgentsUserIdentityProfiling\":\"AWS Internal , AWS Service\",\"rareProfiledUserNamesAccountProfiling\":\"\",\"rareProfiledUserTypesAccountProfiling\":\"\"},\"unusualBehavior\":{\"isUnusualUserIdentity\":\"false\",\"unusualAPIsAccountProfiling\":\"\",\"unusualAPIsUserIdentityProfiling\":\"\",\"unusualASNsAccountProfiling\":\"asnNumber: 64496 asnOrg: EXAMPLE NETWORKS LTD\",\"unusualASNsUserIdentityProfiling\":\"asnNumber: 64496 asnOrg: EXAMPLE NETWORKS LTD\",\"unusualUserAgentsAccountProfiling\":\"\",\"unusualUserAgentsUserIdentityProfiling\":\"\",\"unusualUserNamesAccountProfiling\":\"\",\"unusualUserTypesAccountProfiling\":\"\"},\"userAgent\":{\"fullUserAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36\",\"userAgentCategory\":\"browser\"}}"
+        },
+        "Archived": false,
+        "Count": 180,
+        "Detection": null,
+        "DetectorId": "00000000000000000000000000000001",
+        "EbsVolumeScanDetails": null,
+        "EventFirstSeen": "2026-09-02T14:49:53.000Z",
+        "EventLastSeen": "2026-09-02T15:01:24.000Z",
+        "Evidence": null,
+        "FeatureName": "CloudTrailManagementEvent",
+        "ResourceRole": "TARGET",
+        "RuntimeDetails": null,
+        "ServiceName": "guardduty",
+        "UserFeedback": null
+    },
+    "Severity": 2,
+    "Title": "The user IAMUser : helpdesk is anomalously invoking APIs commonly used in Discovery tactics.",
+    "Type": "Discovery:IAMUser/AnomalousBehavior",
+    "UpdatedAt": "2026-09-02T15:12:33.847Z"
+}
