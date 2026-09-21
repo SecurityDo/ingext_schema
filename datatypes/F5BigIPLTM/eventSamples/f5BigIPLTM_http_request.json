@@ -5,7 +5,7 @@
     "poolMemberIp": "10.48.11.32",
     "poolMemberPort": 8888,
     "poolName": "/HTTP-HTTPS/cmicprod.app/cmicprod_pool",
-    "referer": "https://cmicprod.jedunn.com/cmicprod/UIConsole/faces/console.jspx",
+    "referer": "https://cmicprod.example.com/cmicprod/UIConsole/faces/console.jspx",
     "requestLine": "POST /cmicprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage?Adf-Window-Id=w16ci3r0572&Adf-Page-Id=3 HTTP/1.1",
     "requestUri": "/cmicprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage",
     "responseTimeMs": 403,

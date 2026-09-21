@@ -70,7 +70,7 @@ fields:
   - name: referer
     type: String
     description: "HTTP Referer header of the request. Empty/absent when not sent."
-    sampleValues: ["https://cmicprod.jedunn.com/cmicprod/UIConsole/faces/console.jspx"]
+    sampleValues: ["https://cmicprod.example.com/cmicprod/UIConsole/faces/console.jspx"]
 
   # ==========================================
   # REQUEST
