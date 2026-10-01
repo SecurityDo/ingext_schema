@@ -29,7 +29,7 @@ fields:
   - name: virtualServer
     type: String
     description: "Name of the LTM virtual server (front-end listener) that received the request, including its partition/folder path."
-    sampleValues: ["/HTTP-HTTPS/cmicprod.app/cmicprod_https_vs"]
+    sampleValues: ["/HTTP-HTTPS/erpprod.app/erpprod_https_vs"]
 
   - name: virtualIp
     type: String
@@ -42,7 +42,7 @@ fields:
   - name: poolName
     type: String
     description: "Name of the back-end pool the virtual server load-balanced the request to, including its partition/folder path."
-    sampleValues: ["/HTTP-HTTPS/cmicprod.app/cmicprod_pool"]
+    sampleValues: ["/HTTP-HTTPS/erpprod.app/erpprod_pool"]
 
   - name: poolMemberIp
     type: String
@@ -70,7 +70,7 @@ fields:
   - name: referer
     type: String
     description: "HTTP Referer header of the request. Empty/absent when not sent."
-    sampleValues: ["https://cmicprod.example.com/cmicprod/UIConsole/faces/console.jspx"]
+    sampleValues: ["https://erpprod.example.com/erpprod/UIConsole/faces/console.jspx"]
 
   # ==========================================
   # REQUEST
@@ -78,12 +78,12 @@ fields:
   - name: requestLine
     type: String
     description: "Full HTTP request line: method, request target (with query string), and protocol version. Parse out the method with split()/extract() when needed."
-    sampleValues: ["POST /cmicprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage?Adf-Window-Id=w16ci3r0572&Adf-Page-Id=3 HTTP/1.1"]
+    sampleValues: ["POST /erpprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage?Adf-Window-Id=w16ci3r0572&Adf-Page-Id=3 HTTP/1.1"]
 
   - name: requestUri
     type: String
     description: "Request URI path only (no method, query string, or protocol). Primary field for per-endpoint analysis."
-    sampleValues: ["/cmicprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage"]
+    sampleValues: ["/erpprod/UIConsole/faces/task-flow-definition-named-console/mainConsolePage"]
 
   # ==========================================
   # RESPONSE / TIMING

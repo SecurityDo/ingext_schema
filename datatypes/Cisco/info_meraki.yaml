@@ -43,8 +43,8 @@ fields:
 
   - name: dst
     type: String
-    description: "Destination IP address of the connection. NOTE: in the security_event facility this field carries the port appended as IP:port (e.g. 23.217.9.85:80); split on ':' to separate IP from port. In flow/firewall facilities it is a bare IP and the port is in dport."
-    sampleValues: ["192.168.112.75", "208.67.220.220", "8.8.8.8", "23.217.9.85:80"]
+    description: "Destination IP address of the connection. NOTE: in the security_event facility this field carries the port appended as IP:port (e.g. 203.0.113.13:80); split on ':' to separate IP from port. In flow/firewall facilities it is a bare IP and the port is in dport."
+    sampleValues: ["192.168.112.75", "208.67.220.220", "8.8.8.8", "203.0.113.13:80"]
     applicableFacility: ["flows", "firewall", "ip_flow_start", "ip_flow_end", "urls", "vpn_firewall", "l7_firewall", "security_event"]
 
   - name: sport
@@ -104,7 +104,7 @@ fields:
   - name: translated_src_ip
     type: String
     description: "The NAT-translated (public) source IP address that the internal src was rewritten to."
-    sampleValues: ["72.179.94.226", "12.76.159.146"]
+    sampleValues: ["203.0.113.12", "203.0.113.11"]
     applicableFacility: ["ip_flow_start", "ip_flow_end"]
 
   - name: translated_port

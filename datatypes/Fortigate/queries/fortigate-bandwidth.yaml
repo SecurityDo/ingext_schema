@@ -19,5 +19,5 @@ tags: [fortigate, network, bandwidth, top-talkers]
 expected_output: |
   srcip          event_count  total_sentbyte  total_rcvdbyte  total_bytes
   10.0.5.20      42351        24130294655     288508467       24418803122
-  64.132.42.50   9153         66417944        72770910        139188854
+  203.0.113.14   9153         66417944        72770910        139188854
   192.168.86.45  4531         13362371        66369737        79732108

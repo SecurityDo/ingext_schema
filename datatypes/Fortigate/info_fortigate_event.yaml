@@ -152,7 +152,7 @@ fields:
   - name: dstip
     type: String
     description: "Destination IP address (IPv4/IPv6)."
-    sampleValues: ["35.197.51.42"]
+    sampleValues: ["203.0.113.15"]
 
   - name: dstport
     type: Integer
