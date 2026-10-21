@@ -1,0 +1,57 @@
+{
+  "conditions": {
+    "applications": {
+      "applicationFilter": null,
+      "excludeApplications": [],
+      "includeApplications": [
+        "All"
+      ],
+      "includeAuthenticationContextClassReferences": [],
+      "includeUserActions": []
+    },
+    "authenticationFlows": null,
+    "clientAppTypes": [
+      "exchangeActiveSync",
+      "other"
+    ],
+    "clientApplications": null,
+    "devices": null,
+    "insiderRiskLevels": null,
+    "locations": null,
+    "platforms": null,
+    "servicePrincipalRiskLevels": [],
+    "signInRiskLevels": [],
+    "userRiskLevels": [],
+    "users": {
+      "excludeGroups": [
+        "6b29fc40-0000-0000-0000-000000000005"
+      ],
+      "excludeGuestsOrExternalUsers": null,
+      "excludeRoles": [],
+      "excludeUsers": [],
+      "includeGroups": [],
+      "includeGuestsOrExternalUsers": null,
+      "includeRoles": [],
+      "includeUsers": [
+        "All"
+      ]
+    }
+  },
+  "createdDateTime": "2021-10-05T18:01:46.4333571Z",
+  "deletedDateTime": null,
+  "displayName": "CA06 - All Apps: Block Legacy Auth for All Users",
+  "grantControls": {
+    "authenticationStrength": null,
+    "builtInControls": [
+      "block"
+    ],
+    "customAuthenticationFactors": [],
+    "operator": "OR",
+    "termsOfUse": []
+  },
+  "id": "9a8b7c6d-0000-0000-0000-000000000005",
+  "modifiedDateTime": "2026-01-26T15:50:55.9559184Z",
+  "sessionControls": null,
+  "state": "enabled",
+  "templateId": null
+}

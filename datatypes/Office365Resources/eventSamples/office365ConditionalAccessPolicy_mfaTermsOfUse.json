@@ -1,0 +1,128 @@
+{
+  "conditions": {
+    "applications": {
+      "applicationFilter": null,
+      "excludeApplications": [],
+      "includeApplications": [
+        "All"
+      ],
+      "includeAuthenticationContextClassReferences": [],
+      "includeUserActions": []
+    },
+    "authenticationFlows": null,
+    "clientAppTypes": [
+      "all"
+    ],
+    "clientApplications": null,
+    "devices": null,
+    "insiderRiskLevels": null,
+    "locations": {
+      "excludeLocations": [
+        "AllTrusted"
+      ],
+      "includeLocations": [
+        "All"
+      ]
+    },
+    "platforms": {
+      "excludePlatforms": [
+        "android",
+        "iOS"
+      ],
+      "includePlatforms": [
+        "all"
+      ]
+    },
+    "servicePrincipalRiskLevels": [],
+    "signInRiskLevels": [],
+    "userRiskLevels": [],
+    "users": {
+      "excludeGroups": [
+        "6b29fc40-0000-0000-0000-000000000001",
+        "6b29fc40-0000-0000-0000-000000000002",
+        "6b29fc40-0000-0000-0000-000000000003"
+      ],
+      "excludeGuestsOrExternalUsers": {
+        "externalTenants": {
+          "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants",
+          "membershipKind": "all"
+        },
+        "guestOrExternalUserTypes": "serviceProvider"
+      },
+      "excludeRoles": [
+        "d29b2b05-8046-44ba-8758-1e26182fcf32"
+      ],
+      "excludeUsers": [
+        "3f2504e0-0000-0000-0000-000000000001",
+        "3f2504e0-0000-0000-0000-000000000002",
+        "3f2504e0-0000-0000-0000-000000000003"
+      ],
+      "includeGroups": [],
+      "includeGuestsOrExternalUsers": null,
+      "includeRoles": [],
+      "includeUsers": [
+        "All"
+      ]
+    }
+  },
+  "createdDateTime": "2023-08-15T15:02:36.1556306Z",
+  "deletedDateTime": null,
+  "displayName": "CA001 - Require MFA and Terms of Use for all users outside trusted locations",
+  "grantControls": {
+    "authenticationStrength": {
+      "allowedCombinations": [
+        "windowsHelloForBusiness",
+        "fido2",
+        "x509CertificateMultiFactor",
+        "deviceBasedPush",
+        "temporaryAccessPassOneTime",
+        "temporaryAccessPassMultiUse",
+        "password,microsoftAuthenticatorPush",
+        "password,softwareOath",
+        "password,hardwareOath",
+        "password,sms",
+        "password,voice",
+        "federatedMultiFactor",
+        "microsoftAuthenticatorPush,federatedSingleFactor",
+        "softwareOath,federatedSingleFactor",
+        "hardwareOath,federatedSingleFactor",
+        "sms,federatedSingleFactor",
+        "voice,federatedSingleFactor"
+      ],
+      "combinationConfigurations": [],
+      "combinationConfigurations@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('9a8b7c6d-0000-0000-0000-000000000001')/grantControls/authenticationStrength/combinationConfigurations",
+      "createdDateTime": "2021-12-01T08:00:00Z",
+      "description": "Combinations of methods that satisfy strong authentication, such as a password + SMS",
+      "displayName": "Multifactor authentication",
+      "id": "00000000-0000-0000-0000-000000000002",
+      "modifiedDateTime": "2021-12-01T08:00:00Z",
+      "policyType": "builtIn",
+      "requirementsSatisfied": "mfa"
+    },
+    "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('9a8b7c6d-0000-0000-0000-000000000001')/grantControls/authenticationStrength/$entity",
+    "builtInControls": [],
+    "customAuthenticationFactors": [],
+    "operator": "AND",
+    "termsOfUse": [
+      "c0ffee00-0000-0000-0000-000000000001"
+    ]
+  },
+  "id": "9a8b7c6d-0000-0000-0000-000000000001",
+  "modifiedDateTime": "2026-10-21T14:44:01.953236Z",
+  "sessionControls": {
+    "applicationEnforcedRestrictions": null,
+    "cloudAppSecurity": null,
+    "disableResilienceDefaults": null,
+    "persistentBrowser": null,
+    "secureSignInSession": null,
+    "signInFrequency": {
+      "authenticationType": "primaryAndSecondaryAuthentication",
+      "frequencyInterval": "timeBased",
+      "isEnabled": true,
+      "type": "days",
+      "value": 30
+    }
+  },
+  "state": "enabled",
+  "templateId": null
+}

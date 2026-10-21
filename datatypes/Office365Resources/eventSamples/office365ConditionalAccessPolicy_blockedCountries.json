@@ -1,0 +1,69 @@
+{
+  "conditions": {
+    "applications": {
+      "applicationFilter": null,
+      "excludeApplications": [],
+      "includeApplications": [
+        "All"
+      ],
+      "includeAuthenticationContextClassReferences": [],
+      "includeUserActions": []
+    },
+    "authenticationFlows": null,
+    "clientAppTypes": [
+      "browser",
+      "mobileAppsAndDesktopClients"
+    ],
+    "clientApplications": null,
+    "devices": null,
+    "insiderRiskLevels": null,
+    "locations": {
+      "excludeLocations": [
+        "7c9e6679-0000-0000-0000-000000000001"
+      ],
+      "includeLocations": [
+        "7c9e6679-0000-0000-0000-000000000002"
+      ]
+    },
+    "platforms": null,
+    "servicePrincipalRiskLevels": [],
+    "signInRiskLevels": [],
+    "userRiskLevels": [],
+    "users": {
+      "excludeGroups": [
+        "6b29fc40-0000-0000-0000-000000000004",
+        "6b29fc40-0000-0000-0000-000000000005"
+      ],
+      "excludeGuestsOrExternalUsers": null,
+      "excludeRoles": [],
+      "excludeUsers": [
+        "3f2504e0-0000-0000-0000-000000000013",
+        "3f2504e0-0000-0000-0000-000000000014",
+        "3f2504e0-0000-0000-0000-000000000015"
+      ],
+      "includeGroups": [],
+      "includeGuestsOrExternalUsers": null,
+      "includeRoles": [],
+      "includeUsers": [
+        "All"
+      ]
+    }
+  },
+  "createdDateTime": null,
+  "deletedDateTime": null,
+  "displayName": "CA08 - All Apps: Block Access for All Users from Blocked Countries",
+  "grantControls": {
+    "authenticationStrength": null,
+    "builtInControls": [
+      "block"
+    ],
+    "customAuthenticationFactors": [],
+    "operator": "OR",
+    "termsOfUse": []
+  },
+  "id": "9a8b7c6d-0000-0000-0000-000000000003",
+  "modifiedDateTime": "2026-07-09T18:54:32.5565882Z",
+  "sessionControls": null,
+  "state": "enabled",
+  "templateId": null
+}

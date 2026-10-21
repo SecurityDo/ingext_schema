@@ -1,0 +1,69 @@
+{
+  "conditions": {
+    "applications": {
+      "applicationFilter": null,
+      "excludeApplications": [],
+      "includeApplications": [
+        "All"
+      ],
+      "includeAuthenticationContextClassReferences": [],
+      "includeUserActions": []
+    },
+    "authenticationFlows": null,
+    "clientAppTypes": [
+      "all"
+    ],
+    "clientApplications": null,
+    "devices": null,
+    "insiderRiskLevels": null,
+    "locations": null,
+    "platforms": null,
+    "servicePrincipalRiskLevels": [],
+    "signInRiskLevels": [
+      "high"
+    ],
+    "userRiskLevels": [],
+    "users": {
+      "excludeGroups": [],
+      "excludeGuestsOrExternalUsers": null,
+      "excludeRoles": [],
+      "excludeUsers": [],
+      "includeGroups": [
+        "6b29fc40-0000-0000-0000-000000000006"
+      ],
+      "includeGuestsOrExternalUsers": null,
+      "includeRoles": [],
+      "includeUsers": []
+    }
+  },
+  "createdDateTime": "2024-11-15T03:04:21.1881243Z",
+  "deletedDateTime": null,
+  "displayName": "Microsoft-managed: Multifactor authentication and reauthentication for risky sign-ins",
+  "grantControls": {
+    "authenticationStrength": null,
+    "builtInControls": [
+      "mfa"
+    ],
+    "customAuthenticationFactors": [],
+    "operator": "OR",
+    "termsOfUse": []
+  },
+  "id": "9a8b7c6d-0000-0000-0000-000000000006",
+  "modifiedDateTime": "2026-03-20T14:48:42.5899745Z",
+  "sessionControls": {
+    "applicationEnforcedRestrictions": null,
+    "cloudAppSecurity": null,
+    "disableResilienceDefaults": null,
+    "persistentBrowser": null,
+    "secureSignInSession": null,
+    "signInFrequency": {
+      "authenticationType": "primaryAndSecondaryAuthentication",
+      "frequencyInterval": "everyTime",
+      "isEnabled": true,
+      "type": null,
+      "value": null
+    }
+  },
+  "state": "disabled",
+  "templateId": "4200930c-0da2-4e33-ca01-000000000007"
+}

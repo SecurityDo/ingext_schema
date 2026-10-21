@@ -1,0 +1,93 @@
+{
+  "conditions": {
+    "applications": {
+      "applicationFilter": null,
+      "excludeApplications": [],
+      "includeApplications": [
+        "All"
+      ],
+      "includeAuthenticationContextClassReferences": [],
+      "includeUserActions": []
+    },
+    "authenticationFlows": null,
+    "clientAppTypes": [
+      "all"
+    ],
+    "clientApplications": null,
+    "devices": null,
+    "insiderRiskLevels": null,
+    "locations": {
+      "excludeLocations": [],
+      "includeLocations": [
+        "All"
+      ]
+    },
+    "platforms": {
+      "excludePlatforms": [],
+      "includePlatforms": [
+        "all"
+      ]
+    },
+    "servicePrincipalRiskLevels": [],
+    "signInRiskLevels": [],
+    "userRiskLevels": [],
+    "users": {
+      "excludeGroups": [
+        "6b29fc40-0000-0000-0000-000000000001"
+      ],
+      "excludeGuestsOrExternalUsers": null,
+      "excludeRoles": [],
+      "excludeUsers": [
+        "3f2504e0-0000-0000-0000-000000000001",
+        "3f2504e0-0000-0000-0000-000000000002",
+        "3f2504e0-0000-0000-0000-000000000011"
+      ],
+      "includeGroups": [],
+      "includeGuestsOrExternalUsers": null,
+      "includeRoles": [
+        "9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3",
+        "cf1c38e5-3621-4004-a7cb-879624dced7c",
+        "9c6df0f2-1e7c-4dc3-b195-66dfbd24aa8f",
+        "c430b396-e693-46cc-96f3-db01bf8bb62a",
+        "810a2642-a034-447f-a5e8-41beaa378541",
+        "32696413-001a-46ae-978c-ce0f6b3620d2",
+        "62e90394-69f5-4237-9190-012177145e10",
+        "194ae4cb-b126-40b2-bd5b-6091b380977d"
+      ],
+      "includeUsers": []
+    }
+  },
+  "createdDateTime": "2023-08-15T14:48:22.7442529Z",
+  "deletedDateTime": null,
+  "displayName": "CA002 - Require MFA for all administrator roles",
+  "grantControls": {
+    "authenticationStrength": null,
+    "builtInControls": [
+      "mfa"
+    ],
+    "customAuthenticationFactors": [],
+    "operator": "OR",
+    "termsOfUse": []
+  },
+  "id": "9a8b7c6d-0000-0000-0000-000000000002",
+  "modifiedDateTime": "2026-10-14T11:21:38.1388095Z",
+  "sessionControls": {
+    "applicationEnforcedRestrictions": null,
+    "cloudAppSecurity": null,
+    "disableResilienceDefaults": null,
+    "persistentBrowser": {
+      "isEnabled": true,
+      "mode": "never"
+    },
+    "secureSignInSession": null,
+    "signInFrequency": {
+      "authenticationType": "primaryAndSecondaryAuthentication",
+      "frequencyInterval": "timeBased",
+      "isEnabled": true,
+      "type": "hours",
+      "value": 12
+    }
+  },
+  "state": "enabled",
+  "templateId": null
+}
