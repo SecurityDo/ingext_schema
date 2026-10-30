@@ -5,11 +5,11 @@
     "descriptionFields": {
       "Duration": "0:00:01",
       "Errors": "User jsmith-admin (cn=jsmith-admin,ou=managers,dc=contoso,dc=local): \"jsmith-admin\" is already an alias of user \"jsmith\".",
-      "Sync Ref. Code": "a1b2c3d4e5f60718293a4b5c6d7e8f90",
-      "Users added": 0,
-      "Users modified": 0,
-      "Users removed": 0,
-      "Users seen": 6,
+      "SyncRefCode": "a1b2c3d4e5f60718293a4b5c6d7e8f90",
+      "Usersadded": 0,
+      "Usersmodified": 0,
+      "Usersremoved": 0,
+      "Usersseen": 6,
       "authproxy_identifiers": [
         "DIAPROXY000000000001"
       ]
@@ -21,16 +21,18 @@
   },
   {
     "action": "admin_login",
-    "description": "{\"ip_address\": \"192.0.2.45\", \"factor\": \"push\", \"primary_auth_method\": \"Password\"}",
+    "description": "{\"ip_address\": \"192.0.2.45\", \"role\": \"Administrator\", \"device\": \"616-555-0110\", \"factor\": \"sms\", \"primary_auth_method\": \"Password\"}",
     "descriptionFields": {
-      "factor": "push",
+      "device": "616-555-0110",
+      "factor": "sms",
       "ip_address": "192.0.2.45",
-      "primary_auth_method": "Password"
+      "primary_auth_method": "Password",
+      "role": "Administrator"
     },
     "isotimestamp": "2026-07-21T13:41:09+00:00",
-    "object": "",
+    "object": null,
     "timestamp": 1784641269,
-    "username": "adele.vance@contoso.com"
+    "username": "Adele Vance"
   },
   {
     "action": "bypass_create",
@@ -45,7 +47,7 @@
     "isotimestamp": "2026-07-21T14:15:52+00:00",
     "object": "acontractor",
     "timestamp": 1784643352,
-    "username": "adele.vance@contoso.com"
+    "username": "Adele Vance"
   },
   {
     "action": "user_update",
@@ -57,6 +59,74 @@
     "isotimestamp": "2026-07-21T14:17:03+00:00",
     "object": "acontractor",
     "timestamp": 1784643423,
-    "username": "adele.vance@contoso.com"
+    "username": "Adele Vance"
+  },
+  {
+    "action": "ad_sync_failed",
+    "description": "{\"reason\": \"The Authentication Proxy did not respond. Please check that the proxy is running and connected to both the Duo Security service and the directory server.\", \"Sync Ref. Code\": \"b2c3d4e5f60718293a4b5c6d7e8f90a1\"}",
+    "descriptionFields": {
+      "SyncRefCode": "b2c3d4e5f60718293a4b5c6d7e8f90a1",
+      "reason": "The Authentication Proxy did not respond. Please check that the proxy is running and connected to both the Duo Security service and the directory server."
+    },
+    "isotimestamp": "2026-10-26T12:28:22+00:00",
+    "object": "AD Sync",
+    "timestamp": 1793017702,
+    "username": "Active Directory User Sync: AD Sync"
+  },
+  {
+    "action": "user_update",
+    "description": "{\"status\": \"Bypass\"}",
+    "descriptionFields": {
+      "status": "Bypass"
+    },
+    "isotimestamp": "2026-10-29T21:48:30+00:00",
+    "object": "jsmith",
+    "timestamp": 1793310510,
+    "username": "Adele Vance"
+  },
+  {
+    "action": "user_pending_delete",
+    "description": "{\"uname\": \"mbowen\", \"status\": \"Active\", \"Sync Ref. Code\": \"c3d4e5f60718293a4b5c6d7e8f90a1b2\"}",
+    "descriptionFields": {
+      "SyncRefCode": "c3d4e5f60718293a4b5c6d7e8f90a1b2",
+      "status": "Active",
+      "uname": "mbowen"
+    },
+    "isotimestamp": "2026-10-30T11:10:40+00:00",
+    "object": "mbowen",
+    "timestamp": 1793358640,
+    "username": "Active Directory User Sync: AD Sync"
+  },
+  {
+    "action": "phone_create",
+    "description": "{\"number\": \"+16165550163\", \"extension\": \"\", \"biometrics_status\": \"Unknown\", \"os\": \"Generic Smartphone\", \"tampered_status\": \"Unknown\", \"passcode_status\": \"Unknown\", \"country_code\": \"1\", \"enrollment_status\": \"User Became Enrolled\"}",
+    "descriptionFields": {
+      "biometrics_status": "Unknown",
+      "country_code": "1",
+      "enrollment_status": "User Became Enrolled",
+      "extension": "",
+      "number": "+16165550163",
+      "os": "Generic Smartphone",
+      "passcode_status": "Unknown",
+      "tampered_status": "Unknown"
+    },
+    "isotimestamp": "2026-10-29T19:48:03+00:00",
+    "object": "616-555-0163",
+    "timestamp": 1793303283,
+    "username": "Megan Bowen"
+  },
+  {
+    "action": "admin_2fa_error",
+    "description": "{\"ip_address\": \"198.51.100.23\", \"email\": \"megan.bowen@contoso.com\", \"factor\": \"push\", \"error\": \"Cancelled by user.\"}",
+    "descriptionFields": {
+      "email": "megan.bowen@contoso.com",
+      "error": "Cancelled by user.",
+      "factor": "push",
+      "ip_address": "198.51.100.23"
+    },
+    "isotimestamp": "2026-10-18T22:42:58+00:00",
+    "object": null,
+    "timestamp": 1792363378,
+    "username": "Megan Bowen"
   }
 ]

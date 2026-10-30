@@ -227,5 +227,138 @@
       "key": "DUUSER00000000000002",
       "name": "acontractor"
     }
+  },
+  {
+    "access_device": {
+      "browser": null,
+      "browser_version": null,
+      "epkey": null,
+      "flash_version": null,
+      "hostname": "WKSTN-0187",
+      "ip": "0.0.0.0",
+      "is_encryption_enabled": "unknown",
+      "is_firewall_enabled": "unknown",
+      "is_password_set": "unknown",
+      "java_version": null,
+      "location": {
+        "city": null,
+        "country": null,
+        "state": null
+      },
+      "management_agents": [],
+      "os": null,
+      "os_version": null
+    },
+    "adaptive_trust_assessments": {
+      "more_secure_auth": {
+        "detected_attack_detectors": null,
+        "features_version": null,
+        "model_version": null,
+        "policy_enabled": false,
+        "preview_mode_enabled": true,
+        "reason": "Not requested",
+        "trust_level": "UNSET"
+      },
+      "remember_me": {
+        "features_version": "3.0",
+        "model_version": "2022.07.19.001",
+        "policy_enabled": false,
+        "reason": "Novel Access IP",
+        "trust_level": "LOW"
+      }
+    },
+    "alias": "",
+    "application": {
+      "key": "DIAPP0000000000000001",
+      "name": "Microsoft RDP"
+    },
+    "auth_device": {
+      "ip": null,
+      "key": "DPDEVICE000000000002",
+      "location": {
+        "city": null,
+        "country": null,
+        "state": null
+      },
+      "name": "616-555-0142",
+      "serial": null,
+      "type": null
+    },
+    "email": "megan.bowen@contoso.com",
+    "event_type": "authentication",
+    "factor": "phone_call",
+    "isotimestamp": "2026-10-30T11:25:18.366381+00:00",
+    "ood_software": null,
+    "rbfs_triggered_attacks": null,
+    "reason": "user_approved",
+    "result": "success",
+    "timestamp": 1793359518,
+    "trusted_endpoint_status": "unknown",
+    "txid": "1a2b3c4d-0000-4000-8000-000000000010",
+    "user": {
+      "groups": [
+        "DUO_Users (from AD sync \"AD Sync\")"
+      ],
+      "key": "DUUSER00000000000003",
+      "name": "mbowen"
+    }
+  },
+  {
+    "access_device": {
+      "browser": "DuoWinLogon",
+      "browser_version": "6.0.0",
+      "epkey": null,
+      "flash_version": null,
+      "hostname": "WKSTN-0201",
+      "ip": "0.0.0.0",
+      "is_encryption_enabled": "unknown",
+      "is_firewall_enabled": "unknown",
+      "is_password_set": "unknown",
+      "java_version": null,
+      "location": {
+        "city": null,
+        "country": null,
+        "state": null
+      },
+      "management_agents": [],
+      "os": "Windows",
+      "os_version": "10.0.26100.6584"
+    },
+    "adaptive_trust_assessments": {},
+    "alias": "",
+    "application": {
+      "key": "DIAPP0000000000000001",
+      "name": "Microsoft RDP"
+    },
+    "auth_device": {
+      "ip": null,
+      "key": null,
+      "location": {
+        "city": null,
+        "country": null,
+        "state": null
+      },
+      "name": null,
+      "serial": null,
+      "type": null
+    },
+    "email": "jsmith@contoso.com",
+    "event_type": "authentication",
+    "factor": null,
+    "isotimestamp": "2026-10-29T21:13:17.000000+00:00",
+    "ood_software": null,
+    "rbfs_triggered_attacks": null,
+    "reason": "bypass_user",
+    "result": "success",
+    "timestamp": 1793308397,
+    "trusted_endpoint_status": "unknown",
+    "txid": "1a2b3c4d-0000-4000-8000-000000000011",
+    "user": {
+      "groups": [
+        "DUO_Users (from AD sync \"AD Sync\")"
+      ],
+      "key": "DUUSER00000000000004",
+      "name": "jsmith"
+    }
   }
 ]

@@ -1,0 +1,34 @@
+[
+  {
+    "context": "authentication",
+    "credits": 2,
+    "isotimestamp": "2026-10-30T11:25:10+00:00",
+    "phone": "+16165550142",
+    "timestamp": 1793359510,
+    "type": "phone"
+  },
+  {
+    "context": "authentication",
+    "credits": 1,
+    "isotimestamp": "2026-10-30T09:58:21+00:00",
+    "phone": "+16165550187",
+    "timestamp": 1793354301,
+    "type": "sms"
+  },
+  {
+    "context": "administrator login",
+    "credits": 1,
+    "isotimestamp": "2026-10-28T17:25:41+00:00",
+    "phone": "+16165550110",
+    "timestamp": 1793208341,
+    "type": "sms"
+  },
+  {
+    "context": "enrollment",
+    "credits": 1,
+    "isotimestamp": "2026-10-29T19:48:29+00:00",
+    "phone": "+16165550163",
+    "timestamp": 1793303309,
+    "type": "sms"
+  }
+]
