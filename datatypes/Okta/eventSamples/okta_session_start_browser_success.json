@@ -1,0 +1,146 @@
+{
+  "actor": {
+    "alternateId": "user3@contoso.example",
+    "displayName": "User",
+    "id": "00u00000000000000003",
+    "type": "User"
+  },
+  "authenticationContext": {
+    "authenticationStep": 0,
+    "externalSessionId": "sess23793",
+    "rootSessionId": "sess23793"
+  },
+  "client": {
+    "device": "Computer",
+    "geographicalContext": {
+      "city": "Kochi",
+      "country": "India",
+      "geolocation": {
+        "lat": 9.9397,
+        "lon": 76.2651
+      },
+      "postalCode": "682506",
+      "state": "Kerala"
+    },
+    "ipAddress": "203.0.113.12",
+    "userAgent": {
+      "browser": "CHROME",
+      "os": "Windows 11",
+      "rawUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
+    },
+    "zone": "null"
+  },
+  "debugContext": {
+    "debugData": {
+      "associatedProxies": "[\"LUMINATI_PROXY\"]",
+      "deviceFingerprint": "REDACTED",
+      "dtHash": "REDACTED",
+      "logOnlySecurityData": "{\"risk\":{\"level\":\"LOW\"},\"behaviors\":{\"New Geo-Location\":\"POSITIVE\",\"New Device\":\"NEGATIVE\",\"New ASN\":\"NEGATIVE\",\"New IP\":\"POSITIVE\",\"New State\":\"NEGATIVE\",\"New Country\":\"NEGATIVE\",\"Velocity\":\"NEGATIVE\",\"New City\":\"NEGATIVE\"}}",
+      "oktaUserAgentExtended": "okta-signin-widget-2.21.0",
+      "origin": "REDACTED",
+      "requestId": "REDACTED",
+      "requestUri": "/api/v1/authn",
+      "threatSuspected": "false",
+      "url": "/api/v1/authn?"
+    }
+  },
+  "device": null,
+  "displayMessage": "User login to Okta",
+  "eventType": "user.session.start",
+  "gatewayContext": null,
+  "legacyEventType": "core.user_auth.login_success",
+  "outcome": {
+    "result": "SUCCESS"
+  },
+  "published": "2026-11-04T08:05:36.416Z",
+  "request": {
+    "ipChain": [
+      {
+        "geographicalContext": {
+          "city": "Kochi",
+          "country": "India",
+          "geolocation": {
+            "lat": 9.9397,
+            "lon": 76.2651
+          },
+          "postalCode": "682506",
+          "state": "Kerala"
+        },
+        "ip": "203.0.113.12",
+        "ipDetails": {
+          "asNumber": 17465,
+          "asOrg": "asianet is a cable isp providing",
+          "domain": "asianet.co.in",
+          "isp": "cable isp in india"
+        },
+        "version": "V4"
+      }
+    ]
+  },
+  "securityContext": {
+    "asNumber": 17465,
+    "asOrg": "asianet is a cable isp providing",
+    "domain": "asianet.co.in",
+    "ipDetails": {
+      "asNumber": 17465,
+      "asOrg": "asianet is a cable isp providing",
+      "domain": "asianet.co.in",
+      "isp": "cable isp in india"
+    },
+    "isProxy": false,
+    "isp": "cable isp in india",
+    "risk": {
+      "level": "LOW"
+    },
+    "userBehaviors": [
+      {
+        "id": "bhvctvx2v1Nn37Fmd2p7",
+        "name": "Velocity",
+        "result": "NEGATIVE"
+      },
+      {
+        "id": "bhvctvx2uwJ8GUbuc2p7",
+        "name": "New Country",
+        "result": "NEGATIVE"
+      },
+      {
+        "id": "bhvctvx2uzfVmLAtY2p7",
+        "name": "New IP",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhvctvx2uxFsiUMSx2p7",
+        "name": "New State",
+        "result": "NEGATIVE"
+      },
+      {
+        "id": "bhv17z4nn61GTXnfZ2p8",
+        "name": "New ASN",
+        "result": "NEGATIVE"
+      },
+      {
+        "id": "bhvctvx2v00fbXMvU2p7",
+        "name": "New Device",
+        "result": "NEGATIVE"
+      },
+      {
+        "id": "bhvctvx2uv8ljAKkS2p7",
+        "name": "New Geo-Location",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhvctvx2uyYKsOz8t2p7",
+        "name": "New City",
+        "result": "NEGATIVE"
+      }
+    ]
+  },
+  "severity": "INFO",
+  "transaction": {
+    "detail": {},
+    "id": "REDACTED",
+    "type": "WEB"
+  },
+  "uuid": "00000000-0000-0000-0000-287374857269",
+  "version": "0"
+}

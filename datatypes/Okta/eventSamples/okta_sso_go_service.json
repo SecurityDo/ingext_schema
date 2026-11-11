@@ -1,0 +1,121 @@
+{
+  "actor": {
+    "alternateId": "user4@contoso.example",
+    "displayName": "User",
+    "id": "00u00000000000000004",
+    "type": "User"
+  },
+  "authenticationContext": {
+    "authenticationStep": 0,
+    "externalSessionId": "sess67164",
+    "rootSessionId": "sess67164"
+  },
+  "client": {
+    "device": "Unknown",
+    "geographicalContext": {
+      "city": "Columbus",
+      "country": "United States",
+      "geolocation": {
+        "lat": 39.9587,
+        "lon": -82.9987
+      },
+      "postalCode": "43215",
+      "state": "Ohio"
+    },
+    "ipAddress": "203.0.113.13",
+    "userAgent": {
+      "browser": "UNKNOWN",
+      "os": "Unknown",
+      "rawUserAgent": "Go-http-client/1.1"
+    },
+    "zone": "null"
+  },
+  "debugContext": {
+    "debugData": {
+      "authnRequestId": "REDACTED",
+      "dtHash": "REDACTED",
+      "initiationType": "REDACTED",
+      "redirectUri": "REDACTED",
+      "requestId": "REDACTED",
+      "requestUri": "/oauth2/v1/token",
+      "signOnMode": "OpenID Connect",
+      "threatSuspected": "false",
+      "traceId": "d3e1a0f5-081f-49dd-a08a-7f57ff7af1da",
+      "url": "/oauth2/v1/token?"
+    }
+  },
+  "device": null,
+  "displayMessage": "User single sign on to app",
+  "eventType": "user.authentication.sso",
+  "gatewayContext": null,
+  "legacyEventType": "app.auth.sso",
+  "outcome": {
+    "result": "SUCCESS"
+  },
+  "published": "2026-11-04T02:46:39.484Z",
+  "request": {
+    "ipChain": [
+      {
+        "geographicalContext": {
+          "city": "Columbus",
+          "country": "United States",
+          "geolocation": {
+            "lat": 39.9587,
+            "lon": -82.9987
+          },
+          "postalCode": "43215",
+          "state": "Ohio"
+        },
+        "ip": "203.0.113.13",
+        "ipDetails": {
+          "asNumber": 16509,
+          "asOrg": "amazon technologies inc.",
+          "domain": "amazonaws.com",
+          "isp": "amazon.com  inc."
+        },
+        "version": "V4"
+      }
+    ]
+  },
+  "securityContext": {
+    "asNumber": 16509,
+    "asOrg": "amazon technologies inc.",
+    "domain": "amazonaws.com",
+    "ipDetails": {
+      "asNumber": 16509,
+      "asOrg": "amazon technologies inc.",
+      "domain": "amazonaws.com",
+      "isp": "amazon.com  inc."
+    },
+    "isProxy": false,
+    "isp": "amazon.com  inc.",
+    "tlsFingerprint": {
+      "ja4": "t13d191000_9dc949149365_e7c285222651"
+    }
+  },
+  "severity": "INFO",
+  "target": [
+    {
+      "alternateId": "Grafana - Unified Lab",
+      "detailEntry": {
+        "signOnModeType": "OPENID_CONNECT"
+      },
+      "displayName": "OpenID Connect Client",
+      "id": "0oa00000000000000000",
+      "type": "AppInstance"
+    },
+    {
+      "alternateId": "user4@contoso.example",
+      "displayName": "User",
+      "id": "00u00000000000000000",
+      "type": "AppUser"
+    }
+  ],
+  "transaction": {
+    "detail": {},
+    "id": "REDACTED",
+    "type": "WEB"
+  },
+  "uuid": "00000000-0000-0000-0000-837531412712",
+  "version": "0"
+}

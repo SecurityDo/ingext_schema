@@ -1,0 +1,156 @@
+{
+  "actor": {
+    "alternateId": "user1@contoso.example",
+    "displayName": "User",
+    "id": "00u00000000000000001",
+    "type": "User"
+  },
+  "authenticationContext": {
+    "authenticationStep": 0,
+    "externalSessionId": "sess80989",
+    "rootSessionId": "sess80989"
+  },
+  "client": {
+    "device": "Unknown",
+    "geographicalContext": {
+      "city": "Chisinau",
+      "country": "Moldova",
+      "geolocation": {
+        "lat": 47.012,
+        "lon": 28.858
+      },
+      "postalCode": "MD-2000",
+      "state": "Chișinău Municipality"
+    },
+    "ipAddress": "203.0.113.10",
+    "userAgent": {
+      "browser": "UNKNOWN",
+      "os": "Unknown",
+      "rawUserAgent": "Go-http-client/1.1"
+    },
+    "zone": "null"
+  },
+  "debugContext": {
+    "debugData": {
+      "dtHash": "REDACTED",
+      "logOnlySecurityData": "{\"risk\":{\"reasons\":\"Anomalous Device, Anomalous Location\",\"level\":\"HIGH\"},\"behaviors\":{\"New Geo-Location\":\"POSITIVE\",\"New Device\":\"POSITIVE\",\"New ASN\":\"POSITIVE\",\"New IP\":\"POSITIVE\",\"New State\":\"POSITIVE\",\"New Country\":\"POSITIVE\",\"Velocity\":\"NEGATIVE\",\"New City\":\"POSITIVE\"}}",
+      "requestId": "REDACTED",
+      "requestUri": "/api/v1/authn",
+      "threatSuspected": "false",
+      "tunnels": "[{\"anonymous\":false,\"operator\":null,\"type\":\"REMOTE_DESKTOP\"}]",
+      "url": "/api/v1/authn?"
+    }
+  },
+  "device": null,
+  "displayMessage": "User login to Okta",
+  "eventType": "user.session.start",
+  "gatewayContext": null,
+  "legacyEventType": "core.user_auth.login_success",
+  "outcome": {
+    "result": "SUCCESS"
+  },
+  "published": "2026-10-30T23:05:16.032Z",
+  "request": {
+    "ipChain": [
+      {
+        "geographicalContext": {
+          "city": "Chisinau",
+          "country": "Moldova",
+          "geolocation": {
+            "lat": 47.012,
+            "lon": 28.858
+          },
+          "postalCode": "MD-2000",
+          "state": "Chișinău Municipality"
+        },
+        "ip": "203.0.113.10",
+        "ipDetails": {
+          "asNumber": 200019,
+          "asOrg": "alexhost srl",
+          "ipServiceCategories": [
+            {
+              "isAnonymous": false,
+              "type": "Remote Desktop"
+            }
+          ],
+          "isp": "alexhost srl"
+        },
+        "version": "V4"
+      }
+    ]
+  },
+  "securityContext": {
+    "asNumber": 200019,
+    "asOrg": "alexhost srl",
+    "ipDetails": {
+      "asNumber": 200019,
+      "asOrg": "alexhost srl",
+      "ipServiceCategories": [
+        {
+          "isAnonymous": false,
+          "type": "Remote Desktop"
+        }
+      ],
+      "isp": "alexhost srl"
+    },
+    "isProxy": false,
+    "isp": "alexhost srl",
+    "risk": {
+      "level": "HIGH",
+      "reasons": [
+        "Anomalous Device",
+        "Anomalous Location"
+      ]
+    },
+    "userBehaviors": [
+      {
+        "id": "bhvctvx2v1Nn37Fmd2p7",
+        "name": "Velocity",
+        "result": "NEGATIVE"
+      },
+      {
+        "id": "bhvctvx2uwJ8GUbuc2p7",
+        "name": "New Country",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhvctvx2uzfVmLAtY2p7",
+        "name": "New IP",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhvctvx2uxFsiUMSx2p7",
+        "name": "New State",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhv17z4nn61GTXnfZ2p8",
+        "name": "New ASN",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhvctvx2v00fbXMvU2p7",
+        "name": "New Device",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhvctvx2uv8ljAKkS2p7",
+        "name": "New Geo-Location",
+        "result": "POSITIVE"
+      },
+      {
+        "id": "bhvctvx2uyYKsOz8t2p7",
+        "name": "New City",
+        "result": "POSITIVE"
+      }
+    ]
+  },
+  "severity": "INFO",
+  "transaction": {
+    "detail": {},
+    "id": "REDACTED",
+    "type": "WEB"
+  },
+  "uuid": "00000000-0000-0000-0000-775688334140",
+  "version": "0"
+}

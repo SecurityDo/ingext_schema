@@ -1,0 +1,121 @@
+{
+  "actor": {
+    "alternateId": "user2@contoso.example",
+    "displayName": "unknown",
+    "id": "unknown",
+    "type": "User"
+  },
+  "authenticationContext": {
+    "authenticationStep": 0,
+    "externalSessionId": "unknown",
+    "rootSessionId": "unknown"
+  },
+  "client": {
+    "device": "Unknown",
+    "geographicalContext": {
+      "city": "Stockholm",
+      "country": "Sweden",
+      "geolocation": {
+        "lat": 59.3098,
+        "lon": 17.9796
+      },
+      "postalCode": "126 30",
+      "state": "Stockholm County"
+    },
+    "ipAddress": "203.0.113.11",
+    "userAgent": {
+      "browser": "UNKNOWN",
+      "os": "Unknown",
+      "rawUserAgent": "Go-http-client/1.1"
+    },
+    "zone": "null"
+  },
+  "debugContext": {
+    "debugData": {
+      "dtHash": "REDACTED",
+      "loginResult": "VERIFICATION_ERROR",
+      "requestId": "REDACTED",
+      "requestUri": "/api/v1/authn",
+      "threatSuspected": "false",
+      "tunnels": "[{\"anonymous\":true,\"operator\":\"MULLVAD_VPN\",\"type\":\"VPN\"}]",
+      "url": "/api/v1/authn?"
+    }
+  },
+  "device": null,
+  "displayMessage": "User login to Okta",
+  "eventType": "user.session.start",
+  "gatewayContext": null,
+  "legacyEventType": "core.user_auth.login_failed",
+  "outcome": {
+    "reason": "VERIFICATION_ERROR",
+    "result": "FAILURE"
+  },
+  "published": "2026-10-14T02:53:45.396Z",
+  "request": {
+    "ipChain": [
+      {
+        "geographicalContext": {
+          "city": "Stockholm",
+          "country": "Sweden",
+          "geolocation": {
+            "lat": 59.3098,
+            "lon": 17.9796
+          },
+          "postalCode": "126 30",
+          "state": "Stockholm County"
+        },
+        "ip": "203.0.113.11",
+        "ipDetails": {
+          "asNumber": 39351,
+          "asOrg": "31173 services ab infrastructure in stockholm  se.",
+          "domain": "31173.se",
+          "ipServiceCategories": [
+            {
+              "isAnonymous": true,
+              "type": "VPN"
+            },
+            {
+              "isAnonymous": true,
+              "operator": "MULLVAD_VPN",
+              "type": "VPN"
+            }
+          ],
+          "isp": "31173 services ab"
+        },
+        "version": "V4"
+      }
+    ]
+  },
+  "securityContext": {
+    "asNumber": 39351,
+    "asOrg": "31173 services ab infrastructure in stockholm  se.",
+    "domain": "31173.se",
+    "ipDetails": {
+      "asNumber": 39351,
+      "asOrg": "31173 services ab infrastructure in stockholm  se.",
+      "domain": "31173.se",
+      "ipServiceCategories": [
+        {
+          "isAnonymous": true,
+          "type": "VPN"
+        },
+        {
+          "isAnonymous": true,
+          "operator": "MULLVAD_VPN",
+          "type": "VPN"
+        }
+      ],
+      "isp": "31173 services ab"
+    },
+    "isProxy": true,
+    "isp": "31173 services ab"
+  },
+  "severity": "INFO",
+  "transaction": {
+    "detail": {},
+    "id": "REDACTED",
+    "type": "WEB"
+  },
+  "uuid": "00000000-0000-0000-0000-986188154975",
+  "version": "0"
+}
