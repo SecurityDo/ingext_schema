@@ -1,0 +1,23 @@
+{
+  "action_id": 100,
+  "action_name": "LOGON",
+  "cribl_pipe": "OracleUnifiedLog_Parser",
+  "cribl_time": 1795168184,
+  "current_user": "SVCAPP",
+  "database_id": "100000001",
+  "database_user": "SVCAPP",
+  "entry_id": 1,
+  "error_code": "ORA-28000",
+  "error_message": "the account is locked",
+  "event_type": "audit",
+  "host": "db01",
+  "oracle_process_id": "10002",
+  "outcome": "failure",
+  "product": "Oracle Database",
+  "record_type_code": "4",
+  "return_code": 28000,
+  "session_id": "2000000002",
+  "source_type": "oracle_unified_audit",
+  "statement_id": 1,
+  "vendor": "Oracle"
+}

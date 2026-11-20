@@ -1,0 +1,23 @@
+{
+  "action_id": 6,
+  "action_name": "UPDATE",
+  "cribl_pipe": "OracleUnifiedLog_Parser",
+  "cribl_time": 1795168184,
+  "current_user": "APPUSER",
+  "database_id": "100000001",
+  "database_user": "APPUSER",
+  "entry_id": 3,
+  "event_type": "audit",
+  "host": "db01",
+  "object_name": "APP_SETTINGS",
+  "oracle_process_id": "10001",
+  "outcome": "success",
+  "product": "Oracle Database",
+  "record_type_code": "4",
+  "return_code": 0,
+  "schema_name": "APPSCHEMA",
+  "session_id": "2000000004",
+  "source_type": "oracle_unified_audit",
+  "statement_id": 12,
+  "vendor": "Oracle"
+}

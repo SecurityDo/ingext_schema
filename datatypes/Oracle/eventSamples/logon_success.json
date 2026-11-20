@@ -1,0 +1,21 @@
+{
+  "action_id": 100,
+  "action_name": "LOGON",
+  "cribl_pipe": "OracleUnifiedLog_Parser",
+  "cribl_time": 1795168184,
+  "current_user": "APPUSER",
+  "database_id": "100000001",
+  "database_user": "APPUSER",
+  "entry_id": 1,
+  "event_type": "audit",
+  "host": "db01",
+  "oracle_process_id": "10001",
+  "outcome": "success",
+  "product": "Oracle Database",
+  "record_type_code": "4",
+  "return_code": 0,
+  "session_id": "2000000001",
+  "source_type": "oracle_unified_audit",
+  "statement_id": 1,
+  "vendor": "Oracle"
+}
